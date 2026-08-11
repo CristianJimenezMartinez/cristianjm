@@ -156,17 +156,20 @@ git push -u origin main
 | **Automatic Deployments** | Habilitado |
 
 ### 🔒 Configuración SSL/TLS Recomendada:
-- **Ubicación**: Panel principal de Cloudflare → **SSL/TLS** → **Visión general** *(Overview)*.
+- **Ubicación en Menú**: Panel de Cloudflare → Dominio `cristianjm.com` → **SSL/TLS** → **Visión general** *(Overview)*.
 - **Modo de Encriptación**: `Completo (Estricto)` / `Full (Strict)` (o `Completo`).
-- **Certificados de borde** *(Edge Certificates)*:
+- **Certificados de Borde** *(Edge Certificates)*:
   - **Siempre usar HTTPS** *(Always Use HTTPS)*: `ON`
   - **Reescrituras HTTPS automáticas** *(Automatic HTTPS Rewrites)*: `ON`
 
 ### ⚡ Configuración de Velocidad & Optimización (Ubicación en Menú):
-- **¿Dónde encontrarlo?**: En el menú lateral izquierdo del panel de Cloudflare (fuera de Pages, en el nivel del dominio `cristianjm.com`), ve a **Velocidad** → **Optimización** *(Speed → Optimization)*.
-- **Ajustes recomendados**:
-  - **Brotli**: `Habilitado (ON)`
+- **Ubicación en Menú**: Panel de Cloudflare → Dominio `cristianjm.com` → **Velocidad** → **Configuración** *(Speed → Optimization)*.
+- **Pestaña "Optimización de Contenido"** *(speed/optimization/content)*:
+  - **Brotli**: `Habilitado (ON)` *(Compresión automática por defecto en Cloudflare Pages)*.
+  - **Cloudflare Fonts**: `Habilitado (ON)` *(Sirve las fuentes Google Fonts Outfit y JetBrains Mono directamente desde la red CDN perimetral de Cloudflare para reducir latencia)*.
+- **Pestaña "Optimización de Protocolo"** *(speed/optimization/protocol)*:
   - **HTTP/3 (con QUIC)**: `Habilitado (ON)`
+  - **TLS 1.3**: `Habilitado (ON)`
 
 ---
 
