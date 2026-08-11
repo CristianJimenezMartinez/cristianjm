@@ -1,0 +1,24 @@
+<div class="project-card">
+  <div class="card-header">
+    <span class="project-number">{{ project.number }}</span>
+    <span class="sector-badge">{{ project.sector }}</span>
+  </div>
+
+  <h3 class="project-title">{{ project.title }}</h3>
+  <p class="project-problem">{{ project.problem }}</p>
+  <p class="project-description">{{ project.description }}</p>
+
+  <div *ngIf="project.metrics" class="project-metrics">
+    <span class="metric-highlight">{{ project.metrics }}</span>
+  </div>
+
+  <div class="stack-tags">
+    <span *ngFor="let tech of project.stack" class="tag">{{ tech }}</span>
+  </div>
+
+  <div *ngIf="project.liveUrl" class="card-footer">
+    <a [href]="project.liveUrl" target="_blank" rel="noopener" class="demo-link">
+      Ver caso de negocio <span class="arrow">&rarr;</span>
+    </a>
+  </div>
+</div>

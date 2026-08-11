@@ -1,0 +1,22 @@
+<section id="faq" class="section faq-section">
+  <div class="container">
+    <span class="section-eyebrow">// FAQ</span>
+    <h2 class="section-title">Preguntas <span class="accent">frecuentes</span></h2>
+    <p class="section-subtitle">
+      Respuestas claras sobre metodología, costes, operación y entregas.
+    </p>
+
+    <div class="faq-accordion">
+      <div *ngFor="let item of faqs(); let i = index" class="faq-item" [class.open]="item.isOpen">
+        <button class="faq-header" (click)="toggleFaq(i)" [attr.aria-expanded]="item.isOpen">
+          <span class="faq-number">0{{ i + 1 }}</span>
+          <span class="faq-question">{{ item.question }}</span>
+          <span class="faq-toggle-icon">{{ item.isOpen ? '−' : '+' }}</span>
+        </button>
+        <div *ngIf="item.isOpen" class="faq-body">
+          <p>{{ item.answer }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

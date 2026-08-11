@@ -1,0 +1,49 @@
+@import 'variables';
+
+// ── Glass Card — navbar, hero terminal, service cards (sutil) ──
+@mixin glass-card($blur: 16px, $bg-opacity: 0.5) {
+  background: rgba(16, 24, 18, $bg-opacity);
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+  border: 1px solid $border-color;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+// ── Solid Card — project cards, about, FAQ ─────
+@mixin solid-card {
+  background: $surface;
+  border: 1px solid $border-color;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+// ── Hover effect — shared ──────────────────────
+@mixin card-hover {
+  &:hover {
+    border-color: $border-color-hover;
+    box-shadow: $glow-hover;
+    transform: translateY(-2px);
+  }
+}
+
+// Keep alias for existing components
+@mixin glass-card-hover {
+  @include card-hover;
+}
+
+// ── Gradient Text — key word highlight ────────
+// Usage: only on 1 word/phrase per section, not whole titles
+@mixin gradient-text-accent {
+  background: linear-gradient(90deg, $sage 0%, $lime 60%, $forest 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Keep alias for compatibility
+@mixin gradient-text {
+  color: $text;
+}

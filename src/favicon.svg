@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Dark background container for crisp browser tab contrast -->
+  <rect width="512" height="512" rx="110" fill="#090d0a"/>
+  <!-- Official logo zoomed 2.25x to eliminate margins and maximize mark visibility -->
+  <image href="assets/CJ-logo-Sage-Forest-Lime.png" x="-320" y="-320" width="1152" height="1152" />
+</svg>

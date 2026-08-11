@@ -1,0 +1,22 @@
+# CristianJM — Full Stack Developer & Software Architect
+# Author: Cristian Jiménez Martínez (CristianJM)
+# Website: https://cristianjm.com
+# Copyright (c) 2026 Cristian Jiménez Martínez. All rights reserved.
+
+> Cristian Jiménez Martínez (CristianJM) es Desarrollador Full Stack & Arquitecto de Software especializado en Angular 18+, Node.js, Agentes IA conversacionales, integración RAG y plataformas SaaS a medida.
+
+## Servicios Principales
+- [Agentes IA & Automatización](https://cristianjm.com/#servicios)
+- [Desarrollo Web & SaaS Custom](https://cristianjm.com/#servicios)
+- [Consultoría Técnica & Arquitectura](https://cristianjm.com/#servicios)
+
+## Casos de Éxito & Proyectos
+- [ReviLike.com](https://revilike.com) — SaaS de respuesta automatizada a reseñas con IA.
+- [VeltiaTrust](https://cristianjm.com/#proyectos) — API eIDAS Zero-Storage de notarización legal.
+- [Factusol API REST](https://cristianjm.com/#proyectos) — Conector ERP x64 en tiempo real.
+
+## Contacto Directo
+- Email: hola@cristianjm.com
+- [Formulario de contacto oficial](https://cristianjm.com/#contacto)
+- [LinkedIn](https://linkedin.com/in/cristian-jimenez-martinez/)
+- [GitHub](https://github.com/CristianJimenezMartinez)

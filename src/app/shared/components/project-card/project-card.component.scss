@@ -1,0 +1,117 @@
+@import 'styles/variables';
+@import 'styles/glassmorphism';
+
+.project-card {
+  @include solid-card;
+  @include card-hover;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  @media (max-width: 576px) {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+
+    .project-number {
+      font-family: $font-family-mono;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: $sage;
+      letter-spacing: 0.05em;
+    }
+
+    .sector-badge {
+      font-family: $font-family-mono;
+      font-size: 0.7rem;
+      color: rgba($text, 0.5);
+      background: rgba(74, 222, 128, 0.05);
+      border: 1px solid rgba(74, 222, 128, 0.12);
+      padding: 0.15rem 0.55rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  .project-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    color: $text;
+  }
+
+  .project-problem {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $sage;
+    margin-bottom: 0.75rem;
+    line-height: 1.45;
+  }
+
+  .project-description {
+    color: rgba($text, 0.5);
+    font-size: 0.85rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .project-metrics {
+    margin-bottom: 1.25rem;
+
+    .metric-highlight {
+      display: inline-block;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: $lime;
+      letter-spacing: -0.01em;
+    }
+  }
+
+  .stack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+
+    .tag {
+      font-family: $font-family-mono;
+      font-size: 0.7rem;
+      color: rgba($text, 0.45);
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+    }
+  }
+
+  .card-footer {
+    border-top: 1px solid rgba(74, 222, 128, 0.06);
+    padding-top: 1rem;
+
+    .demo-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: $text;
+      font-weight: 600;
+      font-size: 0.82rem;
+      transition: color 0.2s ease;
+
+      .arrow { transition: transform 0.18s ease; }
+
+      &:hover {
+        color: $sage;
+        .arrow { transform: translateX(4px); }
+      }
+    }
+  }
+}

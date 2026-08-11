@@ -1,0 +1,162 @@
+@import 'styles/variables';
+@import 'styles/glassmorphism';
+
+.services-section {
+  background: $surface;
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+
+    @media (max-width: 992px) { grid-template-columns: 1fr; }
+  }
+
+  .service-card {
+    @include glass-card(14px, 0.3);  // very subtle glass
+    @include glass-card-hover;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: 576px) {
+      padding: 1.5rem 1.25rem;
+    }
+
+    &.popular {
+      border-color: rgba(74, 222, 128, 0.2);
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, $sage, $lime);
+      }
+
+      .popular-badge {
+        position: absolute;
+        top: 1.25rem; right: 1.25rem;
+        background: rgba(74, 222, 128, 0.08);
+        border: 1px solid rgba(74, 222, 128, 0.2);
+        color: $sage;
+        font-family: $font-family-mono;
+        font-size: 0.62rem;
+        font-weight: 700;
+        padding: 0.18rem 0.5rem;
+        border-radius: 4px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+    }
+
+    .service-icon-box {
+      width: 42px;
+      height: 42px;
+      background: rgba(22, 163, 74, 0.08);
+      border: 1px solid rgba(22, 163, 74, 0.18);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $forest;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: $text;
+      margin-bottom: 0.35rem;
+    }
+
+    .service-tagline {
+      font-size: 0.82rem;
+      color: $sage;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+    }
+
+    .service-description {
+      color: rgba($text, 0.5);
+      font-size: 0.875rem;
+      line-height: 1.55;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin-bottom: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.55rem;
+        font-size: 0.845rem;
+        color: rgba($text, 0.6);
+
+        .check-svg { color: $forest; flex-shrink: 0; margin-top: 3px; }
+      }
+    }
+
+    .pricing-box {
+      background: rgba(0, 0, 0, 0.25);
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      border: 1px solid rgba(74, 222, 128, 0.06);
+      margin-bottom: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+
+      .setup-price {
+        font-size: 1.35rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: $text;
+      }
+
+      .recurring-price {
+        font-size: 0.8rem;
+        color: rgba($text, 0.45);
+      }
+
+      .price-note {
+        font-size: 0.72rem;
+        color: rgba($text, 0.28);
+        margin-top: 0.25rem;
+        line-height: 1.4;
+      }
+    }
+
+    .btn-service {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.7rem;
+      background: $sage;
+      color: #090d0a;
+      font-weight: 700;
+      font-size: 0.875rem;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+
+      .btn-arrow { transition: transform 0.18s ease; }
+
+      &:hover {
+        background: $lime;
+        transform: translateY(-1px);
+        .btn-arrow { transform: translateX(4px); }
+      }
+    }
+  }
+}

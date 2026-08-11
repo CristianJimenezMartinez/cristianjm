@@ -1,0 +1,16 @@
+<section id="proyectos" class="section projects-section">
+  <div class="container">
+    <span class="section-eyebrow">// Casos de Éxito</span>
+    <h2 class="section-title">Lo que ya he <span class="accent">construido</span></h2>
+    <p class="section-subtitle">
+      Tres problemas empresariales reales. Tres soluciones en producción.
+    </p>
+
+    <div class="projects-grid">
+      <app-project-card
+        *ngFor="let p of projects()"
+        [project]="p">
+      </app-project-card>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,126 @@
+@import 'styles/variables';
+@import 'styles/glassmorphism';
+
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+  .footer-inner {
+    background: $bg-surface;
+    padding: 4rem 0 0 0;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 560px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // Brand column
+  .footer-brand {
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+
+      .logo-img {
+        height: 48px;
+        width: auto;
+        object-fit: contain;
+        filter: drop-shadow(0 2px 12px rgba(74, 222, 128, 0.28));
+      }
+
+      .highlight { color: $accent-indigo; }
+    }
+
+    .tagline {
+      font-size: 0.85rem;
+      color: $text-secondary;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-bio {
+      font-size: 0.82rem;
+      color: $text-muted;
+      line-height: 1.6;
+      max-width: 240px;
+    }
+  }
+
+  // Link columns
+  .footer-col {
+    .footer-col-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: $text-primary;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+
+      li a {
+        font-size: 0.875rem;
+        color: $text-secondary;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: $text-primary;
+        }
+      }
+    }
+  }
+
+  // Bottom bar
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 640px) {
+      flex-direction: column;
+      gap: 0.75rem;
+      text-align: center;
+    }
+
+    .footer-copy {
+      font-size: 0.8rem;
+      color: $text-muted;
+    }
+
+    .footer-status {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: $text-secondary;
+
+      .status-dot {
+        width: 7px;
+        height: 7px;
+        background: $accent-emerald;
+        border-radius: 50%;
+        box-shadow: 0 0 8px $accent-emerald;
+      }
+    }
+  }
+}

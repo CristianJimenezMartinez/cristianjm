@@ -1,0 +1,51 @@
+// ═══════════════════════════════════════════════
+// CJ — Sage × Lime System
+// 5 core colors + transparencies only
+// ═══════════════════════════════════════════════
+
+// ── Backgrounds ────────────────────────────────
+$bg:      #090d0a;   // near-black with green undertone — main bg
+$surface: #0d1410;   // section-alt, card solid bg
+
+// ── Brand Colors ───────────────────────────────
+$sage:    #4ade80;   // primary CTA, logo, active states
+$lime:    #a3e635;   // gradient accent, key highlights, metrics
+$forest:  #16a34a;   // icons, details, deep accent
+
+// ── Text ───────────────────────────────────────
+$text:    #f0fdf4;   // primary — slightly warm white
+$muted:   rgba(240, 253, 244, 0.5);  // secondary text — transparency of $text
+
+// ── Semantic Aliases (keep component compatibility) ─
+$bg-dark:          $bg;
+$bg-surface:       $surface;
+$bg-card:          rgba(16, 24, 18, 0.7);
+$bg-card-hover:    rgba(22, 34, 25, 0.9);
+$accent-primary:   $sage;
+$accent-secondary: $lime;
+$accent-indigo:    $sage;
+$accent-violet:    rgba(74, 222, 128, 0.75);
+$accent-emerald:   $sage;
+$accent-cyan:      $lime;
+$text-primary:     $text;
+$text-secondary:   rgba(240, 253, 244, 0.6);
+$text-muted:       rgba(240, 253, 244, 0.35);
+
+// ── Semantic Status Colors ─────────────────────
+$status-success: $sage;
+$status-warning: #f59e0b;   // amber ONLY for warnings
+$status-error:   #f87171;
+
+// ── Fonts ──────────────────────────────────────
+$font-family-sans: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-family-mono: 'JetBrains Mono', monospace;
+
+// ── Borders & Shadows ─────────────────────────
+$border-color:       rgba(74, 222, 128, 0.08);
+$border-color-hover: rgba(74, 222, 128, 0.3);
+$glow-subtle:        0 0 20px rgba(74, 222, 128, 0.1);
+$glow-hover:         0 8px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(74, 222, 128, 0.15);
+
+// ── Layout ─────────────────────────────────────
+$container-max-width: 1200px;
+$navbar-height: 72px;

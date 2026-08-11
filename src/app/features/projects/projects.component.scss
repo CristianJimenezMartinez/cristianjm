@@ -1,0 +1,30 @@
+@import 'styles/variables';
+@import 'styles/glassmorphism';
+
+.projects-section {
+  .section-eyebrow {
+    display: block;
+    text-align: center;
+    font-family: $font-family-mono;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: $accent-violet;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
