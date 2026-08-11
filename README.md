@@ -143,12 +143,30 @@ git remote add origin https://github.com/CristianJimenezMartinez/cristianjm.git
 git push -u origin main
 ```
 
-### Configuración en Cloudflare Pages:
-| Ajuste | Valor Exacto |
+### Configuración de Compilación (Build Settings):
+| Parámetro | Valor Exacto |
 |---|---|
+| **Project name** | `cristianjm` |
+| **Production branch** | `main` |
+| **Framework preset** | `Angular` |
 | **Build command** | `npx ng build` |
 | **Build output directory** | `dist/cristian-jimenez/browser` |
+| **Root directory** | `/` |
 | **Environment Variable** | `NODE_VERSION` = `18.20.0` |
+| **Automatic Deployments** | Habilitado |
+
+### 🔒 Configuración SSL/TLS Recomendada:
+- **Ubicación**: Panel principal de Cloudflare → **SSL/TLS** → **Visión general** *(Overview)*.
+- **Modo de Encriptación**: `Completo (Estricto)` / `Full (Strict)` (o `Completo`).
+- **Certificados de borde** *(Edge Certificates)*:
+  - **Siempre usar HTTPS** *(Always Use HTTPS)*: `ON`
+  - **Reescrituras HTTPS automáticas** *(Automatic HTTPS Rewrites)*: `ON`
+
+### ⚡ Configuración de Velocidad & Optimización (Ubicación en Menú):
+- **¿Dónde encontrarlo?**: En el menú lateral izquierdo del panel de Cloudflare (fuera de Pages, en el nivel del dominio `cristianjm.com`), ve a **Velocidad** → **Optimización** *(Speed → Optimization)*.
+- **Ajustes recomendados**:
+  - **Brotli**: `Habilitado (ON)`
+  - **HTTP/3 (con QUIC)**: `Habilitado (ON)`
 
 ---
 
