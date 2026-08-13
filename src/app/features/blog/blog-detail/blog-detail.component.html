@@ -13,6 +13,10 @@
       </div>
     </header>
 
+    <div class="cover-image-container" *ngIf="postMeta()?.coverImage">
+      <img [src]="postMeta()?.coverImage" [alt]="postMeta()?.title" class="detail-cover-img">
+    </div>
+
     <div class="markdown-body solid-card">
       <markdown [data]="postContent()"></markdown>
     </div>
@@ -22,7 +26,7 @@
         <img src="assets/CJ-logo-Sage-Forest-Lime.png" alt="CristianJM Logo" class="author-avatar">
         <div class="author-info">
           <h4>Escrito por Cristian Jiménez Martínez (CristianJM)</h4>
-          <p>Full Stack Developer & Software Architect. Especializado en Angular, Node.js e Inteligencia Artificial.</p>
+          <p>Full Stack Developer &amp; Software Architect. Especializado en Angular, Node.js e Inteligencia Artificial.</p>
         </div>
       </div>
     </footer>

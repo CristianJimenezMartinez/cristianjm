@@ -32,46 +32,84 @@
 
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2.5rem;
 }
 
 .blog-card {
   @include solid-card;
+  padding: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 
   &:hover {
-    transform: translateY(-4px);
-    border-color: rgba($sage, 0.3);
+    transform: translateY(-5px);
+    border-color: rgba($sage, 0.4);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(74, 222, 128, 0.1);
+
+    .card-cover-img {
+      transform: scale(1.04);
+    }
   }
+}
+
+.card-image-link {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background-color: #050806;
+}
+
+.card-image-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.card-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.card-body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .card-meta {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: 0.75rem;
   margin-bottom: 1.25rem;
-  font-size: 0.85rem;
 
   .post-date {
     color: $text-muted;
     font-family: $font-family-mono;
+    font-size: 0.825rem;
+    white-space: nowrap;
   }
 
   .tags {
     display: flex;
-    gap: 0.5rem;
+    flex-wrap: wrap;
+    gap: 0.4rem;
 
     .tag {
-      background-color: rgba($sage, 0.1);
+      background-color: rgba($sage, 0.12);
       color: $sage;
-      padding: 0.2rem 0.6rem;
+      padding: 0.25rem 0.65rem;
       border-radius: 9999px;
       font-size: 0.75rem;
-      font-weight: 500;
+      font-weight: 600;
+      letter-spacing: 0.02em;
     }
   }
 }
@@ -80,7 +118,7 @@
   font-size: 1.35rem;
   font-weight: 700;
   line-height: 1.4;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
 
   a {
     color: $text-primary;
@@ -96,8 +134,15 @@
 .post-desc {
   color: $text-muted;
   font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
+}
+
+.card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .read-more {
@@ -114,7 +159,7 @@
   }
 
   &:hover .arrow {
-    transform: translateX(4px);
+    transform: translateX(5px);
   }
 }
 

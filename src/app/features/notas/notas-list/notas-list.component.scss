@@ -48,8 +48,10 @@
 
 .nota-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  gap: 0.75rem;
   margin-bottom: 0.75rem;
 
   .nota-title {
@@ -71,6 +73,7 @@
     color: $text-muted;
     font-family: $font-family-mono;
     font-size: 0.85rem;
+    white-space: nowrap;
   }
 }
 

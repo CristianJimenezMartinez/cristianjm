@@ -3,7 +3,7 @@
     <header class="blog-header">
       <div class="badge-pill">
         <span class="pulse-dot"></span>
-        <span>Artículos & Reflexiones</span>
+        <span>Artículos &amp; Reflexiones</span>
       </div>
       <h1 class="page-title">Blog <span class="highlight">Técnico</span></h1>
       <p class="page-subtitle">
@@ -13,22 +13,34 @@
 
     <div class="blog-grid" *ngIf="contentService.blogPosts().length > 0; else emptyState">
       <article *ngFor="let post of contentService.blogPosts()" class="blog-card solid-card">
-        <div class="card-meta">
-          <span class="post-date">{{ post.date | date:'dd MMM, yyyy' }}</span>
-          <div class="tags">
-            <span *ngFor="let tag of post.tags" class="tag">{{ tag }}</span>
+        
+        <a [routerLink]="['/blog', post.slug]" class="card-image-link" *ngIf="post.coverImage">
+          <div class="card-image-wrapper">
+            <img [src]="post.coverImage" [alt]="post.title" class="card-cover-img">
+          </div>
+        </a>
+
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="post-date">{{ post.date | date:'dd MMM yyyy' }}</span>
+            <div class="tags">
+              <span *ngFor="let tag of post.tags" class="tag">{{ tag }}</span>
+            </div>
+          </div>
+
+          <h2 class="post-title">
+            <a [routerLink]="['/blog', post.slug]">{{ post.title }}</a>
+          </h2>
+
+          <p class="post-desc">{{ post.description }}</p>
+
+          <div class="card-footer">
+            <a [routerLink]="['/blog', post.slug]" class="read-more">
+              Leer artículo completo <span class="arrow">&rarr;</span>
+            </a>
           </div>
         </div>
 
-        <h2 class="post-title">
-          <a [routerLink]="['/blog', post.slug]">{{ post.title }}</a>
-        </h2>
-
-        <p class="post-desc">{{ post.description }}</p>
-
-        <a [routerLink]="['/blog', post.slug]" class="read-more">
-          Leer artículo completo <span class="arrow">&rarr;</span>
-        </a>
       </article>
     </div>
 

@@ -23,7 +23,7 @@
 }
 
 .post-header {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 
   .meta-row {
     display: flex;
@@ -34,21 +34,39 @@
 
     .post-date {
       font-family: $font-family-mono;
+      white-space: nowrap;
     }
 
     .tags {
       display: flex;
+      flex-wrap: wrap;
       gap: 0.5rem;
 
       .tag {
         background-color: rgba($sage, 0.1);
         color: $sage;
-        padding: 0.2rem 0.6rem;
+        padding: 0.25rem 0.65rem;
         border-radius: 9999px;
         font-size: 0.75rem;
-        font-weight: 500;
+        font-weight: 600;
       }
     }
+  }
+}
+
+.cover-image-container {
+  width: 100%;
+  max-height: 420px;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 2.5rem;
+  border: 1px solid rgba(74, 222, 128, 0.15);
+
+  .detail-cover-img {
+    width: 100%;
+    height: 100%;
+    max-height: 420px;
+    object-fit: cover;
   }
 }
 
@@ -56,12 +74,12 @@
   @include solid-card;
   padding: 3rem;
   color: $text-primary;
-  line-height: 1.8;
+  line-height: 1.85;
 
   ::ng-deep {
     h1, h2, h3, h4 {
       color: $text-primary;
-      margin-top: 2rem;
+      margin-top: 2.25rem;
       margin-bottom: 1rem;
       font-weight: 700;
     }
@@ -70,6 +88,7 @@
       font-size: 2.25rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       padding-bottom: 0.75rem;
+      margin-top: 0;
     }
 
     h2 {
