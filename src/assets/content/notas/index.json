@@ -1,0 +1,15 @@
+[
+  {
+    "slug": "configurar-cloudflare-pages-angular-ssr",
+    "title": "Configuración limpia de Angular 18 SSR en Cloudflare Pages",
+    "description": "Paso a paso para configurar prerendering estático (SSG) en Angular 18 para despliegues instantáneos en Cloudflare.",
+    "date": "2026-08-12",
+    "tags": [
+      "Angular",
+      "Cloudflare",
+      "SSG",
+      "DevOps"
+    ],
+    "coverImage": ""
+  }
+]

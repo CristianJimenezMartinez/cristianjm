@@ -1,0 +1,106 @@
+@import 'styles/variables';
+@import 'styles/glassmorphism';
+
+.nota-detail-container {
+  padding-top: 7.5rem;
+  padding-bottom: 5rem;
+  min-height: 80vh;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $sage;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.nota-header {
+  margin-bottom: 2rem;
+
+  .meta-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    color: $text-muted;
+
+    .nota-date {
+      font-family: $font-family-mono;
+    }
+
+    .tags {
+      display: flex;
+      gap: 0.5rem;
+
+      .tag {
+        color: $lime;
+        font-family: $font-family-mono;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+.markdown-body {
+  @include solid-card;
+  padding: 2.5rem;
+  color: $text-primary;
+  line-height: 1.8;
+
+  ::ng-deep {
+    h1, h2, h3, h4 {
+      color: $text-primary;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 0.75rem;
+      color: $sage;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      color: lighten($text-muted, 15%);
+    }
+
+    code {
+      font-family: $font-family-mono;
+      background-color: rgba(255, 255, 255, 0.06);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.88em;
+      color: $lime;
+    }
+
+    pre {
+      background-color: #050806;
+      padding: 1.25rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      border: 1px solid rgba(74, 222, 128, 0.15);
+      margin-bottom: 1.5rem;
+
+      code {
+        background: none;
+        padding: 0;
+        color: #e2e8f0;
+      }
+    }
+  }
+}

@@ -14,4 +14,11 @@ export class MetaService {
     this.meta.updateTag({ property: 'og:title', content: titleText });
     this.meta.updateTag({ property: 'og:description', content: descriptionText });
   }
+
+  updateTags(tags: { title: string; description: string; keywords?: string }) {
+    this.updateSeo(tags.title, tags.description);
+    if (tags.keywords) {
+      this.meta.updateTag({ name: 'keywords', content: tags.keywords });
+    }
+  }
 }

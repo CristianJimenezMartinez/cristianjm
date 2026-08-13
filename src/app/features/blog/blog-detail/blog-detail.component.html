@@ -1,0 +1,30 @@
+<div class="post-detail-container section">
+  <div class="container">
+    <a routerLink="/blog" class="back-link">
+      &larr; Volver al Blog
+    </a>
+
+    <header class="post-header" *ngIf="postMeta()">
+      <div class="meta-row">
+        <span class="post-date">{{ postMeta()?.date | date:'dd MMMM, yyyy' }}</span>
+        <div class="tags">
+          <span *ngFor="let tag of postMeta()?.tags" class="tag">{{ tag }}</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="markdown-body solid-card">
+      <markdown [data]="postContent()"></markdown>
+    </div>
+
+    <footer class="post-footer">
+      <div class="author-card solid-card">
+        <img src="assets/CJ-logo-Sage-Forest-Lime.png" alt="CristianJM Logo" class="author-avatar">
+        <div class="author-info">
+          <h4>Escrito por Cristian Jiménez Martínez (CristianJM)</h4>
+          <p>Full Stack Developer & Software Architect. Especializado en Angular, Node.js e Inteligencia Artificial.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>

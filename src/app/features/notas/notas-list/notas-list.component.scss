@@ -1,0 +1,117 @@
+@import 'styles/variables';
+@import 'styles/glassmorphism';
+
+.notas-container {
+  padding-top: 7.5rem;
+  padding-bottom: 5rem;
+  min-height: 80vh;
+}
+
+.notas-header {
+  margin-bottom: 3.5rem;
+}
+
+.page-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: $text-primary;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+
+  .highlight {
+    @include gradient-text;
+  }
+}
+
+.page-subtitle {
+  color: $text-muted;
+  font-size: 1.15rem;
+  max-width: 650px;
+}
+
+.notas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.nota-card {
+  @include solid-card;
+  padding: 1.75rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    border-color: rgba($sage, 0.3);
+    transform: translateX(4px);
+  }
+}
+
+.nota-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+
+  .nota-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    a {
+      color: $text-primary;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $sage;
+      }
+    }
+  }
+
+  .nota-date {
+    color: $text-muted;
+    font-family: $font-family-mono;
+    font-size: 0.85rem;
+  }
+}
+
+.nota-desc {
+  color: $text-muted;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.nota-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .tags {
+    display: flex;
+    gap: 0.5rem;
+
+    .tag {
+      color: $lime;
+      font-family: $font-family-mono;
+      font-size: 0.8rem;
+    }
+  }
+
+  .read-btn {
+    color: $sage;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.88rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.empty-card {
+  @include solid-card;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: $text-muted;
+}

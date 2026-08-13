@@ -1,0 +1,15 @@
+[
+  {
+    "slug": "como-escalar-agentes-ia-en-produccion",
+    "title": "Cómo escalar Agentes de Inteligencia Artificial en producción sin arruinarte",
+    "description": "Guía de arquitectura sobre cómo desplegar bots y agentes LLM conversacionales manteniendo latencias bajas y costes optimizados.",
+    "date": "2026-08-13",
+    "tags": [
+      "IA",
+      "Agentes",
+      "Arquitectura",
+      "Cloudflare"
+    ],
+    "coverImage": "assets/images/og-cover.png"
+  }
+]

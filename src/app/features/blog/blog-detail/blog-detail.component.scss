@@ -1,0 +1,162 @@
+@import 'styles/variables';
+@import 'styles/glassmorphism';
+
+.post-detail-container {
+  padding-top: 7.5rem;
+  padding-bottom: 5rem;
+  min-height: 80vh;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $sage;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.post-header {
+  margin-bottom: 2rem;
+
+  .meta-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    color: $text-muted;
+
+    .post-date {
+      font-family: $font-family-mono;
+    }
+
+    .tags {
+      display: flex;
+      gap: 0.5rem;
+
+      .tag {
+        background-color: rgba($sage, 0.1);
+        color: $sage;
+        padding: 0.2rem 0.6rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.markdown-body {
+  @include solid-card;
+  padding: 3rem;
+  color: $text-primary;
+  line-height: 1.8;
+
+  ::ng-deep {
+    h1, h2, h3, h4 {
+      color: $text-primary;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 0.75rem;
+    }
+
+    h2 {
+      font-size: 1.65rem;
+      color: $sage;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      color: lighten($text-muted, 15%);
+    }
+
+    ul, ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    code {
+      font-family: $font-family-mono;
+      background-color: rgba(255, 255, 255, 0.06);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.88em;
+      color: $lime;
+    }
+
+    pre {
+      background-color: #050806;
+      padding: 1.25rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      border: 1px solid rgba(74, 222, 128, 0.15);
+      margin-bottom: 1.5rem;
+
+      code {
+        background: none;
+        padding: 0;
+        color: #e2e8f0;
+      }
+    }
+
+    blockquote {
+      border-left: 4px solid $sage;
+      padding-left: 1.25rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: $text-muted;
+    }
+  }
+}
+
+.post-footer {
+  margin-top: 3rem;
+
+  .author-card {
+    @include solid-card;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.75rem;
+
+    .author-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      object-fit: contain;
+    }
+
+    .author-info {
+      h4 {
+        color: $text-primary;
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+      }
+
+      p {
+        color: $text-muted;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

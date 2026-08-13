@@ -1,0 +1,126 @@
+@import 'styles/variables';
+@import 'styles/glassmorphism';
+
+.blog-container {
+  padding-top: 7.5rem;
+  padding-bottom: 5rem;
+  min-height: 80vh;
+}
+
+.blog-header {
+  margin-bottom: 3.5rem;
+  text-align: left;
+}
+
+.page-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: $text-primary;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+
+  .highlight {
+    @include gradient-text;
+  }
+}
+
+.page-subtitle {
+  color: $text-muted;
+  font-size: 1.15rem;
+  max-width: 650px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.blog-card {
+  @include solid-card;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba($sage, 0.3);
+  }
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  font-size: 0.85rem;
+
+  .post-date {
+    color: $text-muted;
+    font-family: $font-family-mono;
+  }
+
+  .tags {
+    display: flex;
+    gap: 0.5rem;
+
+    .tag {
+      background-color: rgba($sage, 0.1);
+      color: $sage;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.post-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+
+  a {
+    color: $text-primary;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $sage;
+    }
+  }
+}
+
+.post-desc {
+  color: $text-muted;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $sage;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+
+  .arrow {
+    transition: transform 0.2s ease;
+  }
+
+  &:hover .arrow {
+    transform: translateX(4px);
+  }
+}
+
+.empty-card {
+  @include solid-card;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: $text-muted;
+}

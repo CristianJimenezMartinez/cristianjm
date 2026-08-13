@@ -1,0 +1,42 @@
+<div class="notas-container section">
+  <div class="container">
+    <header class="notas-header">
+      <div class="badge-pill">
+        <span class="pulse-dot"></span>
+        <span>Wiki & Snippets</span>
+      </div>
+      <h1 class="page-title">Notas <span class="highlight">Técnicas</span></h1>
+      <p class="page-subtitle">
+        Chuletas de código, configuraciones de servidor y soluciones rápidas a problemas reales de ingeniería.
+      </p>
+    </header>
+
+    <div class="notas-list" *ngIf="contentService.techNotes().length > 0; else emptyState">
+      <div *ngFor="let nota of contentService.techNotes()" class="nota-card solid-card">
+        <div class="nota-header">
+          <h2 class="nota-title">
+            <a [routerLink]="['/notas-tecnicas', nota.slug]">{{ nota.title }}</a>
+          </h2>
+          <span class="nota-date">{{ nota.date | date:'dd/MM/yyyy' }}</span>
+        </div>
+
+        <p class="nota-desc">{{ nota.description }}</p>
+
+        <div class="nota-footer">
+          <div class="tags">
+            <span *ngFor="let tag of nota.tags" class="tag">#{{ tag }}</span>
+          </div>
+          <a [routerLink]="['/notas-tecnicas', nota.slug]" class="read-btn">
+            Ver Nota &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #emptyState>
+      <div class="empty-card solid-card">
+        <p>No hay notas técnicas publicadas todavía.</p>
+      </div>
+    </ng-template>
+  </div>
+</div>

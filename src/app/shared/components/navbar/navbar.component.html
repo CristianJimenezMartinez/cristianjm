@@ -1,6 +1,6 @@
 <nav class="navbar">
   <div class="container navbar-container">
-    <a href="#inicio" class="logo" (click)="closeMenu()">
+    <a routerLink="/" class="logo" (click)="closeMenu()">
       <img src="assets/CJ-logo-Sage-Forest-Lime.png" alt="CristianJM Logo" class="logo-img">
       <span class="logo-text">Cristian<span class="highlight">JM</span></span>
     </a>
@@ -12,12 +12,13 @@
     </button>
 
     <ul class="nav-menu" [class.active]="isMenuOpen()">
-      <li class="nav-item"><a href="#servicios" (click)="closeMenu()">Servicios</a></li>
-      <li class="nav-item"><a href="#proyectos" (click)="closeMenu()">Casos</a></li>
-      <li class="nav-item"><a href="#sobre-mi" (click)="closeMenu()">Sobre mí</a></li>
-      <li class="nav-item"><a href="#faq" (click)="closeMenu()">FAQ</a></li>
+      <li class="nav-item"><a routerLink="/" fragment="servicios" (click)="closeMenu()">Servicios</a></li>
+      <li class="nav-item"><a routerLink="/" fragment="proyectos" (click)="closeMenu()">Casos</a></li>
+      <li class="nav-item"><a routerLink="/" fragment="sobre-mi" (click)="closeMenu()">Sobre mí</a></li>
+      <li class="nav-item"><a routerLink="/blog" routerLinkActive="active" (click)="closeMenu()">Blog</a></li>
+      <li class="nav-item"><a routerLink="/notas-tecnicas" routerLinkActive="active" (click)="closeMenu()">Notas</a></li>
       <li class="nav-item cta-item">
-        <a href="#contacto" class="nav-btn" (click)="closeMenu()">
+        <a routerLink="/" fragment="contacto" class="nav-btn" (click)="closeMenu()">
           Hablemos <span class="nav-arrow">&rarr;</span>
         </a>
       </li>
