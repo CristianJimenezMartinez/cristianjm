@@ -93,6 +93,30 @@
       box-shadow: 0 0 8px $sage;
       flex-shrink: 0;
     }
+
+    &.hero-bridge-badge {
+      background: rgba(99, 102, 241, 0.12);
+      border-color: rgba(129, 140, 248, 0.35);
+      color: #e0e7ff;
+      text-decoration: none;
+      transition: all 0.2s ease;
+
+      strong {
+        color: #ffffff;
+      }
+
+      .pulse-emerald {
+        background: #34d399;
+        box-shadow: 0 0 10px #34d399;
+      }
+
+      &:hover {
+        background: rgba(99, 102, 241, 0.22);
+        border-color: rgba(129, 140, 248, 0.6);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 16px rgba(99, 102, 241, 0.25);
+      }
+    }
   }
 
   // H1 title

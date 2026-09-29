@@ -14,6 +14,11 @@
     <ul class="nav-menu" [class.active]="isMenuOpen()">
       <li class="nav-item"><a routerLink="/" fragment="servicios" (click)="closeMenu()">Servicios</a></li>
       <li class="nav-item"><a routerLink="/" fragment="proyectos" (click)="closeMenu()">Casos</a></li>
+      <li class="nav-item">
+        <a href="https://bridge.cristianjm.com" target="_blank" rel="noopener" class="nav-bridge-link" (click)="closeMenu()">
+          Bentian Bridge ↗
+        </a>
+      </li>
       <li class="nav-item"><a routerLink="/" fragment="sobre-mi" (click)="closeMenu()">Sobre mí</a></li>
       <li class="nav-item"><a routerLink="/blog" routerLinkActive="active" (click)="closeMenu()">Blog</a></li>
       <li class="nav-item"><a routerLink="/notas-tecnicas" routerLinkActive="active" (click)="closeMenu()">Notas</a></li>
