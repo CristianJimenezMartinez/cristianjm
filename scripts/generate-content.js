@@ -1,6 +1,27 @@
 const fs = require('fs');
 const path = require('path');
-const fm = require('front-matter');
+
+function parseFrontMatter(content) {
+  const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  if (!match) return { attributes: {} };
+  const lines = match[1].split(/\r?\n/);
+  const attributes = {};
+  for (const line of lines) {
+    const colon = line.indexOf(':');
+    if (colon > -1) {
+      const key = line.slice(0, colon).trim();
+      let val = line.slice(colon + 1).trim();
+      if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) {
+        val = val.slice(1, -1);
+      }
+      if (val.startsWith('[') && val.endsWith(']')) {
+        val = val.slice(1, -1).split(',').map(s => s.trim().replace(/^['"]|['"]$/g, ''));
+      }
+      attributes[key] = val;
+    }
+  }
+  return { attributes };
+}
 
 const CONTENT_DIR = path.join(__dirname, '../src/assets/content');
 const ROUTES_FILE = path.join(__dirname, '../prerender-routes.txt');
@@ -20,8 +41,8 @@ function generateIndexForFolder(folderName) {
     const filePath = path.join(folderPath, file);
     const fileContent = fs.readFileSync(filePath, 'utf8');
     
-    // Parse frontmatter
-    const parsed = fm(fileContent);
+    // Parse frontmatter natively without external deps
+    const parsed = parseFrontMatter(fileContent);
     const slug = file.replace('.md', '');
     
     indexData.push({
