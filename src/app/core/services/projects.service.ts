@@ -16,7 +16,7 @@ export class ProjectsService {
       title: 'Bentian ERP Bridge',
       problem: 'Sincronización autónoma en tiempo real entre Factusol ERP y tiendas online.',
       description: 'Conector de escritorio Windows x64 con arquitectura Local-First, motor OLEDB de baja latencia y sincronización bidireccional de catálogo, stock, tarifas, pedidos y facturas sin exponer bases de datos a internet.',
-      fullDescription: 'Infraestructura empresarial puente de alta resiliencia diseñada para Factusol, WooCommerce y PrestaShop. Incluye agente de escritorio en segundo plano, portal SaaS multi-tenant con Stripe, deadman switch de monitorización y tolerancia offline de 30 días.',
+      fullDescription: 'Infraestructura empresarial puente de alta resiliencia diseñada para Factusol, WooCommerce y PrestaShop. Incluye servicio de escritorio en segundo plano, portal SaaS multi-tenant con Stripe, deadman switch de monitorización y tolerancia offline de 30 días.',
       stack: ['TypeScript', 'Node.js SEA', 'OLEDB / Access', 'PostgreSQL', 'Stripe', 'Docker'],
       metrics: '<100ms latencia · Tolerancia Offline 30 días',
       liveUrl: 'https://bridge.cristianjm.com',
