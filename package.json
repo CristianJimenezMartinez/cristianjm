@@ -1,7 +1,7 @@
 {
   "name": "cristian-jimenez",
   "version": "1.0.0",
-  "author": "Cristian Jiménez Martínez (CristianJM) <hola@cristianjm.com> (https://cristianjm.com)",
+  "author": "Cristian Jiménez Martínez (CristianJM) <contacto@cristianjm.com> (https://cristianjm.com)",
   "homepage": "https://cristianjm.com",
   "repository": {
     "type": "git",
@@ -11,7 +11,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "node scripts/generate-content.js && ng build",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:cristian-jimenez": "node dist/cristian-jimenez/server/server.mjs"

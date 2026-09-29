@@ -21,7 +21,7 @@ export class ContactComponent {
   contactForm = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(2)]],
     email: ['', [Validators.required, Validators.email]],
-    service: ['ia-agents', [Validators.required]],
+    service: ['factusol-bridge', [Validators.required]],
     message: ['', [Validators.required, Validators.minLength(10)]]
   });
 
@@ -49,14 +49,14 @@ export class ContactComponent {
         this.isSubmitting.set(false);
         if (res.success) {
           this.submitSuccess.set(true);
-          this.contactForm.reset({ service: 'ia-agents' });
+          this.contactForm.reset({ service: 'factusol-bridge' });
         } else {
           this.submitError.set('Ocurrió un error al enviar el mensaje. Inténtalo de nuevo.');
         }
       },
       error: () => {
         this.isSubmitting.set(false);
-        this.submitError.set('No se pudo conectar con el servidor de envíos. Por favor escríbeme directamente a hola@cristianjm.com');
+        this.submitError.set('No se pudo conectar con el servidor de envíos. Por favor escríbeme directamente a contacto@cristianjm.com');
       }
     });
   }

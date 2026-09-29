@@ -14,7 +14,7 @@ export class AboutComponent {
     { name: 'TypeScript', category: 'Frontend/Backend' },
     { name: 'Node.js & Express', category: 'Backend' },
     { name: 'PostgreSQL & SQL', category: 'Database' },
-    { name: 'OpenAI API & RAG', category: 'AI' },
+    { name: 'Factusol OLEDB & Access', category: 'ERP Engine' },
     { name: 'Stripe Payments', category: 'Integrations' },
     { name: 'Docker & Cloud', category: 'DevOps' },
     { name: 'Cloudflare Pages/Workers', category: 'Infrastructure' },

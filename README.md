@@ -1,7 +1,7 @@
 # 🌿 CristianJM (CJ) — Web Comercial & Portfolio V2
 
 > **Plataforma web comercial y marca personal de Cristian Jiménez Martínez (CristianJM)**  
-> Full Stack Developer & Software Architect especializado en Angular 18+, Node.js, Agentes IA y arquitecturas SaaS.
+> Especialista en Integración Factusol ERP & Software Architect (Angular 18+, Node.js, Creador de Bentian ERP Bridge).
 
 ![Angular](https://img.shields.io/badge/Angular-18+-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
@@ -14,19 +14,19 @@
 
 La aplicación está diseñada como un **funnel de ventas B2B** de alta conversión que responde a las 3 preguntas clave de cualquier cliente empresarial:
 
-1. **¿Qué puedes hacer por mi negocio?** (Hero + Servicios)
-2. **¿Prueba de que sabes resolverlo?** (Casos de Éxito)
+1. **¿Qué puedes hacer por mi negocio?** (Hero + Integración Factusol)
+2. **¿Prueba de que sabes resolverlo?** (Bentian ERP Bridge y Casos de Éxito)
 3. **¿Quién hay detrás y cómo te contacto?** (Sobre Mí + FAQ + Formulario)
 
 ```
-[01. NAVBAR]     ──> Marca CJ, navegación limpia y CTA "Hablemos →"
-[02. HERO]       ──> Promesa clara: "Automatizo procesos. Construyo software. Creo agentes IA."
-[03. SERVICIOS]  ──> Catálogo comercial: Agentes IA, Software & SaaS, Consultoría (Precios "Desde")
-[04. CASOS]      ──> Casos de éxito numerados (01, 02, 03) centrados en resultados reales
-[05. SOBRE MÍ]   ──> Bio del ingeniero, stack técnico dominado y tarjeta de disponibilidad
-[06. FAQ]        ──> Eliminación de objeciones (costes, entregas, mantenimiento)
-[07. CONTACTO]   ──> Formulario reactivo serverless conectado a Web3Forms (hola@cristianjm.com)
-[08. FOOTER]     ──> 4 columnas con enlaces, copyright e indicador de disponibilidad
+[01. NAVBAR]     ──> Marca CJ, Bentian Bridge destacado y CTA "Hablemos →"
+[02. HERO]       ──> Promesa clara: "Integración Factusol ERP. Arquitectura de software. Sistemas en producción."
+[03. SERVICIOS]  ──> Catálogo comercial: Integración Factusol & Web, Software a Medida, Consultoría ERP
+[04. CASOS]      ──> Casos de éxito: Bentian ERP Bridge (#01), Suministros Rubio B2B (#02), VeltiaTrust (#03)
+[05. SOBRE MÍ]   ──> Bio del ingeniero, stack técnico dominado y disponibilidad
+[06. FAQ]        ──> Eliminación de objeciones (seguridad sin abrir puertos, concurrencia Factusol, tolerancia offline)
+[07. CONTACTO]   ──> Formulario reactivo serverless conectado a Web3Forms (contacto@cristianjm.com)
+[08. FOOTER]     ──> 4 columnas con enlaces directos al producto, legal y contacto
 ```
 
 ---
@@ -53,25 +53,25 @@ Basado en una estética ejecutiva oscura (*Obsidian Dark Mode*) con una paleta r
 
 ## 💼 3. Catálogo de Servicios & Modelo de Negocio
 
-1. **🤖 Agentes IA & Automatización**
-   - *Promesa*: "Automatiza lo que hoy consume horas."
-   - *Inversión*: Desde **1.500€** (Desarrollo) | Operación & Mantenimiento desde **80€/mes**.
+1. **🔌 Integración Factusol ERP & Tiendas Web**
+   - *Promesa*: "Conecta tu Factusol con WooCommerce o PrestaShop en tiempo real."
+   - *Inversión*: Desde **199€/año** (Licenciamiento SaaS Bentian Bridge) | Soporte técnico continuo.
 
-2. **⚡ Software & SaaS Custom**
-   - *Promesa*: "Convierte una idea o proceso en producto."
-   - *Inversión*: Desde **2.500€** (Desarrollo) | Mantenimiento & Hosting desde **150€/mes**.
+2. **⚡ Software, APIs & Middleware a Medida**
+   - *Promesa*: "Automatiza procesos empresariales y conecta sistemas aislados."
+   - *Inversión*: Desde **1.800€** (Desarrollo) | Mantenimiento & Hosting desde **120€/mes**.
 
-3. **🧠 Consultoría Técnica & Arquitectura**
-   - *Promesa*: "Cuando el problema necesita arquitectura, no más código."
-   - *Inversión*: **150€/h** | Retainer técnico desde **400€/mes**.
+3. **🧠 Consultoría Técnica & Auditoría ERP**
+   - *Promesa*: "Optimización, rendimiento y resolución de bloqueos en Factusol."
+   - *Inversión*: **150€/h** | Retainer técnico desde **350€/mes**.
 
 ---
 
 ## 🏆 4. Casos de Éxito (Proyectos)
 
 - **`01 / ERP Middleware & SaaS` · Bentian ERP Bridge**: Infraestructura empresarial de sincronización bidireccional en tiempo real entre Factusol ERP y tiendas online (WooCommerce, PrestaShop) con arquitectura Local-First (`<100ms latencia · Tolerancia Offline 30 días`) — [bridge.cristianjm.com](https://bridge.cristianjm.com).
-- **`02 / AI & SaaS` · ReviLike.com**: Gestión automatizada de reseñas con IA conversacional (`+85% ahorro en tiempo de respuesta`) — [revilike.com](https://revilike.com).
-- **`03 / LegalTech` · VeltiaTrust**: Infraestructura API para notarización y firma electrónica Zero-Storage (`100% Cumplimiento eIDAS`) — [veltiatrust.com](https://veltiatrust.com).
+- **`02 / B2B & Distribución` · Suministros Rubio**: Sincronización desatendida entre Factusol local y tienda web B2B (+5.000 SKUs, stock disponible y cero picado manual) — [bridge.cristianjm.com](https://bridge.cristianjm.com).
+- **`03 / LegalTech & Seguridad` · VeltiaTrust**: Infraestructura API para notarización y firma electrónica Zero-Storage (`100% Cumplimiento eIDAS`) — [veltiatrust.com](https://veltiatrust.com).
 
 ---
 
@@ -179,6 +179,6 @@ git push -u origin main
 Full Stack Developer & Software Architect  
 
 - 🌐 Website: [cristianjm.com](https://cristianjm.com)  
-- ✉️ Email: [hola@cristianjm.com](mailto:hola@cristianjm.com)  
+- ✉️ Email: [contacto@cristianjm.com](mailto:contacto@cristianjm.com)  
 - 💼 LinkedIn: [linkedin.com/in/cristian-jimenez-martinez/](https://linkedin.com/in/cristian-jimenez-martinez/)  
 - 🐙 GitHub: [github.com/CristianJimenezMartinez](https://github.com/CristianJimenezMartinez)  

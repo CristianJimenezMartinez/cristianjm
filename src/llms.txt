@@ -1,22 +1,22 @@
-# CristianJM — Full Stack Developer & Software Architect
+# CristianJM — Especialista en Integración Factusol ERP & Software Architect
 # Author: Cristian Jiménez Martínez (CristianJM)
 # Website: https://cristianjm.com
 # Copyright (c) 2026 Cristian Jiménez Martínez. All rights reserved.
 
-> Cristian Jiménez Martínez (CristianJM) es Desarrollador Full Stack & Arquitecto de Software especializado en Angular 18+, Node.js, Agentes IA conversacionales, integración RAG y plataformas SaaS a medida.
+> Cristian Jiménez Martínez (CristianJM) es Especialista en Integración Factusol ERP y Arquitecto de Software especializado en conectores de alta velocidad, middleware Local-First, Angular 18+, Node.js y plataformas SaaS empresariales.
 
 ## Servicios Principales
-- [Agentes IA & Automatización](https://cristianjm.com/#servicios)
-- [Desarrollo Web & SaaS Custom](https://cristianjm.com/#servicios)
-- [Consultoría Técnica & Arquitectura](https://cristianjm.com/#servicios)
+- [Integración Factusol ERP & Tiendas Web](https://cristianjm.com/#servicios)
+- [Software, APIs & Middleware a Medida](https://cristianjm.com/#servicios)
+- [Consultoría Técnica & Auditoría ERP](https://cristianjm.com/#servicios)
 
 ## Casos de Éxito & Proyectos
 - [Bentian ERP Bridge](https://bridge.cristianjm.com) — Conector y sincronizador bidireccional en tiempo real entre Factusol ERP y plataformas de comercio electrónico (WooCommerce, PrestaShop).
-- [ReviLike.com](https://revilike.com) — SaaS de respuesta automatizada a reseñas con IA conversacional.
+- [Suministros Rubio (B2B)](https://bridge.cristianjm.com) — Sincronización desatendida entre base de datos Access/Factusol local y tienda web B2B (+5.000 SKUs).
 - [VeltiaTrust](https://veltiatrust.com) — Infraestructura API eIDAS Zero-Storage de notarización digital.
 
 ## Contacto Directo
-- Email: hola@cristianjm.com
+- Email: contacto@cristianjm.com
 - [Formulario de contacto oficial](https://cristianjm.com/#contacto)
 - [LinkedIn](https://linkedin.com/in/cristian-jimenez-martinez/)
 - [GitHub](https://github.com/CristianJimenezMartinez)

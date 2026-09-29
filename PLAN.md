@@ -162,7 +162,7 @@ Al enviar, hace `HTTP POST` a `https://api.web3forms.com/submit` con:
 
 Resultado: el mensaje llega directamente al correo configurado. **Gratis hasta 250 emails/mes.**
 
-> 💡 **Tip**: Usar Cloudflare Email Routing para crear `hola@cristianjm.com` → redirigido a Gmail. Gratis. Así Web3Forms envía a `hola@cristianjm.com` en lugar de un email personal.
+> 💡 **Tip**: Usar Cloudflare Email Routing para crear `contacto@cristianjm.com` → redirigido a Gmail. Gratis. Así Web3Forms envía a `contacto@cristianjm.com` en lugar de un email personal.
 
 ---
 
@@ -230,7 +230,7 @@ Archivo en `src/llms.txt` que actúa como guía para que ChatGPT, Claude, Gemini
 - **Cache**: Assets de Angular (`*.js`, `*.css`, `/assets/*`) con `Cache-Control: max-age=31536000`
 - **SSL**: Incluido y automático. Forzar HTTPS redirect.
 - **Web Analytics**: Activar desde panel de Pages (1 clic, sin cookies, cumple GDPR)
-- **Email Routing**: `hola@cristianjm.com` → Gmail. Gratis.
+- **Email Routing**: `contacto@cristianjm.com` → Gmail. Gratis.
 
 ---
 
@@ -256,7 +256,7 @@ Archivo en `src/llms.txt` que actúa como guía para que ChatGPT, Claude, Gemini
 ### ☐ Fase 0 — Preparación (Manual por Cristian)
 - [ ] Crear repositorio GitHub `cristianjm-web`
 - [ ] Conectar repo con Cloudflare Pages
-- [ ] Configurar Cloudflare Email Routing: `hola@cristianjm.com` → Gmail
+- [ ] Configurar Cloudflare Email Routing: `contacto@cristianjm.com` → Gmail
 - [ ] Registrarse en [web3forms.com](https://web3forms.com) → obtener `access_key`
 - [ ] Crear/verificar Google Business Profile en [business.google.com](https://business.google.com)
 
@@ -282,7 +282,7 @@ ng new . --style=scss --routing=true --standalone=true --ssr=false
 
 ### ☐ Fase 4 — Shared Components
 - [ ] `NavbarComponent`: sticky, glassmorphism, scroll-spy para active link, menú hamburguesa responsive
-- [ ] `FooterComponent`: links GitHub / LinkedIn / `hola@cristianjm.com`
+- [ ] `FooterComponent`: links GitHub / LinkedIn / `contacto@cristianjm.com`
 - [ ] `ProjectCardComponent`: `@Input() project: Project`, hover 3D effect, link a demo
 
 ### ☐ Fase 5 — Features (en orden de la página)

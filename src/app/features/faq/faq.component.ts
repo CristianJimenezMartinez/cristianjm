@@ -17,23 +17,23 @@ interface FaqItem {
 export class FaqComponent {
   faqs = signal<FaqItem[]>([
     {
-      question: '¿Cómo funciona la cuota mensual en los Agentes IA?',
-      answer: 'La cuota mensual cubre el consumo real de las APIs de IA (como OpenAI/Claude), la infraestructura cloud en producción y el mantenimiento/ajuste continuo del agente. Tú no necesitas gestionar claves de API ni servidores por separado.',
+      question: '¿Es necesario abrir puertos en el router o exponer mi base de datos de Factusol?',
+      answer: 'No, en absoluto. Toda la arquitectura funciona mediante conexiones salientes seguras HTTPS con modelo Local-First. Tu base de datos Factusol (Access .accdb) jamás se expone a internet, eliminando cualquier vector de intrusión externa.',
       isOpen: true
     },
     {
-      question: '¿Cuáles son los plazos de entrega habituales?',
-      answer: 'Para un desarrollo web o agente de IA inicial, el tiempo típico de entrega es de 2 a 4 semanas. En proyectos SaaS más complejos o arquitecturas custom, acordamos fases de entrega iterativas.',
+      question: '¿Puedo seguir usando Factusol en la oficina mientras se sincroniza con la web?',
+      answer: 'Sí, 100% compatible. El motor de sincronización accede mediante OLEDB en modo concurrente optimizado, sin bloquear tablas ni ralentizar el trabajo diario de facturación, almacén o contabilidad en tu red local.',
       isOpen: false
     },
     {
-      question: '¿Qué garantía y soporte ofreces tras el lanzamiento?',
-      answer: 'Todos los proyectos incluyen un periodo de garantía de 30 días post-lanzamiento para corrección de cualquier incidencia. Además, ofrezco planes de mantenimiento continuo y bolsas de horas.',
+      question: '¿Qué ocurre si se corta la conexión a internet o la luz en la oficina?',
+      answer: 'El sistema incorpora tolerancia offline de hasta 30 días con arquitectura Store-and-Forward. Si se interrumpe la red, los pedidos se encolan de forma segura y se inyectan automáticamente en Factusol en cuanto vuelve la conexión, sin pérdida ni duplicados.',
       isOpen: false
     },
     {
-      question: '¿Se puede integrar un Agente IA con mi CRM o base de datos actual?',
-      answer: 'Absolutamente. Todos los agentes se pueden conectar vía API REST o Webhooks con tu CRM, base de datos PostgreSQL/MySQL o plataformas de mensajería como WhatsApp y Telegram.',
+      question: '¿Qué plataformas eCommerce son compatibles con la sincronización?',
+      answer: 'Disponemos de conector nativo para WooCommerce y PrestaShop, además de soporte para tiendas personalizadas mediante Universal Bridge API. Sincroniza catálogo, stock disponible (DISSTO), tarifas y albaranes/pedidos en tiempo real.',
       isOpen: false
     }
   ]);
