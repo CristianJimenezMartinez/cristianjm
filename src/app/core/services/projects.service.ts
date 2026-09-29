@@ -45,6 +45,7 @@ export class ProjectsService {
       fullDescription: 'Infraestructura de alta seguridad orientada al sector Telco y legal para procesos de verificación de identidad, notarización y firma según normativa eIDAS.',
       stack: ['Node.js', 'PostgreSQL', 'API-First', 'eIDAS', 'Zero-Storage'],
       metrics: '100% Cumplimiento eIDAS',
+      liveUrl: 'https://veltiatrust.com',
       badgeText: 'Infraestructura LegalTech'
     }
   ]);

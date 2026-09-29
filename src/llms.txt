@@ -11,9 +11,9 @@
 - [Consultoría Técnica & Arquitectura](https://cristianjm.com/#servicios)
 
 ## Casos de Éxito & Proyectos
-- [ReviLike.com](https://revilike.com) — SaaS de respuesta automatizada a reseñas con IA.
-- [VeltiaTrust](https://cristianjm.com/#proyectos) — API eIDAS Zero-Storage de notarización legal.
-- [Factusol API REST](https://cristianjm.com/#proyectos) — Conector ERP x64 en tiempo real.
+- [Bentian ERP Bridge](https://bridge.cristianjm.com) — Conector y sincronizador bidireccional en tiempo real entre Factusol ERP y plataformas de comercio electrónico (WooCommerce, PrestaShop).
+- [ReviLike.com](https://revilike.com) — SaaS de respuesta automatizada a reseñas con IA conversacional.
+- [VeltiaTrust](https://veltiatrust.com) — Infraestructura API eIDAS Zero-Storage de notarización digital.
 
 ## Contacto Directo
 - Email: hola@cristianjm.com

@@ -69,9 +69,9 @@ Basado en una estética ejecutiva oscura (*Obsidian Dark Mode*) con una paleta r
 
 ## 🏆 4. Casos de Éxito (Proyectos)
 
-- **`01 / AI & SaaS` · ReviLike.com**: Gestión automatizada de reseñas con IA conversacional (`+85% ahorro en tiempo de respuesta`).
-- **`02 / LegalTech` · VeltiaTrust**: Infraestructura API para notarización y firma electrónica (`100% Cumplimiento eIDAS`).
-- **`03 / ERP & Integrations` · Conector Factusol API REST**: Infraestructura REST x64 en tiempo real con WebSockets y Stripe (`<100ms latencia`).
+- **`01 / ERP Middleware & SaaS` · Bentian ERP Bridge**: Infraestructura empresarial de sincronización bidireccional en tiempo real entre Factusol ERP y tiendas online (WooCommerce, PrestaShop) con arquitectura Local-First (`<100ms latencia · Tolerancia Offline 30 días`) — [bridge.cristianjm.com](https://bridge.cristianjm.com).
+- **`02 / AI & SaaS` · ReviLike.com**: Gestión automatizada de reseñas con IA conversacional (`+85% ahorro en tiempo de respuesta`) — [revilike.com](https://revilike.com).
+- **`03 / LegalTech` · VeltiaTrust**: Infraestructura API para notarización y firma electrónica Zero-Storage (`100% Cumplimiento eIDAS`) — [veltiatrust.com](https://veltiatrust.com).
 
 ---
 
