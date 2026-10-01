@@ -1,17 +1,23 @@
 <section id="inicio" class="hero-section">
-  <!-- Dual ambient glow -->
-  <div class="hero-glow-top"></div>
-  <div class="hero-glow-bottom"></div>
+  <!-- Subtle ambient aura behind grid -->
+  <div class="hero-glow-indigo"></div>
+  <div class="hero-glow-emerald"></div>
 
   <div class="container hero-container">
     <div class="hero-grid">
 
-      <!-- Left Column: Copy, Badge, CTAs & Trust -->
+      <!-- Left Column: Copy, Identity, Badges & CTAs -->
       <div class="hero-left">
-        <a href="https://bridge.cristianjm.com" target="_blank" rel="noopener" class="hero-badge hero-bridge-badge">
-          <span class="badge-dot pulse-emerald"></span>
-          <span>Nuevo lanzamiento: <strong>Bentian ERP Bridge</strong> &rarr;</span>
-        </a>
+        <div class="hero-badge-group">
+          <a href="https://bridge.cristianjm.com" target="_blank" rel="noopener" class="hero-badge hero-bridge-badge">
+            <span class="badge-dot pulse-emerald"></span>
+            <span>Flagship: <strong>Bentian ERP Bridge</strong> &rarr;</span>
+          </a>
+          <span class="hero-status-pill">
+            <span class="status-live-dot"></span>
+            <span>Disponible para Arquitectura &amp; Proyectos</span>
+          </span>
+        </div>
 
         <h1 class="hero-title">
           Arquitectura de software.<br>
@@ -20,64 +26,130 @@
         </h1>
 
         <p class="hero-subtitle">
-          Desarrollador de software y arquitecto de sistemas. Creador de <strong>Bentian ERP Bridge</strong> — middleware de alta resiliencia entre Factusol ERP y comercio electrónico (WooCommerce, PrestaShop). Construyo software empresarial robusto, arquitecturas Local-First y automatizaciones desatendidas.
+          Soy <strong>Cristian Jiménez Martínez (CristianJM)</strong>, Full Stack Developer &amp; Software Architect. Creador de <strong>Bentian ERP Bridge</strong>. Construyo middleware de baja latencia, arquitecturas <em>Local-First</em> y conectores de alta fiabilidad entre ERPs de escritorio y plataformas de comercio electrónico en tiempo real.
         </p>
 
         <div class="hero-actions">
           <a href="https://bridge.cristianjm.com" target="_blank" rel="noopener" class="btn btn-primary">
-            Bentian ERP Bridge <span class="arrow">&rarr;</span>
+            <span>Ver Bentian ERP Bridge</span>
+            <span class="arrow">&rarr;</span>
           </a>
           <a href="#proyectos" class="btn btn-secondary">
-            Ver proyectos y casos
+            <span>Explorar proyectos y casos</span>
+            <span class="arrow">&darr;</span>
           </a>
         </div>
 
-        <p class="hero-trust">Full Stack Developer &nbsp;·&nbsp; Software Architect &nbsp;·&nbsp; Creador de Bentian ERP Bridge</p>
+        <div class="hero-spec-strip">
+          <div class="spec-item">
+            <span class="spec-dot"></span>
+            <span>Arquitectura Local-First</span>
+          </div>
+          <span class="spec-divider">/</span>
+          <div class="spec-item">
+            <span class="spec-dot"></span>
+            <span>Factusol OLEDB Concurrente</span>
+          </div>
+          <span class="spec-divider">/</span>
+          <div class="spec-item">
+            <span class="spec-dot"></span>
+            <span>España &amp; Remoto</span>
+          </div>
+        </div>
       </div>
 
-      <!-- Right Column: Terminal Console + Metrics Bar -->
+      <!-- Right Column: Live Architectural Pipeline Visualizer -->
       <div class="hero-right">
-        <div class="terminal-widget">
-          <div class="terminal-header">
-            <div class="terminal-controls">
+        <div class="blueprint-card">
+          <!-- Window Header -->
+          <div class="blueprint-header">
+            <div class="window-controls">
               <span class="dot red"></span>
               <span class="dot yellow"></span>
               <span class="dot green"></span>
             </div>
-            <div class="terminal-title">cristian&#64;bentian-node &nbsp;~&nbsp; bash</div>
+            <div class="blueprint-title">
+              <span class="icon-pulse"></span>
+              <span>Bentian Engine — Realtime Topology</span>
+            </div>
+            <div class="blueprint-tag">LOCAL-FIRST LIVE</div>
           </div>
-          <div class="terminal-body">
-            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">bentian-bridge --status</span></div>
-            <div class="t-line empty"></div>
-            <div class="t-line"><span class="t-arrow">&gt;</span> <span class="t-muted">Connecting Factusol ERP (Local-First OLEDB)...</span></div>
-            <div class="t-line"><span class="t-arrow">&gt;</span> <span class="t-muted">Syncing catalog, stock &amp; orders with eCommerce...</span></div>
-            <div class="t-line"><span class="t-arrow">&gt;</span> <span class="t-muted">Validating fiscal rules &amp; Veri*Factu compliance...</span></div>
-            <div class="t-line empty"></div>
-            <div class="t-line"><span class="t-check">✓</span> <span class="t-success">Factusol &amp; WooCommerce Synced</span></div>
-            <div class="t-line"><span class="t-check">✓</span> <span class="t-success">Store-and-Forward Engine Online</span></div>
-            <div class="t-line"><span class="t-check">✓</span> <span class="t-success">Fleet Monitor &amp; Deadman Switch OK</span></div>
-            <div class="t-line empty"></div>
-            <div class="t-line status-line">
-              <span class="t-label">BRIDGE LIVE</span>
-              <span class="t-status">OPERATIONAL</span>
+
+          <!-- Topology Diagram -->
+          <div class="blueprint-body">
+            <!-- Node 1: Factusol Local -->
+            <div class="topo-node node-erp">
+              <div class="node-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+              </div>
+              <div class="node-content">
+                <div class="node-label">FACTUSOL ERP LOCAL</div>
+                <div class="node-sub">Access .accdb · Red LAN / NAS</div>
+              </div>
+              <div class="node-status-tag">OLEDB CONCURRENTE</div>
+            </div>
+
+            <!-- Pipeline Connector 1 -->
+            <div class="topo-stream">
+              <div class="stream-line">
+                <span class="stream-packet packet-1"></span>
+                <span class="stream-packet packet-2"></span>
+              </div>
+              <div class="stream-badge">Store-and-Forward &lt;42ms</div>
+            </div>
+
+            <!-- Node 2: Bentian Core Middleware -->
+            <div class="topo-node node-bridge">
+              <div class="node-icon icon-indigo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+              </div>
+              <div class="node-content">
+                <div class="node-label">BENTIAN ERP BRIDGE</div>
+                <div class="node-sub">Motor Local-First x64 · Deadman Switch</div>
+              </div>
+              <div class="node-status-tag tag-indigo">BUFFER SEGURO (0 PENDIENTES)</div>
+            </div>
+
+            <!-- Pipeline Connector 2 -->
+            <div class="topo-stream">
+              <div class="stream-line">
+                <span class="stream-packet packet-3"></span>
+                <span class="stream-packet packet-4"></span>
+              </div>
+              <div class="stream-badge">Encrypted TLS 1.3 REST</div>
+            </div>
+
+            <!-- Node 3: Cloud eCommerce -->
+            <div class="topo-node node-cloud">
+              <div class="node-icon icon-cloud">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 11 4-7"/><path d="m19 11-4-7"/><path d="M2 11h20"/><path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8c.9 0 1.8-.7 2-1.6l1.6-7.4"/><path d="m9 11 1 9"/><path d="m15 11-1 9"/></svg>
+              </div>
+              <div class="node-content">
+                <div class="node-label">TIENDA ONLINE / ECOMMERCE</div>
+                <div class="node-sub">WooCommerce · PrestaShop · Web B2B</div>
+              </div>
+              <div class="node-status-tag tag-cyan">SINCRONIZADO</div>
             </div>
           </div>
-        </div>
 
-        <div class="hero-metrics">
-          <div class="metric">
-            <span class="metric-val">&lt;100ms</span>
-            <span class="metric-lbl">Latencia Sync</span>
-          </div>
-          <span class="metric-sep">·</span>
-          <div class="metric">
-            <span class="metric-val">30 Días</span>
-            <span class="metric-lbl">Tolerancia Offline</span>
-          </div>
-          <span class="metric-sep">·</span>
-          <div class="metric">
-            <span class="metric-val">100%</span>
-            <span class="metric-lbl">Local-First</span>
+          <!-- Bottom Telemetry Grid -->
+          <div class="blueprint-footer">
+            <div class="metric-cell">
+              <div class="metric-num">&lt;42ms</div>
+              <div class="metric-text">Latencia Sync</div>
+            </div>
+            <div class="metric-cell">
+              <div class="metric-num">30 Días</div>
+              <div class="metric-text">Tolerancia Offline</div>
+            </div>
+            <div class="metric-cell">
+              <div class="metric-num">0 Puertos</div>
+              <div class="metric-text">Zero-Exposure</div>
+            </div>
+            <div class="metric-cell">
+              <div class="metric-num">100%</div>
+              <div class="metric-text">Stock Fiable</div>
+            </div>
           </div>
         </div>
       </div>

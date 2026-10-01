@@ -2,63 +2,90 @@
 @import 'styles/glassmorphism';
 
 .contact-section {
-  background: $surface;
+  position: relative;
+  background: linear-gradient(180deg, transparent 0%, rgba(14, 17, 24, 0.5) 100%);
 
   .contact-grid {
     display: grid;
     grid-template-columns: 0.8fr 1.2fr;
     gap: 2.5rem;
+    align-items: start;
 
     @media (max-width: 992px) {
       grid-template-columns: 1fr;
+      gap: 2rem;
     }
   }
 
+  // ── Info Card ───────────────────────────────────────
   .contact-info-card {
-    @include solid-card;
+    @include bento-card(#0e111a);
     padding: 2.5rem;
 
     @media (max-width: 576px) {
-      padding: 1.5rem 1.25rem;
+      padding: 1.75rem 1.25rem;
     }
 
-    h3 {
-      font-size: 1.35rem;
-      font-weight: 700;
+    .info-title {
+      font-size: 1.45rem;
+      font-weight: 800;
       letter-spacing: -0.02em;
       margin-bottom: 0.75rem;
-      color: $text;
+      color: #ffffff;
     }
 
     .info-desc {
-      color: rgba($text, 0.55);
+      color: $text-secondary;
       font-size: 0.92rem;
-      line-height: 1.6;
-      margin-bottom: 2rem;
+      line-height: 1.65;
+      margin-bottom: 2.25rem;
     }
 
     .contact-methods {
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
-      margin-bottom: 2rem;
+      margin-bottom: 2.25rem;
 
       .method-item {
         display: flex;
         align-items: center;
         gap: 1rem;
+        padding: 0.85rem;
+        background: rgba(255, 255, 255, 0.025);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 10px;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.045);
+          border-color: rgba(16, 185, 129, 0.3);
+          transform: translateX(3px);
+        }
 
         .method-icon-box {
-          width: 38px;
-          height: 38px;
-          background: rgba(74, 222, 128, 0.06);
-          border: 1px solid rgba(74, 222, 128, 0.15);
+          width: 40px;
+          height: 40px;
+          background: rgba(16, 185, 129, 0.12);
+          border: 1px solid rgba(16, 185, 129, 0.25);
           border-radius: 8px;
           display: flex;
           align-items: center;
           justify-content: center;
-          color: $forest;
+          color: $emerald-light;
           flex-shrink: 0;
+
+          &.icon-linkedin {
+            background: rgba(99, 102, 241, 0.15);
+            border-color: rgba(99, 102, 241, 0.3);
+            color: #c7d2fe;
+          }
+
+          &.icon-github {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+          }
         }
 
         .method-details {
@@ -67,19 +94,21 @@
 
           .method-label {
             font-family: $font-family-mono;
-            font-size: 0.7rem;
-            color: rgba($text, 0.35);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            font-size: 0.65rem;
+            color: $text-muted;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.15rem;
           }
 
           .method-value {
-            color: $text;
+            color: #ffffff;
             font-weight: 600;
-            font-size: 0.88rem;
+            font-size: 0.9rem;
             transition: color 0.2s ease;
 
-            &:hover { color: $sage; }
+            &:hover {
+              color: $emerald-light;
+            }
           }
         }
       }
@@ -91,121 +120,137 @@
       gap: 0.5rem;
       font-family: $font-family-mono;
       font-size: 0.72rem;
-      color: rgba($text, 0.5);
-      padding: 0.4rem 0.8rem;
-      background: rgba(74, 222, 128, 0.04);
-      border: 1px solid rgba(74, 222, 128, 0.1);
-      border-radius: 6px;
+      color: $text-secondary;
+      padding: 0.5rem 0.9rem;
+      background: rgba(16, 185, 129, 0.06);
+      border: 1px solid rgba(16, 185, 129, 0.18);
+      border-radius: 8px;
+      line-height: 1.4;
 
       .status-dot {
         width: 6px;
         height: 6px;
-        background: $sage;
         border-radius: 50%;
-        box-shadow: 0 0 6px $sage;
+        background: $emerald;
+        box-shadow: 0 0 6px $emerald;
+        flex-shrink: 0;
       }
     }
   }
 
+  // ── Form Card ───────────────────────────────────────
   .contact-form-card {
-    @include solid-card;
+    @include bento-card(#0e111a);
     padding: 2.5rem;
 
     @media (max-width: 576px) {
-      padding: 1.5rem 1.25rem;
+      padding: 1.75rem 1.25rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+
+      @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+      }
     }
 
     .form-group {
       margin-bottom: 1.35rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
 
       label {
-        font-size: 0.84rem;
+        display: block;
+        font-family: $font-family-mono;
+        font-size: 0.75rem;
         font-weight: 600;
-        color: rgba($text, 0.8);
+        color: $text-secondary;
+        letter-spacing: 0.02em;
+        margin-bottom: 0.55rem;
       }
 
       input, select, textarea {
         width: 100%;
-        padding: 0.75rem 1rem;
-        background: #090d0a;
-        border: 1px solid rgba(74, 222, 128, 0.12);
-        border-radius: 8px;
-        color: $text;
-        font-family: inherit;
-        font-size: 0.9rem;
-        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        background: rgba(8, 10, 15, 0.75);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 0.85rem 1.15rem;
+        color: #ffffff;
+        font-family: $font-family-sans;
+        font-size: 0.92rem;
+        transition: all 0.2s ease;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.25);
+        }
 
         &:focus {
           outline: none;
-          border-color: $sage;
-          box-shadow: 0 0 12px rgba(74, 222, 128, 0.18);
+          border-color: $emerald;
+          background: rgba(12, 16, 24, 0.9);
+          box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
         }
 
         &.error {
-          border-color: $status-error;
+          border-color: #ef4444;
+          box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
         }
       }
 
-      option {
-        background: $surface;
-        color: $text;
+      select {
+        cursor: pointer;
+        option {
+          background: #0e111a;
+          color: #ffffff;
+        }
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 120px;
+        line-height: 1.6;
       }
 
       .error-msg {
-        font-size: 0.75rem;
-        color: $status-error;
+        display: block;
+        font-family: $font-family-mono;
+        font-size: 0.72rem;
+        color: #f87171;
+        margin-top: 0.4rem;
       }
     }
 
     .alert {
-      padding: 0.75rem 1rem;
+      padding: 0.95rem 1.25rem;
       border-radius: 8px;
-      font-size: 0.85rem;
-      margin-bottom: 1.25rem;
+      font-size: 0.88rem;
+      margin-bottom: 1.35rem;
+      font-weight: 500;
 
       &.alert-success {
-        background: rgba(74, 222, 128, 0.1);
-        border: 1px solid rgba(74, 222, 128, 0.25);
-        color: $sage;
+        background: rgba(16, 185, 129, 0.12);
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        color: #6ee7b7;
       }
 
       &.alert-danger {
-        background: rgba(248, 113, 113, 0.1);
-        border: 1px solid rgba(248, 113, 113, 0.25);
-        color: $status-error;
+        background: rgba(239, 68, 68, 0.12);
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        color: #fca5a5;
       }
     }
 
     .btn-submit {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
       width: 100%;
-      padding: 0.85rem;
-      background: $sage;
-      color: #090d0a;
+      padding: 0.95rem 1.5rem;
+      font-size: 0.96rem;
       font-weight: 700;
-      font-size: 0.95rem;
-      border: none;
-      border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(74, 222, 128, 0.25);
-      transition: all 0.22s ease;
-
-      .btn-arrow { transition: transform 0.18s ease; }
-
-      &:hover:not(:disabled) {
-        background: $lime;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(163, 230, 53, 0.35);
-        .btn-arrow { transform: translateX(4px); }
-      }
+      letter-spacing: -0.01em;
 
       &:disabled {
-        opacity: 0.5;
+        opacity: 0.6;
         cursor: not-allowed;
       }
     }

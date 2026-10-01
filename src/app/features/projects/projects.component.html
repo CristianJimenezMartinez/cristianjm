@@ -1,16 +1,160 @@
 <section id="proyectos" class="section projects-section">
   <div class="container">
-    <span class="section-eyebrow">// Casos de Éxito</span>
-    <h2 class="section-title">Lo que ya he <span class="accent">construido</span></h2>
-    <p class="section-subtitle">
-      Tres problemas empresariales reales. Tres soluciones en producción.
-    </p>
+    <div class="section-header-centered">
+      <span class="section-eyebrow">Arquitectura &amp; Casos en Producción</span>
+      <h2 class="section-title">Sistemas reales. <span class="accent-indigo">Cero teoría.</span></h2>
+      <p class="section-subtitle">
+        Diseño soluciones de software de alta resiliencia para resolver problemas empresariales críticos donde no hay margen para el error.
+      </p>
+    </div>
 
-    <div class="projects-grid">
-      <app-project-card
-        *ngFor="let p of projects()"
-        [project]="p">
-      </app-project-card>
+    <!-- Bento Grid Container -->
+    <div class="bento-grid">
+
+      <!-- Bento Item 1: Bentian ERP Bridge (Flagship Spotlight - Spans full width / 2 cols) -->
+      <div class="bento-card bento-flagship">
+        <div class="flagship-ambient-glow"></div>
+
+        <div class="flagship-header">
+          <div class="flagship-badges">
+            <span class="badge-flagship-pill">
+              <span class="dot-pulse"></span>
+              <span>PRODUCTO PROPIO · SAAS EN PRODUCCIÓN</span>
+            </span>
+            <span class="badge-tag">ERP Middleware &amp; Local-First</span>
+          </div>
+          <span class="project-code">01 // FLAGSHIP</span>
+        </div>
+
+        <div class="flagship-hero-content">
+          <h3 class="flagship-title">Bentian ERP Bridge</h3>
+          <p class="flagship-lead">
+            Conector de escritorio Windows x64 con arquitectura <strong>Local-First</strong>, motor OLEDB de ultra-baja latencia y sincronización bidireccional automática entre <strong>Factusol ERP</strong> y tiendas online (WooCommerce, PrestaShop).
+          </p>
+
+          <!-- 4 Pillars Sub-Bento -->
+          <div class="flagship-pillars-grid">
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+              <div class="pillar-title">Motor OLEDB Concurrente</div>
+              <div class="pillar-desc">Lectura directa de bases de datos Access (.accdb) en red LAN sin bloquear a los usuarios de facturación de la oficina.</div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="pillar-title">Store-and-Forward (30 Días)</div>
+              <div class="pillar-desc">Si se corta la fibra o la luz, los pedidos se encolan en buffer local seguro y se sincronizan atómicamente al volver la red.</div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
+              </div>
+              <div class="pillar-title">Sincronización Bidireccional</div>
+              <div class="pillar-desc">Stock real disponible (DISSTO), tarifas y catálogo hacia la web; pedidos web inyectados directamente en F_PCL.</div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <div class="pillar-title">Zero-Exposure &amp; Seguridad</div>
+              <div class="pillar-desc">Sin abrir puertos en el router, sin exponer la base de datos a internet y con validación para requisitos fiscales Veri*Factu.</div>
+            </div>
+          </div>
+
+          <!-- Bottom Action Bar & Tech Stack -->
+          <div class="flagship-footer">
+            <div class="flagship-tags">
+              <span class="tag">TypeScript</span>
+              <span class="tag">Node.js SEA</span>
+              <span class="tag">Factusol OLEDB</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Stripe</span>
+            </div>
+
+            <div class="flagship-cta">
+              <a href="https://bridge.cristianjm.com" target="_blank" rel="noopener" class="btn btn-indigo">
+                <span>Entrar a Bentian ERP Bridge</span>
+                <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bento Item 2: Suministros Rubio B2B -->
+      <div class="bento-card bento-secondary">
+        <div class="bento-header">
+          <span class="badge-tag">Suministros Industriales &amp; B2B</span>
+          <span class="project-code">02</span>
+        </div>
+
+        <h3 class="bento-title">Suministros Rubio</h3>
+        <p class="bento-subtitle">Automatización integral de catálogo mayorista (+5.000 SKUs) y pedidos web.</p>
+        <p class="bento-description">
+          Despliegue en producción de sincronización desatendida entre Factusol local y tienda web B2B. Reducción al 100% del picado manual de pedidos y actualización de existencias en segundos.
+        </p>
+
+        <div class="bento-metric-highlight">
+          <span class="metric-val">100% Cero errores de stock</span>
+          <span class="metric-sub">0 picado manual de albaranes</span>
+        </div>
+
+        <div class="bento-tags">
+          <span class="tag">Factusol OLEDB</span>
+          <span class="tag">PHP Bridge</span>
+          <span class="tag">MariaDB</span>
+          <span class="tag">Windows Service</span>
+        </div>
+
+        <div class="bento-footer">
+          <a href="https://bridge.cristianjm.com" target="_blank" rel="noopener" class="bento-link">
+            <span>Ver arquitectura del conector</span>
+            <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Bento Item 3: VeltiaTrust LegalTech & eIDAS -->
+      <div class="bento-card bento-secondary">
+        <div class="bento-header">
+          <span class="badge-tag">Infraestructura &amp; Seguridad eIDAS</span>
+          <span class="project-code">03</span>
+        </div>
+
+        <h3 class="bento-title">VeltiaTrust</h3>
+        <p class="bento-subtitle">Infraestructura de notarización y firma electrónica con arquitectura Zero-Storage.</p>
+        <p class="bento-description">
+          API de alta seguridad orientada al sector Telco y legal para procesos de verificación de identidad, notarización digital y firma según normativa eIDAS sin intermediarios ni almacenamiento de datos sensibles.
+        </p>
+
+        <div class="bento-metric-highlight">
+          <span class="metric-val">100% Cumplimiento eIDAS</span>
+          <span class="metric-sub">Arquitectura Zero-Storage</span>
+        </div>
+
+        <div class="bento-tags">
+          <span class="tag">Node.js</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">API-First</span>
+          <span class="tag">Zero-Storage</span>
+          <span class="tag">eIDAS</span>
+        </div>
+
+        <div class="bento-footer">
+          <a href="https://veltiatrust.com" target="_blank" rel="noopener" class="bento-link">
+            <span>Visitar veltiatrust.com</span>
+            <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

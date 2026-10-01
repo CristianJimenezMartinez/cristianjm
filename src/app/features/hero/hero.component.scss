@@ -1,37 +1,38 @@
 @import 'styles/variables';
 @import 'styles/glassmorphism';
+@import 'styles/animations';
 
 .hero-section {
   position: relative;
-  min-height: 100vh;
-  padding-top: calc($navbar-height + 1.5rem);
-  padding-bottom: 2rem;
+  min-height: calc(100vh - #{$navbar-height});
+  padding-top: calc(#{$navbar-height} + 2.5rem);
+  padding-bottom: 4rem;
   display: flex;
   align-items: center;
   overflow: hidden;
   box-sizing: border-box;
 
-  // Dual ambient glow
-  .hero-glow-top {
+  // Background Ambient Lighting
+  .hero-glow-indigo {
     position: absolute;
-    top: -80px;
+    top: -120px;
     left: 20%;
-    width: 600px;
-    height: 350px;
-    background: radial-gradient(ellipse at center, rgba(74, 222, 128, 0.09) 0%, transparent 65%);
-    filter: blur(70px);
+    width: 650px;
+    height: 400px;
+    background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+    filter: blur(80px);
     pointer-events: none;
     z-index: 0;
   }
 
-  .hero-glow-bottom {
+  .hero-glow-emerald {
     position: absolute;
-    bottom: -50px;
+    bottom: -80px;
     right: 15%;
-    width: 500px;
-    height: 250px;
-    background: radial-gradient(ellipse at center, rgba(22, 163, 74, 0.07) 0%, transparent 70%);
-    filter: blur(70px);
+    width: 600px;
+    height: 350px;
+    background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+    filter: blur(80px);
     pointer-events: none;
     z-index: 0;
   }
@@ -42,312 +43,427 @@
     width: 100%;
   }
 
-  /* 2-Column Grid Layout */
   .hero-grid {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
-    gap: 3.5rem;
+    gap: 4rem;
     align-items: center;
     width: 100%;
 
-    @media (max-width: 992px) {
+    @media (max-width: 1080px) {
       grid-template-columns: 1fr;
-      gap: 3rem;
-      text-align: center;
+      gap: 3.5rem;
     }
   }
 
-  /* Left Column: Copy & Actions */
+  /* ── Left Column: Authority & Copy ────────────────── */
   .hero-left {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
 
-    @media (max-width: 992px) {
+    @media (max-width: 1080px) {
       align-items: center;
       text-align: center;
     }
   }
 
-  // Availability badge
+  .hero-badge-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+
+    @media (max-width: 1080px) {
+      justify-content: center;
+    }
+  }
+
   .hero-badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.55rem;
-    padding: 0.3rem 0.9rem;
-    background: rgba(74, 222, 128, 0.06);
-    border: 1px solid rgba(74, 222, 128, 0.18);
+    gap: 0.5rem;
+    padding: 0.35rem 0.95rem;
     border-radius: 20px;
     font-family: $font-family-mono;
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     font-weight: 500;
-    color: rgba($text, 0.65);
-    margin-bottom: 1.25rem;
-
-    .badge-dot {
-      width: 6px;
-      height: 6px;
-      background: $sage;
-      border-radius: 50%;
-      box-shadow: 0 0 8px $sage;
-      flex-shrink: 0;
-    }
+    transition: all 0.22s ease;
 
     &.hero-bridge-badge {
       background: rgba(99, 102, 241, 0.12);
-      border-color: rgba(129, 140, 248, 0.35);
+      border: 1px solid rgba(129, 140, 248, 0.35);
       color: #e0e7ff;
-      text-decoration: none;
-      transition: all 0.2s ease;
-
-      strong {
-        color: #ffffff;
-      }
-
-      .pulse-emerald {
-        background: #34d399;
-        box-shadow: 0 0 10px #34d399;
-      }
+      box-shadow: 0 0 16px rgba(99, 102, 241, 0.18);
 
       &:hover {
         background: rgba(99, 102, 241, 0.22);
         border-color: rgba(129, 140, 248, 0.6);
         transform: translateY(-1px);
-        box-shadow: 0 4px 16px rgba(99, 102, 241, 0.25);
       }
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      background: $emerald-light;
+      border-radius: 50%;
+      box-shadow: 0 0 8px $emerald;
     }
   }
 
-  // H1 title
+  .hero-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: $font-family-mono;
+    font-size: 0.72rem;
+    color: $text-secondary;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 0.35rem 0.85rem;
+
+    .status-live-dot {
+      width: 6px;
+      height: 6px;
+      background: $emerald;
+      border-radius: 50%;
+      box-shadow: 0 0 6px $emerald;
+    }
+  }
+
   .hero-title {
-    font-size: 3.4rem;
+    font-size: 3.35rem;
     font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.035em;
-    margin-bottom: 1.25rem;
-    color: $text;
+    letter-spacing: -0.04em;
+    line-height: 1.12;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
 
     .accent {
       @include gradient-text-accent;
     }
 
-    @media (max-width: 1200px) {
-      font-size: 2.9rem;
-    }
     @media (max-width: 768px) {
-      font-size: 2.25rem;
+      font-size: 2.35rem;
     }
+
     @media (max-width: 480px) {
-      font-size: 1.85rem;
+      font-size: 1.95rem;
     }
   }
 
-  // Subheadline
   .hero-subtitle {
-    font-size: 1rem;
-    color: rgba($text, 0.58);
+    font-size: 1.1rem;
+    color: $text-secondary;
+    line-height: 1.7;
+    margin-bottom: 2.25rem;
     max-width: 580px;
-    margin-bottom: 1.75rem;
-    line-height: 1.6;
-    font-weight: 400;
+
+    strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    em {
+      font-style: normal;
+      color: $emerald-light;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 0.98rem;
+    }
   }
 
-  // CTA buttons
   .hero-actions {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.15rem;
+    margin-bottom: 2.5rem;
 
-    .btn {
-      padding: 0.8rem 1.6rem;
-      font-size: 0.95rem;
-      font-weight: 600;
-      border-radius: 8px;
-      transition: all 0.22s ease;
+    @media (max-width: 1080px) {
+      justify-content: center;
+    }
+  }
+
+  .hero-spec-strip {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: $font-family-mono;
+    font-size: 0.76rem;
+    color: $text-muted;
+
+    .spec-item {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-
-      &.btn-primary {
-        background: $sage;
-        color: #090d0a;
-        box-shadow: 0 4px 18px rgba(74, 222, 128, 0.28);
-
-        .arrow { transition: transform 0.18s ease; }
-
-        &:hover {
-          background: $lime;
-          transform: translateY(-2px);
-          box-shadow: 0 6px 22px rgba(163, 230, 53, 0.35);
-          .arrow { transform: translateX(4px); }
-        }
-      }
-
-      &.btn-secondary {
-        background: transparent;
-        border: 1px solid rgba(74, 222, 128, 0.2);
-        color: rgba($text, 0.8);
-
-        &:hover {
-          border-color: rgba(74, 222, 128, 0.45);
-          color: $text;
-          background: rgba(74, 222, 128, 0.05);
-          transform: translateY(-2px);
-        }
-      }
+      gap: 0.35rem;
     }
 
-    @media (max-width: 480px) {
-      flex-direction: column;
-      width: 100%;
-      .btn { width: 100%; justify-content: center; }
+    .spec-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: $emerald;
+    }
+
+    .spec-divider {
+      color: rgba(255, 255, 255, 0.15);
+    }
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 0.7rem;
     }
   }
 
-  // Trust line
-  .hero-trust {
-    font-family: $font-family-mono;
-    font-size: 0.72rem;
-    color: rgba($text, 0.32);
-    letter-spacing: 0.03em;
-  }
-
-  /* Right Column: Terminal Console + Metrics Bar */
+  /* ── Right Column: Topology Console ───────────────── */
   .hero-right {
+    width: 100%;
+  }
+
+  .blueprint-card {
+    @include bento-card(#0c0f17);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 35px rgba(99, 102, 241, 0.12);
+  }
+
+  .blueprint-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 1.4rem;
+    background: rgba(255, 255, 255, 0.025);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+    .window-controls {
+      display: flex;
+      gap: 6px;
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+
+        &.red { background: #ef4444; opacity: 0.8; }
+        &.yellow { background: #f59e0b; opacity: 0.8; }
+        &.green { background: #10b981; opacity: 0.8; }
+      }
+    }
+
+    .blueprint-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: $font-family-mono;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: $text-secondary;
+
+      .icon-pulse {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $emerald;
+        box-shadow: 0 0 8px $emerald;
+        animation: dataPulse 2s infinite;
+      }
+    }
+
+    .blueprint-tag {
+      font-family: $font-family-mono;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: $emerald-light;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: 4px;
+      padding: 0.15rem 0.5rem;
+    }
+  }
+
+  /* Topology Nodes & Connectors */
+  .blueprint-body {
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
+    gap: 0.65rem;
+    background: rgba(8, 10, 15, 0.5);
   }
 
-  // Terminal widget
-  .terminal-widget {
-    width: 100%;
-    background: rgba(11, 17, 13, 0.95);
-    border: 1px solid rgba(74, 222, 128, 0.12);
-    border-radius: 12px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(74, 222, 128, 0.04);
-    overflow: hidden;
-    text-align: left;
-    margin-bottom: 1.5rem;
-
-    .terminal-header {
-      background: rgba(16, 24, 18, 0.9);
-      padding: 0.65rem 1rem;
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid rgba(74, 222, 128, 0.08);
-
-      .terminal-controls {
-        display: flex;
-        gap: 5px;
-        .dot {
-          width: 10px; height: 10px; border-radius: 50%;
-          &.red    { background: #ff5f56; }
-          &.yellow { background: #ffbd2e; }
-          &.green  { background: #27c93f; }
-        }
-      }
-
-      .terminal-title {
-        font-family: $font-family-mono;
-        font-size: 0.75rem;
-        color: rgba($text, 0.35);
-        margin: 0 auto;
-      }
-    }
-
-    .terminal-body {
-      padding: 1.25rem 1.4rem;
-      font-family: $font-family-mono;
-      font-size: 0.8rem;
-      line-height: 1.75;
-
-      @media (max-width: 576px) {
-        padding: 1rem;
-        font-size: 0.74rem;
-        line-height: 1.65;
-      }
-
-      .t-line {
-        &.empty { height: 0.5rem; }
-
-        &.status-line {
-          display: flex;
-          align-items: center;
-          gap: 0.75rem;
-          margin-top: 0.2rem;
-        }
-      }
-
-      .t-prompt { color: $sage; }
-      .t-cmd    { color: $text; font-weight: 600; }
-      .t-arrow  { color: rgba($text, 0.3); }
-      .t-muted  { color: rgba($text, 0.45); }
-      .t-check  { color: $sage; }
-      .t-success { color: rgba($text, 0.75); }
-      .t-label  {
-        font-family: $font-family-mono;
-        font-size: 0.7rem;
-        font-weight: 700;
-        color: rgba($text, 0.35);
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-      }
-      .t-status {
-        font-weight: 700;
-        color: $sage;
-        letter-spacing: 0.05em;
-      }
-    }
-  }
-
-  // Metrics below terminal
-  .hero-metrics {
+  .topo-node {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1.75rem;
-    width: 100%;
-    padding: 0.85rem 1.5rem;
-    background: rgba(16, 24, 18, 0.5);
-    border: 1px solid rgba(74, 222, 128, 0.08);
+    gap: 1rem;
+    padding: 0.95rem 1.15rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
     border-radius: 10px;
+    position: relative;
+    transition: all 0.2s ease;
 
-    .metric {
+    &:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+      transform: translateX(4px);
+    }
+
+    .node-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
       display: flex;
-      flex-direction: column;
       align-items: center;
+      justify-content: center;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      color: $emerald-light;
+      flex-shrink: 0;
 
-      .metric-val {
-        font-size: 1.2rem;
+      &.icon-indigo {
+        background: rgba(99, 102, 241, 0.15);
+        border-color: rgba(99, 102, 241, 0.35);
+        color: #c7d2fe;
+      }
+
+      &.icon-cloud {
+        background: rgba(6, 182, 212, 0.15);
+        border-color: rgba(6, 182, 212, 0.35);
+        color: #a5f3fc;
+      }
+    }
+
+    .node-content {
+      flex-grow: 1;
+
+      .node-label {
+        font-family: $font-family-mono;
+        font-size: 0.8rem;
         font-weight: 700;
-        color: $text;
+        letter-spacing: 0.02em;
+        color: #ffffff;
+        margin-bottom: 0.2rem;
+      }
+
+      .node-sub {
+        font-size: 0.75rem;
+        color: $text-secondary;
+      }
+    }
+
+    .node-status-tag {
+      font-family: $font-family-mono;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: $emerald-light;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      border-radius: 4px;
+      padding: 0.2rem 0.5rem;
+      white-space: nowrap;
+
+      &.tag-indigo {
+        color: #c7d2fe;
+        background: rgba(99, 102, 241, 0.12);
+        border-color: rgba(99, 102, 241, 0.3);
+      }
+
+      &.tag-cyan {
+        color: #67e8f9;
+        background: rgba(6, 182, 212, 0.1);
+        border-color: rgba(6, 182, 212, 0.25);
+      }
+
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+  }
+
+  /* Animated Data Streams */
+  .topo-stream {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem 1.25rem;
+
+    .stream-line {
+      position: relative;
+      height: 2px;
+      flex-grow: 1;
+      margin-right: 1rem;
+      background: rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+
+      .stream-packet {
+        position: absolute;
+        top: 0;
+        width: 28px;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, $emerald-light, transparent);
+        border-radius: 2px;
+        animation: packetStream 2s linear infinite;
+
+        &.packet-2 {
+          animation-delay: 1s;
+        }
+
+        &.packet-3 {
+          background: linear-gradient(90deg, transparent, #818cf8, transparent);
+          animation-delay: 0.5s;
+        }
+
+        &.packet-4 {
+          background: linear-gradient(90deg, transparent, #818cf8, transparent);
+          animation-delay: 1.5s;
+        }
+      }
+    }
+
+    .stream-badge {
+      font-family: $font-family-mono;
+      font-size: 0.68rem;
+      color: $text-muted;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+  }
+
+  /* Footer Telemetry Matrix */
+  .blueprint-footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    background: rgba(14, 18, 26, 0.6);
+
+    .metric-cell {
+      padding: 0.85rem 0.5rem;
+      text-align: center;
+      border-right: 1px solid rgba(255, 255, 255, 0.07);
+
+      &:last-child {
+        border-right: none;
+      }
+
+      .metric-num {
+        font-family: $font-family-mono;
+        font-size: 0.92rem;
+        font-weight: 800;
+        color: #ffffff;
         letter-spacing: -0.02em;
+        margin-bottom: 0.2rem;
       }
 
-      .metric-lbl {
-        font-size: 0.72rem;
-        color: rgba($text, 0.4);
-        margin-top: 1px;
+      .metric-text {
+        font-size: 0.68rem;
+        color: $text-secondary;
       }
-    }
-
-    .metric-sep {
-      color: rgba($text, 0.15);
-      font-size: 1.1rem;
-    }
-
-    @media (max-width: 576px) {
-      gap: 0.75rem;
-      padding: 0.75rem 1rem;
-      .metric-sep { display: none; }
-      flex-wrap: wrap;
-      justify-content: space-around;
-
-      .metric .metric-val { font-size: 1.05rem; }
-      .metric .metric-lbl { font-size: 0.68rem; }
     }
   }
 }

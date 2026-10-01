@@ -1,51 +1,72 @@
-// ═══════════════════════════════════════════════
-// CJ — Sage × Lime System
-// 5 core colors + transparencies only
-// ═══════════════════════════════════════════════
+// ═════════════════════════════════════════════════════════════════
+// CristianJM (CJ) — Obsidian & Precision Engineering Design System
+// Tailored for Software Architect & Bentian ERP Bridge Flagship
+// ═════════════════════════════════════════════════════════════════
 
-// ── Backgrounds ────────────────────────────────
-$bg:      #090d0a;   // near-black with green undertone — main bg
-$surface: #0d1410;   // section-alt, card solid bg
+// ── Backgrounds (Deep Obsidian / Carbon Spectrum) ─────────────
+$bg:              #08090d;   // Pure deep obsidian base
+$surface:         #0e1118;   // Elevated container surface
+$surface-card:    #121622;   // Card background
+$surface-hover:   #181e2e;   // Card hover state
+$surface-glass:   rgba(14, 17, 24, 0.72); // Frosted backdrop
 
-// ── Brand Colors ───────────────────────────────
-$sage:    #4ade80;   // primary CTA, logo, active states
-$lime:    #a3e635;   // gradient accent, key highlights, metrics
-$forest:  #16a34a;   // icons, details, deep accent
+// ── Precision Accents (Emerald & Electric Indigo) ──────────────
+$emerald:         #10b981;   // Core engineering green / active telemetry
+$emerald-light:   #34d399;   // Mint highlight / specular
+$emerald-glow:    rgba(16, 185, 129, 0.35);
+$emerald-subtle:  rgba(16, 185, 129, 0.12);
 
-// ── Text ───────────────────────────────────────
-$text:    #f0fdf4;   // primary — slightly warm white
-$muted:   rgba(240, 253, 244, 0.5);  // secondary text — transparency of $text
+$indigo:          #6366f1;   // Bentian ERP Bridge flagship accent
+$indigo-light:    #818cf8;   // High-tech specular
+$indigo-glow:     rgba(99, 102, 241, 0.35);
+$indigo-subtle:   rgba(99, 102, 241, 0.12);
 
-// ── Semantic Aliases (keep component compatibility) ─
-$bg-dark:          $bg;
-$bg-surface:       $surface;
-$bg-card:          rgba(16, 24, 18, 0.7);
-$bg-card-hover:    rgba(22, 34, 25, 0.9);
-$accent-primary:   $sage;
-$accent-secondary: $lime;
-$accent-indigo:    $sage;
-$accent-violet:    rgba(74, 222, 128, 0.75);
-$accent-emerald:   $sage;
-$accent-cyan:      $lime;
-$text-primary:     $text;
-$text-secondary:   rgba(240, 253, 244, 0.6);
-$text-muted:       rgba(240, 253, 244, 0.35);
+$cyan:            #06b6d4;   // Latency / pipeline telemetry
 
-// ── Semantic Status Colors ─────────────────────
-$status-success: $sage;
-$status-warning: #f59e0b;   // amber ONLY for warnings
-$status-error:   #f87171;
+// ── Typography Colors ──────────────────────────────────────────
+$text:            #f8fafc;   // Titanium white — primary text
+$text-secondary:  #94a3b8;   // Slate gray — secondary reading
+$text-muted:      #64748b;   // Technical labels, subtitles
 
-// ── Fonts ──────────────────────────────────────
+// ── Legacy Aliases (Compatibility for components) ──────────────
+$sage:            $emerald;
+$lime:            $emerald-light;
+$forest:          #059669;
+$muted:           $text-secondary;
+$bg-dark:         $bg;
+$bg-surface:      $surface;
+$bg-card:         $surface-card;
+$bg-card-hover:   $surface-hover;
+$accent-primary:  $emerald;
+$accent-secondary:$indigo;
+$accent-indigo:   $indigo;
+$accent-violet:   $indigo-light;
+$accent-emerald:  $emerald;
+$accent-cyan:     $cyan;
+$text-primary:    $text;
+
+// ── Status Indicators ──────────────────────────────────────────
+$status-success:  $emerald;
+$status-warning:  #f59e0b;
+$status-error:    #ef4444;
+
+// ── Typography ─────────────────────────────────────────────────
 $font-family-sans: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-$font-family-mono: 'JetBrains Mono', monospace;
+$font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
-// ── Borders & Shadows ─────────────────────────
-$border-color:       rgba(74, 222, 128, 0.08);
-$border-color-hover: rgba(74, 222, 128, 0.3);
-$glow-subtle:        0 0 20px rgba(74, 222, 128, 0.1);
-$glow-hover:         0 8px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(74, 222, 128, 0.15);
+// ── Borders & Specular Highlights ──────────────────────────────
+$border:          rgba(255, 255, 255, 0.08);
+$border-light:    rgba(255, 255, 255, 0.14);
+$border-emerald:  rgba(16, 185, 129, 0.35);
+$border-indigo:   rgba(99, 102, 241, 0.35);
+$border-color:    $border;
+$border-color-hover: $border-emerald;
 
-// ── Layout ─────────────────────────────────────
-$container-max-width: 1200px;
+// ── Elevation & Shadows ────────────────────────────────────────
+$glow-subtle:     0 0 25px rgba(16, 185, 129, 0.12);
+$glow-hover:      0 12px 35px rgba(0, 0, 0, 0.55), 0 0 25px rgba(16, 185, 129, 0.18);
+$glow-indigo:     0 12px 35px rgba(0, 0, 0, 0.55), 0 0 30px rgba(99, 102, 241, 0.25);
+
+// ── Layout Geometry ────────────────────────────────────────────
+$container-max-width: 1240px;
 $navbar-height: 72px;

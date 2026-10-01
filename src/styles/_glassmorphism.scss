@@ -1,49 +1,91 @@
 @import 'variables';
 
-// ── Glass Card — navbar, hero terminal, service cards (sutil) ──
-@mixin glass-card($blur: 16px, $bg-opacity: 0.5) {
-  background: rgba(16, 24, 18, $bg-opacity);
-  backdrop-filter: blur($blur);
-  -webkit-backdrop-filter: blur($blur);
-  border: 1px solid $border-color;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
+// ── Bento & High-End Card Base ────────────────────────────────
+@mixin bento-card($bg: $surface-card) {
+  background: $bg;
+  background-image: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.035), transparent 70%);
+  border: 1px solid $border;
+  border-top-color: $border-light;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 
-// ── Solid Card — project cards, about, FAQ ─────
-@mixin solid-card {
-  background: $surface;
-  border: 1px solid $border-color;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-// ── Hover effect — shared ──────────────────────
-@mixin card-hover {
-  &:hover {
-    border-color: $border-color-hover;
-    box-shadow: $glow-hover;
-    transform: translateY(-2px);
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15%;
+    right: 15%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    pointer-events: none;
   }
 }
 
-// Keep alias for existing components
+// ── Legacy Aliases ────────────────────────────────────────────
+@mixin solid-card {
+  @include bento-card;
+}
+
+@mixin glass-card($blur: 20px, $bg-opacity: 0.75) {
+  background: rgba(14, 17, 24, $bg-opacity);
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+  border: 1px solid $border;
+  border-top-color: $border-light;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+// ── Hover Micro-Interactions ──────────────────────────────────
+@mixin card-hover {
+  &:hover {
+    border-color: rgba(16, 185, 129, 0.35);
+    box-shadow: $glow-hover;
+    transform: translateY(-3px);
+  }
+}
+
 @mixin glass-card-hover {
   @include card-hover;
 }
 
-// ── Gradient Text — key word highlight ────────
-// Usage: only on 1 word/phrase per section, not whole titles
+// ── Premium Text Gradients ────────────────────────────────────
 @mixin gradient-text-accent {
-  background: linear-gradient(90deg, $sage 0%, $lime 60%, $forest 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #34d399 45%, #10b981 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-// Keep alias for compatibility
+@mixin gradient-text-indigo {
+  background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 40%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 @mixin gradient-text {
   color: $text;
+}
+
+// ── Precision Telemetry Badges ────────────────────────────────
+@mixin telemetry-badge($color: $emerald, $bg: rgba(16, 185, 129, 0.1)) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: $font-family-mono;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: $color;
+  background: $bg;
+  border: 1px solid rgba($color, 0.25);
+  border-radius: 20px;
+  padding: 0.25rem 0.75rem;
 }

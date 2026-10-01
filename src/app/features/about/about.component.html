@@ -2,32 +2,62 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-content">
-        <span class="section-eyebrow">// Sobre mí</span>
-        <h2 class="section-title text-left">El ingeniero detrás de <span class="accent">CJ</span></h2>
+        <span class="section-eyebrow">Ingeniería &amp; Filosofía</span>
+        <h2 class="section-title text-left">El ingeniero detrás del <span class="accent">código</span></h2>
 
         <p class="about-lead">
-          Soy <strong>Cristian Jiménez Martínez (CristianJM)</strong>, Full Stack Developer &amp; Software Architect enfocado en ingeniería limpia, automatización inteligente y sistemas escalables.
+          Soy <strong>Cristian Jiménez Martínez (CristianJM)</strong>, Full Stack Developer &amp; Software Architect especializado en ingeniería limpia, middleware empresarial y sistemas de alta disponibilidad.
         </p>
 
         <p class="about-text">
-          Diseño y construyo soluciones de extremo a extremo: desde infraestructura y conectores de alta velocidad para Factusol ERP, hasta plataformas SaaS multi-tenant y sistemas de firma eIDAS bajo estrictos requisitos de seguridad.
+          Diseño y construyo infraestructura de extremo a extremo: desde servicios de escritorio en segundo plano para Windows x64 capaces de consultar bases de datos Factusol OLEDB sin bloquear la oficina, hasta APIs seguras para procesos de verificación y firma electrónica eIDAS.
         </p>
 
         <p class="about-text">
-          Mi enfoque es directo: eliminar tareas repetitivas, automatizar el volcado de pedidos y catálogo, y aportar arquitectura sólida para que tu empresa opere sin fricción ni fallos de stock.
+          Mi filosofía es directa: <strong>eliminar el software inflado</strong>. Construir arquitecturas <em>Local-First</em> con tolerancia a caídas de red, automatizar el flujo de existencias y pedidos para ahorrar cientos de horas de trabajo administrativo, y entregar sistemas en los que una empresa pueda confiar a ciegas.
         </p>
 
-        <div class="tech-badge-container">
-          <h4 class="tech-title">STACK TÉCNICO DOMINADO</h4>
-          <div class="badges-grid">
-            <span *ngFor="let t of techStack" class="tech-badge">
-              <span class="badge-category">{{ t.category }}</span>
-              <span class="badge-name">{{ t.name }}</span>
-            </span>
+        <!-- Technical Capabilities Matrix -->
+        <div class="capabilities-box">
+          <div class="cap-group">
+            <div class="cap-header">
+              <span class="cap-badge">ERP &amp; CONCURRENCIA</span>
+            </div>
+            <div class="cap-items">
+              <span class="cap-item">Factusol OLEDB / Access</span>
+              <span class="cap-item">Arquitectura Local-First</span>
+              <span class="cap-item">Store-and-Forward Engine</span>
+              <span class="cap-item">Concurrencia LAN &amp; NAS</span>
+            </div>
+          </div>
+
+          <div class="cap-group">
+            <div class="cap-header">
+              <span class="cap-badge badge-indigo">BACKEND &amp; SISTEMAS</span>
+            </div>
+            <div class="cap-items">
+              <span class="cap-item">Node.js (SEA)</span>
+              <span class="cap-item">TypeScript</span>
+              <span class="cap-item">PostgreSQL / MariaDB</span>
+              <span class="cap-item">Docker &amp; Linux / Windows</span>
+            </div>
+          </div>
+
+          <div class="cap-group">
+            <div class="cap-header">
+              <span class="cap-badge badge-cyan">FRONTEND &amp; ARQUITECTURA</span>
+            </div>
+            <div class="cap-items">
+              <span class="cap-item">Angular 18+ Standalone</span>
+              <span class="cap-item">Signals &amp; State</span>
+              <span class="cap-item">SCSS Design Systems</span>
+              <span class="cap-item">Cloudflare Pages &amp; CDN</span>
+            </div>
           </div>
         </div>
       </div>
 
+      <!-- Profile & Credential Card -->
       <div class="about-card-box">
         <div class="profile-card">
           <div class="profile-avatar">
@@ -43,21 +73,25 @@
           <div class="profile-info">
             <div class="info-item">
               <span class="info-label">Especialización</span>
-              <span class="info-value">Factusol ERP · Node.js · Angular</span>
+              <span class="info-value">Factusol ERP · Local-First · Angular</span>
             </div>
             <div class="info-item">
-              <span class="info-label">Modalidad</span>
-              <span class="info-value">Remoto · Global</span>
+              <span class="info-label">Ubicación</span>
+              <span class="info-value">España (Remoto / Global)</span>
             </div>
             <div class="info-item">
-              <span class="info-label">Estado</span>
+              <span class="info-label">Disponibilidad</span>
               <span class="info-value status-available">Disponible 2026</span>
             </div>
           </div>
 
           <div class="profile-links">
-            <a href="https://github.com/CristianJimenezMartinez" target="_blank" rel="noopener" class="profile-link">GitHub &rarr;</a>
-            <a href="https://linkedin.com/in/cristian-jimenez-martinez/" target="_blank" rel="noopener" class="profile-link">LinkedIn &rarr;</a>
+            <a href="https://github.com/CristianJimenezMartinez" target="_blank" rel="noopener" class="profile-link">
+              <span>GitHub</span> &rarr;
+            </a>
+            <a href="https://linkedin.com/in/cristian-jimenez-martinez/" target="_blank" rel="noopener" class="profile-link">
+              <span>LinkedIn</span> &rarr;
+            </a>
           </div>
         </div>
       </div>
