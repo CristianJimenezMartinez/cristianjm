@@ -56,7 +56,7 @@ export class ContactComponent {
       },
       error: () => {
         this.isSubmitting.set(false);
-        this.submitError.set('No se pudo conectar con el servidor de envíos. Por favor escríbeme directamente a contacto@cristianjm.com');
+        this.submitError.set('No se pudo conectar con el servidor de envíos. Por favor escríbeme directamente a cristianjimeneztrabajo@gmail.com');
       }
     });
   }

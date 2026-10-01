@@ -1,81 +1,121 @@
 <!--
   ========================================================================
-  CristianJM (CJ) — Official Website & Portfolio
-  Developed & Designed by Cristian Jiménez Martínez
-  Website: https://cristianjm.com
-  Email: contacto@cristianjm.com
+  CristianJM — Web Oficial & Portfolio
+  Desarrollado y Diseñado por Cristian Jiménez Martínez
+  Web: https://cristianjm.com
+  Email: cristianjimeneztrabajo@gmail.com
   GitHub: https://github.com/CristianJimenezMartinez
   LinkedIn: https://linkedin.com/in/cristian-jimenez-martinez/
-  Copyright (c) 2026 Cristian Jiménez Martínez. All rights reserved.
+  Copyright (c) 2026 Cristian Jiménez Martínez. Todos los derechos reservados.
   ========================================================================
 -->
 <!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Cristian Jiménez Martínez | Software Architect & Creador de Bentian ERP Bridge</title>
+  <title>Cristian Jiménez Martínez | Software Architect &amp; Bentian ERP Bridge</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090d">
+  <meta name="color-scheme" content="dark">
+
   <!-- Favicon Official CJ Logo -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/CJ-logo-Sage-Forest-Lime.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/CJ-logo-Sage-Forest-Lime.png">
-  <link rel="shortcut icon" href="favicon.svg?v=2">
+  <link rel="shortcut icon" href="favicon.svg?v=3">
 
-  <!-- Meta Tags SEO -->
-  <meta name="description" content="Cristian Jiménez Martínez (CristianJM) — Desarrollador Full Stack y Arquitecto de Software. Creador de Bentian ERP Bridge, middleware Local-First y soluciones de sincronización en tiempo real para Factusol ERP y tiendas online.">
-  <meta name="keywords" content="Cristian Jimenez Martinez, CristianJM, Bentian ERP Bridge, Factusol, Integracion Factusol, Factusol WooCommerce, Factusol Prestashop, Conector Factusol, Software Architect, Full Stack Developer, Angular, Node.js">
-  <meta name="author" content="Cristian Jiménez Martínez (CristianJM)">
-  <meta name="copyright" content="Cristian Jiménez Martínez (CristianJM)">
-  <meta name="robots" content="index, follow">
+  <!-- Meta Tags SEO de Máxima Precisión -->
+  <meta name="description" content="Web oficial de Cristian Jiménez Martínez (CristianJM). Desarrollador y Arquitecto de Software. Creador de Bentian ERP Bridge y conector Factusol ERP para WooCommerce y PrestaShop.">
+  <meta name="keywords" content="Cristian Jiménez Martínez, Cristian Jimenez Martinez, CristianJM, Cristian Jimenez, Bentian ERP Bridge, Factusol, Integración Factusol, Conector Factusol, Sincronizador Factusol WooCommerce, Factusol PrestaShop, Software Architect, Full Stack Developer, Desarrollador Factusol España, Node.js, Angular, TypeScript, Local-First, OLEDB Access, cristianjimeneztrabajo@gmail.com">
+  <meta name="author" content="Cristian Jiménez Martínez">
+  <meta name="publisher" content="Cristian Jiménez Martínez">
+  <meta name="copyright" content="Cristian Jiménez Martínez">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://cristianjm.com/">
 
-  <!-- OpenGraph / Facebook / LinkedIn -->
-  <meta property="og:type" content="website">
+  <!-- OpenGraph / Redes Sociales (Facebook, LinkedIn, WhatsApp, Telegram) -->
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Cristian Jiménez Martínez">
+  <meta property="og:title" content="Cristian Jiménez Martínez | Software Architect &amp; Creador de Bentian ERP Bridge">
+  <meta property="og:description" content="Web oficial de Cristian Jiménez Martínez (CristianJM). Desarrollador Full Stack y Arquitecto de Software. Creador de Bentian ERP Bridge, middleware Local-First y soluciones de sincronización Factusol ERP.">
   <meta property="og:url" content="https://cristianjm.com/">
-  <meta property="og:title" content="Cristian Jiménez Martínez | Software Architect & Creador de Bentian ERP Bridge">
-  <meta property="og:description" content="Desarrollador Full Stack y Arquitecto de Software. Creador de Bentian ERP Bridge, middleware Local-First y soluciones de sincronización en tiempo real para Factusol ERP y tiendas online.">
   <meta property="og:image" content="https://cristianjm.com/assets/images/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Cristian Jiménez Martínez — Software Architect &amp; Creador de Bentian ERP Bridge">
+  <meta property="profile:first_name" content="Cristian">
+  <meta property="profile:last_name" content="Jiménez Martínez">
+  <meta property="profile:username" content="CristianJM">
 
-  <!-- Twitter -->
+  <!-- Twitter / X Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cristian Jiménez Martínez | Software Architect & Creador de Bentian ERP Bridge">
-  <meta name="twitter:description" content="Desarrollador Full Stack y Arquitecto de Software. Creador de Bentian ERP Bridge, middleware Local-First y soluciones de sincronización en tiempo real para Factusol ERP y tiendas online.">
+  <meta name="twitter:title" content="Cristian Jiménez Martínez | Software Architect &amp; Creador de Bentian ERP Bridge">
+  <meta name="twitter:description" content="Desarrollador Full Stack y Arquitecto de Software. Creador de Bentian ERP Bridge, middleware Local-First y soluciones de sincronización Factusol ERP con tiendas online.">
+  <meta name="twitter:image" content="https://cristianjm.com/assets/images/og-cover.png">
 
-  <!-- Google Fonts: Outfit & JetBrains Mono -->
+  <!-- Google Fonts Preconnect: Outfit & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Schema.org JSON-LD -->
+  <!-- Schema.org JSON-LD Structured Data Graph (Validación 100% Google Rich Results) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Cristian Jiménez Martínez",
-    "alternateName": "CristianJM",
-    "url": "https://cristianjm.com",
-    "image": "https://cristianjm.com/assets/CJ-logo-Sage-Forest-Lime.png",
-    "jobTitle": "Full Stack Developer & Software Architect",
-    "description": "Desarrollador Full Stack y Arquitecto de Software. Creador de Bentian ERP Bridge y especialista en arquitectura Local-First e integración de Factusol ERP con eCommerce.",
-    "email": "contacto@cristianjm.com",
-    "knowsAbout": [
-      "Factusol ERP",
-      "Bentian ERP Bridge",
-      "Arquitectura de Software",
-      "Arquitectura Local-First",
-      "Integración Factusol WooCommerce",
-      "Integración Factusol PrestaShop",
-      "Node.js",
-      "Angular",
-      "TypeScript",
-      "PostgreSQL",
-      "OLEDB Access"
-    ],
-    "sameAs": [
-      "https://github.com/CristianJimenezMartinez",
-      "https://linkedin.com/in/cristian-jimenez-martinez/",
-      "https://bridge.cristianjm.com"
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://cristianjm.com/#person",
+        "name": "Cristian Jiménez Martínez",
+        "alternateName": ["CristianJM", "Cristian Jimenez", "Cristian Jimenez Martinez"],
+        "url": "https://cristianjm.com",
+        "image": "https://cristianjm.com/assets/CJ-logo-Sage-Forest-Lime.png",
+        "jobTitle": "Full Stack Developer & Software Architect",
+        "description": "Desarrollador Full Stack y Arquitecto de Software. Creador de Bentian ERP Bridge, especialista en arquitectura Local-First, integración de Factusol ERP y sistemas de alta fiabilidad en producción.",
+        "email": "mailto:cristianjimeneztrabajo@gmail.com",
+        "sameAs": [
+          "https://github.com/CristianJimenezMartinez",
+          "https://linkedin.com/in/cristian-jimenez-martinez/",
+          "https://bridge.cristianjm.com"
+        ],
+        "knowsAbout": [
+          "Factusol ERP",
+          "Bentian ERP Bridge",
+          "Arquitectura de Software",
+          "Arquitectura Local-First",
+          "Integración Factusol WooCommerce",
+          "Integración Factusol PrestaShop",
+          "OLEDB Access",
+          "Node.js",
+          "TypeScript",
+          "Angular",
+          "PostgreSQL",
+          "Concurrencia en Red Local",
+          "Veri*Factu"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://cristianjm.com/#website",
+        "url": "https://cristianjm.com",
+        "name": "Cristian Jiménez Martínez — Web Oficial",
+        "publisher": { "@id": "https://cristianjm.com/#person" },
+        "inLanguage": "es"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://bridge.cristianjm.com/#software",
+        "name": "Bentian ERP Bridge",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Windows 10, Windows 11, Windows Server x64",
+        "url": "https://bridge.cristianjm.com",
+        "author": { "@id": "https://cristianjm.com/#person" },
+        "description": "Middleware y conector de escritorio Windows x64 con arquitectura Local-First para sincronización autónoma en tiempo real entre Factusol ERP y tiendas online (WooCommerce, PrestaShop)."
+      }
     ]
   }
   </script>

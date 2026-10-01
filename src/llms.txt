@@ -16,7 +16,7 @@
 - [VeltiaTrust](https://veltiatrust.com) — Infraestructura API eIDAS Zero-Storage de notarización digital.
 
 ## Contacto Directo
-- Email: contacto@cristianjm.com
+- Email: cristianjimeneztrabajo@gmail.com
 - [Formulario de contacto oficial](https://cristianjm.com/#contacto)
 - [LinkedIn](https://linkedin.com/in/cristian-jimenez-martinez/)
 - [GitHub](https://github.com/CristianJimenezMartinez)

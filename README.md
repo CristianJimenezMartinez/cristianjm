@@ -25,7 +25,7 @@ La aplicación está diseñada como un **funnel de ventas B2B** de alta conversi
 [04. CASOS]      ──> Casos de éxito: Bentian ERP Bridge (#01), Suministros Rubio B2B (#02), VeltiaTrust (#03)
 [05. SOBRE MÍ]   ──> Bio del ingeniero, stack técnico dominado y disponibilidad
 [06. FAQ]        ──> Eliminación de objeciones (seguridad sin abrir puertos, concurrencia Factusol, tolerancia offline)
-[07. CONTACTO]   ──> Formulario reactivo serverless conectado a Web3Forms (contacto@cristianjm.com)
+[07. CONTACTO]   ──> Formulario reactivo serverless conectado a Web3Forms (cristianjimeneztrabajo@gmail.com)
 [08. FOOTER]     ──> 4 columnas con enlaces directos al producto, legal y contacto
 ```
 
@@ -179,6 +179,6 @@ git push -u origin main
 Full Stack Developer & Software Architect  
 
 - 🌐 Website: [cristianjm.com](https://cristianjm.com)  
-- ✉️ Email: [contacto@cristianjm.com](mailto:contacto@cristianjm.com)  
+- ✉️ Email: [cristianjimeneztrabajo@gmail.com](mailto:cristianjimeneztrabajo@gmail.com)  
 - 💼 LinkedIn: [linkedin.com/in/cristian-jimenez-martinez/](https://linkedin.com/in/cristian-jimenez-martinez/)  
 - 🐙 GitHub: [github.com/CristianJimenezMartinez](https://github.com/CristianJimenezMartinez)  
