@@ -1,1 +1,5 @@
+/servicios / 301
+/servicios/* / 301
+/services / 301
+/services/* / 301
 /* /index.html 200

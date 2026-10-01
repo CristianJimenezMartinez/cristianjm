@@ -65,27 +65,6 @@
       }
     }
 
-    .nav-bridge-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.3rem 0.75rem;
-      background: rgba(99, 102, 241, 0.12);
-      border: 1px solid rgba(129, 140, 248, 0.3);
-      color: #c7d2fe !important;
-      border-radius: 6px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      transition: all 0.2s ease;
-
-      &:hover {
-        background: rgba(99, 102, 241, 0.25);
-        border-color: rgba(129, 140, 248, 0.6);
-        color: #ffffff !important;
-        transform: translateY(-1px);
-        box-shadow: 0 4px 14px rgba(99, 102, 241, 0.25);
-      }
-    }
 
     .nav-btn {
       padding: 0.45rem 1rem;

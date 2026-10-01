@@ -12,18 +12,13 @@
     </button>
 
     <ul class="nav-menu" [class.active]="isMenuOpen()">
-      <li class="nav-item"><a routerLink="/" fragment="servicios" (click)="closeMenu()">Servicios</a></li>
-      <li class="nav-item"><a routerLink="/" fragment="proyectos" (click)="closeMenu()">Casos</a></li>
-      <li class="nav-item">
-        <a href="https://bridge.cristianjm.com" target="_blank" rel="noopener" class="nav-bridge-link" (click)="closeMenu()">
-          Bentian Bridge ↗
-        </a>
-      </li>
+      <li class="nav-item"><a routerLink="/" fragment="proyectos" (click)="closeMenu()">Proyectos</a></li>
       <li class="nav-item"><a routerLink="/" fragment="sobre-mi" (click)="closeMenu()">Sobre mí</a></li>
       <li class="nav-item"><a routerLink="/" fragment="faq" (click)="closeMenu()">FAQ</a></li>
+      <li class="nav-item"><a routerLink="/" fragment="contacto" (click)="closeMenu()">Contacto</a></li>
       <li class="nav-item cta-item">
-        <a routerLink="/" fragment="contacto" class="nav-btn" (click)="closeMenu()">
-          Hablemos <span class="nav-arrow">&rarr;</span>
+        <a href="https://bridge.cristianjm.com" target="_blank" rel="noopener" class="nav-btn" (click)="closeMenu()">
+          Bentian ERP Bridge <span class="nav-arrow">&rarr;</span>
         </a>
       </li>
     </ul>
