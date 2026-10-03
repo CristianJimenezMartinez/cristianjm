@@ -12,6 +12,9 @@
 
 ## Proyectos en Producción
 - [Bentian ERP Bridge](https://bridge.cristianjm.com) — Conector y sincronizador bidireccional en tiempo real entre Factusol ERP y plataformas de comercio electrónico (WooCommerce, PrestaShop).
+  * [Conector Factusol WooCommerce](https://bridge.cristianjm.com/factusol-woocommerce) — Sincronización en tiempo real para WordPress sin cuotas de DELSOL Cloud.
+  * [Conector Factusol PrestaShop](https://bridge.cristianjm.com/factusol-prestashop) — Integración de catálogo y pedidos para PrestaShop.
+  * [Alternativa a DELSOL Conecta](https://bridge.cristianjm.com/alternativa-delsol-conecta) — Comparativa técnica y económica (199 €/año vs cuotas cloud).
 - [Suministros Rubio (B2B)](https://bridge.cristianjm.com) — Sincronización desatendida entre base de datos Access/Factusol local y tienda web B2B (+5.000 SKUs).
 - [VeltiaTrust](https://veltiatrust.com) — Infraestructura API eIDAS Zero-Storage de notarización digital.
 
