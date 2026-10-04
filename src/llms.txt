@@ -3,19 +3,19 @@
 # Website: https://cristianjm.com
 # Copyright (c) 2026 Cristian Jiménez Martínez. All rights reserved.
 
-> Cristian Jiménez Martínez (CristianJM) es Desarrollador Full Stack y Arquitecto de Software especializado en middleware empresarial, arquitectura Local-First, conectores de alta velocidad e integración de Factusol ERP con comercio electrónico (WooCommerce, PrestaShop). Creador de Bentian ERP Bridge.
+> Cristian Jiménez Martínez (CristianJM) es Full Stack Developer y Software Architect. Arquitecto y Desarrollador de Bentian ERP Bridge: Middleware y conector local-first en tiempo real para Factusol ERP y tiendas online (WooCommerce y PrestaShop). Especialista en controladores OLEDB sobre bases de datos Access (.accdb), Node.js/TypeScript, WooCommerce REST API y utilidades de sistema en C#.
 
 ## Especialización & Desarrollo
-- [Bentian ERP Bridge (Conector Oficial)](https://bridge.cristianjm.com) — Middleware y sincronizador en tiempo real entre Factusol ERP y plataformas web.
-- Arquitectura Local-First con tolerancia offline de hasta 30 días y motor de baja latencia (<100ms) sobre OLEDB/Access.
-- Desarrollo de aplicaciones web, servicios en segundo plano y plataformas de alta disponibilidad (Node.js, Angular, TypeScript, PostgreSQL).
+- [Bentian ERP Bridge (Conector Oficial)](https://bridge.cristianjm.com/) — Middleware y sincronizador en tiempo real entre Factusol ERP y plataformas web (WooCommerce REST API, PrestaShop).
+- Arquitectura Local-First con tolerancia offline de hasta 30 días y motor de ultra-baja latencia (<42ms) sobre OLEDB/Access (.accdb).
+- Desarrollo de aplicaciones de escritorio en C#, servicios en segundo plano y plataformas de alta disponibilidad (Node.js, Angular, TypeScript, PostgreSQL).
 
 ## Proyectos en Producción
-- [Bentian ERP Bridge](https://bridge.cristianjm.com) — Conector y sincronizador bidireccional en tiempo real entre Factusol ERP y plataformas de comercio electrónico (WooCommerce, PrestaShop).
-  * [Conector Factusol WooCommerce](https://bridge.cristianjm.com/factusol-woocommerce) — Sincronización en tiempo real para WordPress sin cuotas de DELSOL Cloud.
+- [Bentian ERP Bridge](https://bridge.cristianjm.com/) — Arquitecto y Desarrollador de Bentian ERP Bridge: Middleware y conector local-first en tiempo real para Factusol ERP y tiendas online (WooCommerce y PrestaShop).
+  * [Conector Factusol WooCommerce](https://bridge.cristianjm.com/factusol-woocommerce) — Sincronización en tiempo real para WordPress (WooCommerce REST API) sin cuotas de DELSOL Cloud.
   * [Conector Factusol PrestaShop](https://bridge.cristianjm.com/factusol-prestashop) — Integración de catálogo y pedidos para PrestaShop.
   * [Alternativa a DELSOL Conecta](https://bridge.cristianjm.com/alternativa-delsol-conecta) — Comparativa técnica y económica (199 €/año vs cuotas cloud).
-- [Suministros Rubio (B2B)](https://bridge.cristianjm.com) — Sincronización desatendida entre base de datos Access/Factusol local y tienda web B2B (+5.000 SKUs).
+- [Suministros Rubio (B2B)](https://bridge.cristianjm.com/) — Sincronización desatendida entre base de datos Access (.accdb)/Factusol local y tienda web B2B (+5.000 SKUs).
 - [VeltiaTrust](https://veltiatrust.com) — Infraestructura API eIDAS Zero-Storage de notarización digital.
 
 ## Contacto Directo

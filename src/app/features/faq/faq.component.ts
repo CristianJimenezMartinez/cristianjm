@@ -33,7 +33,7 @@ export class FaqComponent {
     },
     {
       question: '¿Qué plataformas eCommerce son compatibles con la sincronización?',
-      answer: 'Disponemos de conector nativo para WooCommerce y PrestaShop, además de soporte para tiendas personalizadas mediante Universal Bridge API. Sincroniza catálogo, stock disponible (DISSTO), tarifas y albaranes/pedidos en tiempo real.',
+      answer: 'Disponemos de conector nativo para WooCommerce (mediante la WooCommerce REST API oficial) y PrestaShop, además de soporte para tiendas personalizadas mediante Universal Bridge API. Sincroniza catálogo, stock disponible (DISSTO), tarifas y pedidos en tiempo real.',
       isOpen: false
     }
   ]);
