@@ -62,10 +62,12 @@ body {
   }
 }
 
-.section {
+.section,
+section[id] {
   position: relative;
   padding: 6.5rem 0;
   box-sizing: border-box;
+  scroll-margin-top: calc(#{$navbar-height} + 12px);
 
   .container {
     width: 100%;
@@ -73,6 +75,7 @@ body {
 
   @media (max-width: 992px) {
     padding: 4.5rem 0;
+    scroll-margin-top: calc(#{$navbar-height} + 8px);
   }
 }
 
