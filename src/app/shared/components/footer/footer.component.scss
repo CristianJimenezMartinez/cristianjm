@@ -39,8 +39,9 @@
       color: #ffffff;
 
       .logo-img {
+        width: 44px;
         height: 44px;
-        width: auto;
+        aspect-ratio: 1 / 1;
         object-fit: contain;
         filter: drop-shadow(0 0 14px rgba(16, 185, 129, 0.35));
       }

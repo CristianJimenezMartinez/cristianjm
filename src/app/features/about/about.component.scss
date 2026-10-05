@@ -146,6 +146,7 @@
         .avatar-logo-img {
           width: 62px;
           height: 62px;
+          aspect-ratio: 1 / 1;
           object-fit: contain;
           filter: drop-shadow(0 0 12px rgba(16, 185, 129, 0.4));
         }
