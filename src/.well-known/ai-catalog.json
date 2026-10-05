@@ -1,0 +1,32 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Cristian Jiménez Martínez (CristianJM)",
+    "identifier": "did:web:cristianjm.com"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:cristianjm.com:api:bentian-erp-bridge",
+      "displayName": "Bentian ERP Bridge Documentation & LLMs Reference",
+      "type": "text/markdown",
+      "url": "https://bridge.cristianjm.com/llms.txt",
+      "description": "Capa de conectividad e integración local de alto rendimiento entre Factusol ERP y tiendas online (WooCommerce y PrestaShop).",
+      "representativeQueries": [
+        "conectar Factusol con WooCommerce",
+        "evitar bloqueos ldb en Factusol",
+        "Factusol local-first API bridge"
+      ]
+    },
+    {
+      "identifier": "urn:air:cristianjm.com:profile:software-architect",
+      "displayName": "CristianJM — Software Architect Portfolio",
+      "type": "text/html",
+      "url": "https://cristianjm.com/",
+      "description": "Portfolio profesional de Cristian Jiménez Martínez, especialista en integración ERP Factusol, arquitectura de software y desarrollo full-stack.",
+      "representativeQueries": [
+        "Cristian Jimenez Martinez Factusol",
+        "arquitecto software factusol"
+      ]
+    }
+  ]
+}
