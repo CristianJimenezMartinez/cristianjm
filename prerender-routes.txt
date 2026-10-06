@@ -1,1 +1,15 @@
 /
+/sobre-mi
+/servicios/integracion-erp-factusol
+/servicios/arquitectura-cloud-fullstack
+/proyectos/bentian-erp-bridge
+/proyectos/suministros-rubio
+/proyectos/praedium-fundus
+/proyectos/organi-soto
+/proyectos/sototime
+/proyectos/grupo-soto-holding
+/proyectos/serenity-wellness
+/proyectos/poseidon-flow
+/proyectos/nova-ventanas
+/proyectos/grupo-soto-automovil
+/proyectos/veltiatrust

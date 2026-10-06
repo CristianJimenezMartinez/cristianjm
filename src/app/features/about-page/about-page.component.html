@@ -1,0 +1,197 @@
+<article class="about-page">
+  <div class="ambient-glow"></div>
+
+  <div class="container">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+      <a routerLink="/" class="breadcrumb-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        <span>Inicio</span>
+      </a>
+      <span class="breadcrumb-separator">/</span>
+      <span class="breadcrumb-current">Sobre Mí</span>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="about-hero">
+      <div class="hero-badges">
+        <span class="badge-tag">Trayectoria &amp; Filosofía</span>
+        <span class="badge-pill">
+          <span class="dot-pulse"></span>
+          <span>Disponible para Nuevos Proyectos</span>
+        </span>
+      </div>
+
+      <h1 class="about-title">Cristian Jiménez Martínez</h1>
+      <p class="about-lead">
+        Arquitecto de Software, desarrollador de sistemas de alta resiliencia y fundador de <strong>Bentian ERP Bridge</strong>. Especializado en conectar el mundo de las bases de datos locales empresariales con la nube moderna sin fricciones ni intermediarios.
+      </p>
+
+      <div class="profile-quick-stats">
+        <div class="stat-box">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Sistemas en Producción</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">&lt; 100ms</span>
+          <span class="stat-label">Latencia OLEDB en Local</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">11+</span>
+          <span class="stat-label">Proyectos Empresariales</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">0</span>
+          <span class="stat-label">Tolerancia a la Pérdida de Datos</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Bio & Engineering Principles -->
+    <div class="about-body">
+
+      <!-- Section: Trayectoria -->
+      <section class="about-section">
+        <div class="section-title-wrap">
+          <span class="section-eyebrow">01 // Trayectoria Profesional</span>
+          <h2 class="section-heading">Construyendo software donde no hay margen para el error</h2>
+        </div>
+        <p>
+          A lo largo de mi carrera profesional he liderado y diseñado la arquitectura tecnológica de proyectos críticos en sectores diversos: desde el middleware industrial de <strong>Bentian ERP Bridge</strong> y la sincronización B2B de <strong>Suministros Rubio</strong>, hasta plataformas de inversión bancaria en activos adjudicados como <strong>Praedium Fundus</strong> y la infraestructura cloud central del holding multisectorial <strong>Grupo Soto</strong>.
+        </p>
+        <p>
+          Mi enfoque combina el dominio de lenguajes de alto rendimiento a bajo nivel (Node.js, C#, Go puro para servicios de Windows de misión crítica) con arquitecturas web de vanguardia en Angular (SSR y Signals reactivos) y backends transaccionales en NestJS con PostgreSQL.
+        </p>
+      </section>
+
+      <!-- Section: Principios de Ingeniería -->
+      <section class="about-section">
+        <div class="section-title-wrap">
+          <span class="section-eyebrow">02 // Principios de Ingeniería</span>
+          <h2 class="section-heading">Cómo enfoco el desarrollo de software</h2>
+        </div>
+
+        <div class="principles-grid">
+          <div class="principle-card">
+            <div class="principle-header">
+              <span class="principle-num">01</span>
+              <h3 class="principle-title">Local-First &amp; Soberanía del Dato</h3>
+            </div>
+            <p class="principle-desc">
+              Las bases de datos corporativas no deben exponerse innecesariamente a servidores de terceros. Bentian ERP Bridge y OrganiSoto operan en la red local de la empresa, sincronizando atómicamente punto a punto sin intermediarios en la nube.
+            </p>
+          </div>
+
+          <div class="principle-card">
+            <div class="principle-header">
+              <span class="principle-num">02</span>
+              <h3 class="principle-title">Diseño Tolerante al Fallo (Store-and-Forward)</h3>
+            </div>
+            <p class="principle-desc">
+              Todo sistema en producción debe asumir que la fibra óptica se cortará, la corriente se apagará o un archivo de base de datos (.accdb) se bloqueará temporalmente. Las colas persistentes en SQLite aseguran cero pérdidas transaccionales.
+            </p>
+          </div>
+
+          <div class="principle-card">
+            <div class="principle-header">
+              <span class="principle-num">03</span>
+              <h3 class="principle-title">Rigor Fiscal &amp; LegalTech Español</h3>
+            </div>
+            <p class="principle-desc">
+              El software empresarial en España debe blindar jurídicamente a la empresa: cumplimiento estricto del Art. 97 LIVA (tiques simplificados), trazabilidad inmutable Veri*Factu, registro laboral Art. 34.9 ET con ledgers SHA-256 y firma digital FNMT.
+            </p>
+          </div>
+
+          <div class="principle-card">
+            <div class="principle-header">
+              <span class="principle-num">04</span>
+              <h3 class="principle-title">Eficiencia Radical en Infraestructura</h3>
+            </div>
+            <p class="principle-desc">
+              No se resuelven problemas de arquitectura añadiendo servidores sobredimensionados. Gestionar 4 portales web, 3 microservicios y bases de datos transaccionales en un VPS de 4 GB de RAM gracias a compilaciones delegadas en GitHub Actions demuestra ingeniería de costes real.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Stack Tecnológico Principal -->
+      <section class="about-section">
+        <div class="section-title-wrap">
+          <span class="section-eyebrow">03 // Ecosistema Técnico</span>
+          <h2 class="section-heading">Lenguajes, Frameworks y Bases de Datos</h2>
+        </div>
+
+        <div class="stack-categories">
+          <div class="stack-category">
+            <h3 class="category-name">Sistemas &amp; Escritorio Windows</h3>
+            <div class="tags-row">
+              <span class="tech-tag">Node.js / TypeScript</span>
+              <span class="tech-tag">C# (.NET / WinForms STA)</span>
+              <span class="tech-tag">Go (Golang Puro)</span>
+              <span class="tech-tag">Factusol OLEDB</span>
+              <span class="tech-tag">Access (.accdb / .mdb)</span>
+              <span class="tech-tag">SQLite (Modo WAL)</span>
+              <span class="tech-tag">Windows Service SCM</span>
+            </div>
+          </div>
+
+          <div class="stack-category">
+            <h3 class="category-name">Backend &amp; APIs Cloud</h3>
+            <div class="tags-row">
+              <span class="tech-tag">NestJS 11</span>
+              <span class="tech-tag">Prisma ORM v7</span>
+              <span class="tech-tag">PostgreSQL 16</span>
+              <span class="tech-tag">WebSockets / Socket.io</span>
+              <span class="tech-tag">Docker &amp; Compose</span>
+              <span class="tech-tag">Stripe SDK v22</span>
+              <span class="tech-tag">Criptografía Ed25519 &amp; SHA-256</span>
+            </div>
+          </div>
+
+          <div class="stack-category">
+            <h3 class="category-name">Frontend &amp; Aplicaciones Móviles</h3>
+            <div class="tags-row">
+              <span class="tech-tag">Angular 17 / 18 / 21</span>
+              <span class="tech-tag">Angular SSR &amp; SSG</span>
+              <span class="tech-tag">Angular Signals</span>
+              <span class="tech-tag">Capacitor 8.5 (Android Nativo)</span>
+              <span class="tech-tag">SCSS &amp; Atomic Architecture</span>
+              <span class="tech-tag">Schema.org SEO</span>
+            </div>
+          </div>
+
+          <div class="stack-category">
+            <h3 class="category-name">DevOps &amp; Producción</h3>
+            <div class="tags-row">
+              <span class="tech-tag">Nginx Hardened (TLS 1.3)</span>
+              <span class="tech-tag">PM2 Cluster Manager</span>
+              <span class="tech-tag">Ubuntu 24.04 LTS</span>
+              <span class="tech-tag">GitHub Actions CI/CD</span>
+              <span class="tech-tag">Zero-Downtime Reload</span>
+              <span class="tech-tag">Cloudflare Pages &amp; Zero Trust</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Banner de Contacto / Bentian -->
+      <div class="about-cta-banner">
+        <div class="banner-text">
+          <h3 class="banner-title">Conoce el proyecto estrella: Bentian ERP Bridge</h3>
+          <p class="banner-desc">
+            Descubre cómo sincronizar Factusol ERP con WooCommerce y PrestaShop en tiempo real sin exponer tu servidor.
+          </p>
+        </div>
+        <div class="banner-actions">
+          <a href="https://bridge.cristianjm.com/" target="_blank" rel="noopener" class="btn btn-primary">
+            <span>Visitar bridge.cristianjm.com ↗</span>
+          </a>
+          <a routerLink="/" fragment="contacto" class="btn btn-secondary">
+            <span>Contactar Directamente</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>

@@ -12,151 +12,99 @@
     <div class="bento-grid">
 
       <!-- Bento Item 1: Bentian ERP Bridge (Flagship Spotlight - Spans full width / 2 cols) -->
-      <div class="bento-card bento-flagship">
-        <div class="flagship-ambient-glow"></div>
+      @if (flagshipProject(); as flagship) {
+        <div class="bento-card bento-flagship">
+          <div class="flagship-ambient-glow"></div>
 
-        <div class="flagship-header">
-          <div class="flagship-badges">
-            <span class="badge-flagship-pill">
-              <span class="dot-pulse"></span>
-              <span>PRODUCTO PROPIO · SAAS EN PRODUCCIÓN</span>
-            </span>
-            <span class="badge-tag">ERP Middleware &amp; Local-First</span>
+          <div class="flagship-header">
+            <div class="flagship-badges">
+              <span class="badge-flagship-pill">
+                <span class="dot-pulse"></span>
+                <span>PRODUCTO PROPIO · SAAS EN PRODUCCIÓN</span>
+              </span>
+              <span class="badge-tag">{{ flagship.sector }}</span>
+            </div>
+            <span class="project-code">{{ flagship.number }} // FLAGSHIP</span>
           </div>
-          <span class="project-code">01 // FLAGSHIP</span>
+
+          <div class="flagship-hero-content">
+            <h3 class="flagship-title">{{ flagship.title }}</h3>
+            <p class="flagship-lead">
+              <strong>Arquitecto y Desarrollador de Bentian ERP Bridge:</strong> Middleware y conector local-first en tiempo real para Factusol ERP y tiendas online (WooCommerce y PrestaShop). Motor OLEDB de ultra-baja latencia sobre bases de datos Access (.accdb), utilidades nativas en C# y sincronización robusta con WooCommerce REST API.
+            </p>
+
+            <!-- 4 Pillars Sub-Bento -->
+            @if (flagship.pillars) {
+              <div class="flagship-pillars-grid">
+                @for (pillar of flagship.pillars; track pillar.title) {
+                  <div class="pillar-card">
+                    <div class="pillar-title">{{ pillar.title }}</div>
+                    <div class="pillar-desc">{{ pillar.description }}</div>
+                  </div>
+                }
+              </div>
+            }
+
+            <!-- Bottom Action Bar & Tech Stack -->
+            <div class="flagship-footer">
+              <div class="flagship-tags">
+                @for (tag of flagship.stack.slice(0, 8); track tag) {
+                  <span class="tag">{{ tag }}</span>
+                }
+              </div>
+
+              <div class="flagship-cta">
+                <a [routerLink]="['/proyectos', flagship.slug]" class="btn btn-secondary">
+                  <span>Ver Caso de Estudio Detallado</span>
+                  <span class="arrow">&rarr;</span>
+                </a>
+                <a [href]="flagship.liveUrl" target="_blank" rel="noopener" class="btn btn-indigo">
+                  <span>Entrar a Bentian ERP Bridge</span>
+                  <span class="arrow">&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+      }
 
-        <div class="flagship-hero-content">
-          <h3 class="flagship-title">Bentian ERP Bridge</h3>
-          <p class="flagship-lead">
-            <strong>Arquitecto y Desarrollador de Bentian ERP Bridge:</strong> Middleware y conector local-first en tiempo real para Factusol ERP y tiendas online (WooCommerce y PrestaShop). Motor OLEDB de ultra-baja latencia sobre bases de datos Access (.accdb), utilidades nativas en C# y sincronización robusta con WooCommerce REST API.
-          </p>
-
-          <!-- 4 Pillars Sub-Bento -->
-          <div class="flagship-pillars-grid">
-            <div class="pillar-card">
-              <div class="pillar-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-              </div>
-              <div class="pillar-title">Motor OLEDB Concurrente</div>
-              <div class="pillar-desc">Lectura directa y segura de bases de datos Access (.accdb) de Factusol en red LAN sin bloquear a los usuarios de facturación de la oficina.</div>
-            </div>
-
-            <div class="pillar-card">
-              <div class="pillar-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <div class="pillar-title">Store-and-Forward (30 Días)</div>
-              <div class="pillar-desc">Si se corta la fibra o la luz, los pedidos se encolan en buffer local seguro y se sincronizan atómicamente con Node.js y C# al volver la red.</div>
-            </div>
-
-            <div class="pillar-card">
-              <div class="pillar-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
-              </div>
-              <div class="pillar-title">Sincronización Bidireccional</div>
-              <div class="pillar-desc">Stock real disponible (DISSTO), tarifas y catálogo hacia WooCommerce REST API y PrestaShop; pedidos web inyectados en F_PCL.</div>
-            </div>
-
-            <div class="pillar-card">
-              <div class="pillar-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              </div>
-              <div class="pillar-title">Zero-Exposure &amp; Seguridad</div>
-              <div class="pillar-desc">Sin abrir puertos en el router, sin exponer la base de datos Access (.accdb) a internet y con validación para requisitos fiscales Veri*Factu.</div>
-            </div>
+      <!-- Other Projects Bento Cards -->
+      @for (project of otherProjects(); track project.id) {
+        <div class="bento-card bento-secondary">
+          <div class="bento-header">
+            <span class="badge-tag">{{ project.sector }}</span>
+            <span class="project-code">{{ project.number }}</span>
           </div>
 
-          <!-- Bottom Action Bar & Tech Stack -->
-          <div class="flagship-footer">
-            <div class="flagship-tags">
-              <span class="tag">Factusol ERP</span>
-              <span class="tag">Access (.accdb)</span>
-              <span class="tag">OLEDB</span>
-              <span class="tag">Node.js / TypeScript</span>
-              <span class="tag">C#</span>
-              <span class="tag">WooCommerce REST API</span>
-              <span class="tag">PrestaShop</span>
-              <span class="tag">Local-First</span>
-            </div>
+          <h3 class="bento-title">{{ project.title }}</h3>
+          <p class="bento-subtitle">{{ project.tagline }}</p>
+          <p class="bento-description">{{ project.description }}</p>
 
-            <div class="flagship-cta">
-              <a href="https://bridge.cristianjm.com/" target="_blank" rel="noopener" class="btn btn-indigo">
-                <span>Entrar a Bentian ERP Bridge</span>
-                <span class="arrow">&rarr;</span>
+          @if (project.metrics) {
+            <div class="bento-metric-highlight">
+              <span class="metric-val">{{ project.metrics }}</span>
+            </div>
+          }
+
+          <div class="bento-tags">
+            @for (tag of project.stack.slice(0, 5); track tag) {
+              <span class="tag">{{ tag }}</span>
+            }
+          </div>
+
+          <div class="bento-footer">
+            <a [routerLink]="['/proyectos', project.slug]" class="bento-link">
+              <span>Ver caso de estudio</span>
+              <span class="arrow">&rarr;</span>
+            </a>
+            @if (project.liveUrl) {
+              <a [href]="project.liveUrl" target="_blank" rel="noopener" class="bento-link-external" title="Visitar sitio oficial">
+                <span>Web oficial ↗</span>
               </a>
-            </div>
+            }
           </div>
         </div>
-      </div>
-
-      <!-- Bento Item 2: Suministros Rubio B2B -->
-      <div class="bento-card bento-secondary">
-        <div class="bento-header">
-          <span class="badge-tag">Suministros Industriales &amp; B2B</span>
-          <span class="project-code">02</span>
-        </div>
-
-        <h3 class="bento-title">Suministros Rubio</h3>
-        <p class="bento-subtitle">Automatización integral de catálogo mayorista (+5.000 SKUs) y pedidos web.</p>
-        <p class="bento-description">
-          Despliegue en producción de sincronización desatendida entre Factusol local y tienda web B2B. Reducción al 100% del picado manual de pedidos y actualización de existencias en segundos.
-        </p>
-
-        <div class="bento-metric-highlight">
-          <span class="metric-val">100% Cero errores de stock</span>
-          <span class="metric-sub">0 picado manual de albaranes</span>
-        </div>
-
-        <div class="bento-tags">
-          <span class="tag">Factusol OLEDB</span>
-          <span class="tag">Access (.accdb)</span>
-          <span class="tag">PHP Bridge</span>
-          <span class="tag">MariaDB</span>
-          <span class="tag">Windows Service</span>
-        </div>
-
-        <div class="bento-footer">
-          <a href="https://bridge.cristianjm.com/" target="_blank" rel="noopener" class="bento-link">
-            <span>Ver arquitectura del conector</span>
-            <span class="arrow">&rarr;</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Bento Item 3: VeltiaTrust LegalTech & eIDAS -->
-      <div class="bento-card bento-secondary">
-        <div class="bento-header">
-          <span class="badge-tag">Infraestructura &amp; Seguridad eIDAS</span>
-          <span class="project-code">03</span>
-        </div>
-
-        <h3 class="bento-title">VeltiaTrust</h3>
-        <p class="bento-subtitle">Infraestructura de notarización y firma electrónica con arquitectura Zero-Storage.</p>
-        <p class="bento-description">
-          API de alta seguridad orientada al sector Telco y legal para procesos de verificación de identidad, notarización digital y firma según normativa eIDAS sin intermediarios ni almacenamiento de datos sensibles.
-        </p>
-
-        <div class="bento-metric-highlight">
-          <span class="metric-val">100% Cumplimiento eIDAS</span>
-          <span class="metric-sub">Arquitectura Zero-Storage</span>
-        </div>
-
-        <div class="bento-tags">
-          <span class="tag">Node.js</span>
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">API-First</span>
-          <span class="tag">Zero-Storage</span>
-          <span class="tag">eIDAS</span>
-        </div>
-
-        <div class="bento-footer">
-          <a href="https://veltiatrust.com" target="_blank" rel="noopener" class="bento-link">
-            <span>Visitar veltiatrust.com</span>
-            <span class="arrow">&rarr;</span>
-          </a>
-        </div>
-      </div>
+      }
 
     </div>
   </div>

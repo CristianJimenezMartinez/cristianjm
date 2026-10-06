@@ -1,0 +1,192 @@
+@if (project(); as p) {
+  <article class="project-detail-page">
+    <div class="ambient-glow"></div>
+
+    <div class="container">
+      <!-- Breadcrumb & Back navigation -->
+      <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+        <a routerLink="/" class="breadcrumb-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          <span>Inicio</span>
+        </a>
+        <span class="breadcrumb-separator">/</span>
+        <a routerLink="/" fragment="proyectos" class="breadcrumb-link">Proyectos</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">{{ p.title }}</span>
+      </nav>
+
+      <!-- Project Header / Hero -->
+      <header class="project-hero">
+        <div class="project-meta-badges">
+          <span class="badge-tag">{{ p.sector }}</span>
+          <span class="badge-code">{{ p.number }} // PROYECTO</span>
+          @if (p.badgeText) {
+            <span class="badge-pill">
+              <span class="dot-pulse"></span>
+              <span>{{ p.badgeText }}</span>
+            </span>
+          }
+        </div>
+
+        <h1 class="project-title">{{ p.title }}</h1>
+        <p class="project-tagline">{{ p.tagline }}</p>
+
+        <!-- Project Meta Strip (Role, Year, Stack summary) -->
+        <div class="project-meta-strip">
+          <div class="meta-item">
+            <span class="meta-label">Rol Técnico</span>
+            <span class="meta-value">{{ p.role }}</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Periodo</span>
+            <span class="meta-value">{{ p.year }}</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Disponibilidad</span>
+            <span class="meta-value text-emerald">En Producción Activa</span>
+          </div>
+          @if (p.liveUrl) {
+            <div class="meta-item cta-meta">
+              <a [href]="p.liveUrl" target="_blank" rel="noopener" class="btn btn-primary">
+                <span>Acceder a la Plataforma</span>
+                <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          }
+        </div>
+
+        <!-- 4 Metrics Highlight Grid -->
+        @if (p.metricsList && p.metricsList.length > 0) {
+          <div class="metrics-grid">
+            @for (m of p.metricsList; track m.label) {
+              <div class="metric-card">
+                <span class="metric-value">{{ m.value }}</span>
+                <span class="metric-label">{{ m.label }}</span>
+              </div>
+            }
+          </div>
+        }
+      </header>
+
+      <!-- Main Case Study Content -->
+      <div class="case-study-body">
+        
+        <!-- Challenge Section -->
+        <section class="case-section challenge-section">
+          <div class="section-title-wrap">
+            <span class="section-eyebrow">01 // El Reto de Negocio</span>
+            <h2 class="section-heading">El problema a resolver</h2>
+          </div>
+          <p class="section-lead">{{ p.problem }}</p>
+          <div class="challenge-box">
+            <h3 class="box-title">Complejidad Técnica &amp; Operativa</h3>
+            <p>{{ p.challenge }}</p>
+          </div>
+        </section>
+
+        <!-- Solution & Architecture Section -->
+        <section class="case-section solution-section">
+          <div class="section-title-wrap">
+            <span class="section-eyebrow">02 // Arquitectura &amp; Solución</span>
+            <h2 class="section-heading">Diseño de Ingeniería de Software</h2>
+          </div>
+          <p class="section-lead">{{ p.solution }}</p>
+
+          <!-- 4 Pillars Grid if available -->
+          @if (p.pillars && p.pillars.length > 0) {
+            <div class="pillars-grid">
+              @for (pillar of p.pillars; track pillar.title) {
+                <div class="pillar-card">
+                  <div class="pillar-header">
+                    <span class="pillar-bullet">&bull;</span>
+                    <h3 class="pillar-title">{{ pillar.title }}</h3>
+                  </div>
+                  <p class="pillar-description">{{ pillar.description }}</p>
+                </div>
+              }
+            </div>
+          }
+        </section>
+
+        <!-- Key Features Checklist -->
+        @if (p.keyFeatures && p.keyFeatures.length > 0) {
+          <section class="case-section features-section">
+            <div class="section-title-wrap">
+              <span class="section-eyebrow">03 // Capacidades Implementadas</span>
+              <h2 class="section-heading">Funcionalidades Clave en Producción</h2>
+            </div>
+            <ul class="features-list">
+              @for (feature of p.keyFeatures; track feature) {
+                <li class="feature-item">
+                  <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span>{{ feature }}</span>
+                </li>
+              }
+            </ul>
+          </section>
+        }
+
+        <!-- Stack & Technologies -->
+        <section class="case-section stack-section">
+          <div class="section-title-wrap">
+            <span class="section-eyebrow">04 // Tecnologías</span>
+            <h2 class="section-heading">Stack y Ecosistema</h2>
+          </div>
+          <div class="tech-tags-grid">
+            @for (tech of p.stack; track tech) {
+              <span class="tech-tag">{{ tech }}</span>
+            }
+          </div>
+        </section>
+
+        <!-- Direct Actions Banner -->
+        <div class="case-cta-banner">
+          <div class="cta-content">
+            <h3 class="cta-title">¿Necesitas una arquitectura similar para tu empresa?</h3>
+            <p class="cta-desc">
+              Diseño e implemento soluciones de alta concurrencia, integración con ERPs y sistemas cloud resilientes.
+            </p>
+          </div>
+          <div class="cta-buttons">
+            <a routerLink="/" fragment="contacto" class="btn btn-primary">
+              <span>Hablemos de tu Proyecto</span>
+              <span class="arrow">&rarr;</span>
+            </a>
+            @if (p.liveUrl) {
+              <a [href]="p.liveUrl" target="_blank" rel="noopener" class="btn btn-secondary">
+                <span>Ver Sitio Oficial ↗</span>
+              </a>
+            }
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Related Projects Section -->
+      <footer class="related-projects-section">
+        <div class="section-header-centered">
+          <span class="section-eyebrow">Otros Proyectos Reales</span>
+          <h2 class="section-title">Casos de Éxito Relacionados</h2>
+        </div>
+
+        <div class="related-grid">
+          @for (rel of getRelatedProjects(); track rel.id) {
+            <a [routerLink]="['/proyectos', rel.slug]" class="related-card">
+              <div class="related-meta">
+                <span class="badge-tag">{{ rel.sector }}</span>
+                <span class="badge-code">{{ rel.number }}</span>
+              </div>
+              <h3 class="related-title">{{ rel.title }}</h3>
+              <p class="related-desc">{{ rel.tagline }}</p>
+              <div class="related-link">
+                <span>Explorar caso de estudio</span>
+                <span class="arrow">&rarr;</span>
+              </div>
+            </a>
+          }
+        </div>
+      </footer>
+
+    </div>
+  </article>
+}

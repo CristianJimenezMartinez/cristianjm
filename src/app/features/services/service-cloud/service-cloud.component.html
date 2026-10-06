@@ -1,0 +1,109 @@
+<article class="service-page">
+  <div class="ambient-glow"></div>
+
+  <div class="container">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+      <a routerLink="/" class="breadcrumb-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        <span>Inicio</span>
+      </a>
+      <span class="breadcrumb-separator">/</span>
+      <span>Servicios</span>
+      <span class="breadcrumb-separator">/</span>
+      <span class="breadcrumb-current">Arquitectura Cloud &amp; Full-Stack</span>
+    </nav>
+
+    <!-- Header Hero -->
+    <header class="service-hero">
+      <div class="hero-badges">
+        <span class="badge-tag">Cloud &amp; DevOps</span>
+        <span class="badge-pill">
+          <span class="dot-pulse"></span>
+          <span>Alta Disponibilidad &amp; Costes Contenidos</span>
+        </span>
+      </div>
+
+      <h1 class="service-title">Arquitectura Cloud, Microservicios y Full-Stack</h1>
+      <p class="service-lead">
+        Diseño de arquitecturas escalables, limpias y de bajo coste operativo para holdings multisectoriales y plataformas SaaS. <strong>NestJS</strong> modular, <strong>Angular SSR</strong>, <strong>PostgreSQL</strong> y pipelines CI/CD automatizados.
+      </p>
+
+      <div class="hero-actions">
+        <a routerLink="/proyectos/grupo-soto-holding" class="btn btn-primary">
+          <span>Ver Caso de Éxito Grupo Soto &rarr;</span>
+        </a>
+        <a routerLink="/" fragment="contacto" class="btn btn-secondary">
+          <span>Consultar Viabilidad de Proyecto</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Content Sections -->
+    <div class="service-body">
+
+      <!-- Section: Principios Cloud -->
+      <section class="service-section">
+        <div class="section-title-wrap">
+          <span class="section-eyebrow">01 // Filosofía de Diseño</span>
+          <h2 class="section-heading">Ingeniería eficiente orientada a la contención de costes</h2>
+        </div>
+        <p>
+          Construir una infraestructura cloud robusta no consiste en acumular servicios gestionados caros en AWS o Azure. Mi metodología optimiza cada capa para exprimir al máximo servidores VPS o nubes híbridas, logrando disponibilidad del 99.9% con una fracción del coste mensual:
+        </p>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <h3 class="pillar-title">Backend Modular en NestJS</h3>
+            <p>Estructura por dominios de negocio con validación estricta DTO (Zero-Trust), control de acceso por roles (RBAC) y soporte de WebSockets para tiempo real.</p>
+          </div>
+          <div class="pillar-card">
+            <h3 class="pillar-title">Frontend Angular SSR &amp; Signals</h3>
+            <p>Server-Side Rendering para un posicionamiento SEO perfecto en Google y gestión de estado reactivo fino con Signals sin penalizaciones de rendimiento.</p>
+          </div>
+          <div class="pillar-card">
+            <h3 class="pillar-title">PostgreSQL &amp; Prisma Multi-Schema</h3>
+            <p>Modelado relacional ACID con schemas modulares (`prismaSchemaFolder`), índices de consulta compuestos y políticas de menor privilegio (Least Privilege).</p>
+          </div>
+          <div class="pillar-card">
+            <h3 class="pillar-title">Pipelines CI/CD Zero-Downtime</h3>
+            <p>Compilación desacoplada en la nube mediante GitHub Actions y despliegue idempotente con rsync y recarga en caliente supervisada por PM2.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case study link -->
+      <section class="service-section case-ref-section">
+        <div class="case-ref-box">
+          <div class="case-ref-content">
+            <span class="case-tag">Caso Real en Producción</span>
+            <h3 class="case-ref-title">Holding Grupo Soto: Consolidación Cloud</h3>
+            <p class="case-ref-desc">
+              Descubre cómo unificamos 4 portales web, microservicios de fichajes laborales y bases de datos transaccionales en un VPS de 4 GB de RAM con Nginx y PM2.
+            </p>
+          </div>
+          <a routerLink="/proyectos/grupo-soto-holding" class="btn btn-secondary">
+            <span>Explorar Caso de Estudio &rarr;</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- CTA Final -->
+      <div class="service-cta-banner">
+        <div class="banner-text">
+          <h3 class="banner-title">¿Tienes un proyecto cloud o necesitas modernizar tu stack?</h3>
+          <p class="banner-desc">
+            Analicemos tu infraestructura actual y diseñemos una hoja de ruta técnica sin caídas.
+          </p>
+        </div>
+        <div class="banner-actions">
+          <a routerLink="/" fragment="contacto" class="btn btn-primary">
+            <span>Iniciar Conversación</span>
+            <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>

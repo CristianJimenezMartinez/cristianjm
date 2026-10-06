@@ -11,7 +11,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "node scripts/generate-content.js && ng build",
+    "build": "node scripts/generate-content.js && ng build && node scripts/post-build-seo.js",
     "build:favicons": "node scripts/build-favicons.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",

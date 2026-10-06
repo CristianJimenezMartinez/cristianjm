@@ -3,20 +3,26 @@
 # Website: https://cristianjm.com
 # Copyright (c) 2026 Cristian Jiménez Martínez. All rights reserved.
 
-> Cristian Jiménez Martínez (CristianJM) es Full Stack Developer y Software Architect. Arquitecto y Desarrollador de Bentian ERP Bridge: Middleware y conector local-first en tiempo real para Factusol ERP y tiendas online (WooCommerce y PrestaShop). Especialista en controladores OLEDB sobre bases de datos Access (.accdb), Node.js/TypeScript, WooCommerce REST API y utilidades de sistema en C#.
+> Cristian Jiménez Martínez (CristianJM) es Arquitecto de Software y Desarrollador Full-Stack. Fundador y Creador de Bentian ERP Bridge: Middleware y conector local-first en tiempo real para Factusol ERP y tiendas online (WooCommerce y PrestaShop). Especialista en controladores OLEDB sobre bases de datos Access (.accdb), Node.js/TypeScript, C#, Go y Angular SSR.
 
-## Especialización & Desarrollo
+## Especialización & Consultoría
 - [Bentian ERP Bridge (Conector Oficial)](https://bridge.cristianjm.com/) — Middleware y sincronizador en tiempo real entre Factusol ERP y plataformas web (WooCommerce REST API, PrestaShop).
-- Arquitectura Local-First con tolerancia offline de hasta 30 días y motor de ultra-baja latencia (<42ms) sobre OLEDB/Access (.accdb).
-- Desarrollo de aplicaciones de escritorio en C#, servicios en segundo plano y plataformas de alta disponibilidad (Node.js, Angular, TypeScript, PostgreSQL).
+- [Integración Factusol ERP](https://cristianjm.com/servicios/integracion-erp-factusol) — Conectores a medida para comercio electrónico y Factusol.
+- [Arquitectura Cloud & Full-Stack](https://cristianjm.com/servicios/arquitectura-cloud-fullstack) — NestJS, Angular SSR, PostgreSQL y Docker.
+- [Sobre Mí](https://cristianjm.com/sobre-mi) — Principios de ingeniería y trayectoria.
 
-## Proyectos en Producción
-- [Bentian ERP Bridge](https://bridge.cristianjm.com/) — Arquitecto y Desarrollador de Bentian ERP Bridge: Middleware y conector local-first en tiempo real para Factusol ERP y tiendas online (WooCommerce y PrestaShop).
-  * [Conector Factusol WooCommerce](https://bridge.cristianjm.com/factusol-woocommerce) — Sincronización en tiempo real para WordPress (WooCommerce REST API) sin cuotas de DELSOL Cloud.
-  * [Conector Factusol PrestaShop](https://bridge.cristianjm.com/factusol-prestashop) — Integración de catálogo y pedidos para PrestaShop.
-  * [Alternativa a DELSOL Conecta](https://bridge.cristianjm.com/alternativa-delsol-conecta) — Comparativa técnica y económica (199 €/año vs cuotas cloud).
-- [Suministros Rubio (B2B)](https://bridge.cristianjm.com/) — Sincronización desatendida entre base de datos Access (.accdb)/Factusol local y tienda web B2B (+5.000 SKUs).
-- [VeltiaTrust](https://veltiatrust.com) — Infraestructura API eIDAS Zero-Storage de notarización digital.
+## Proyectos y Casos de Estudio en Producción
+- [Bentian ERP Bridge](https://cristianjm.com/proyectos/bentian-erp-bridge) — Middleware local-first para Factusol ERP, WooCommerce y PrestaShop (Web: https://bridge.cristianjm.com/).
+- [Suministros Rubio](https://cristianjm.com/proyectos/suministros-rubio) — Sincronización desatendida entre base de datos Access/Factusol local y tienda web B2B (+5.000 SKUs).
+- [Praedium Fundus](https://cristianjm.com/proyectos/praedium-fundus) — Plataforma de inversión en activos inmobiliarios adjudicados, deuda bancaria NPL y suelo industrial (Web: https://praediumfundus.es/).
+- [OrganiSoto](https://cristianjm.com/proyectos/organi-soto) — Motor de contabilidad autónoma en Go con corte inteligente de fajos y auditoría fiscal con Google Gemini Flash Vision.
+- [SotoTime](https://cristianjm.com/proyectos/sototime) — Plataforma SaaS de control de jornada laboral con ledger criptográfico inmutable SHA-256 (Art. 34.9 ET) y firma digital FNMT.
+- [Grupo Soto Holding](https://cristianjm.com/proyectos/grupo-soto-holding) — Infraestructura cloud centralizada en VPS de IONOS con Nginx Hardened, PM2, NestJS y Angular SSR.
+- [Serenity Wellness Center](https://cristianjm.com/proyectos/serenity-wellness) — Ecosistema omnicanal para estudio boutique de Pilates Reformer (Web SSR + App Android Google Play + TPV físico).
+- [PoseidonFlow](https://cristianjm.com/proyectos/poseidon-flow) — Automatización operativa de centros de lavado con WebSockets, telefonía CTI a coste cero y balanceo de turnos.
+- [Nova Ventanas y Puertas](https://cristianjm.com/proyectos/nova-ventanas) — Showroom digital Passivhaus y cotizador express en 3 pasos con cálculo de ayudas NextGen EU.
+- [Grupo Soto Automóvil](https://cristianjm.com/proyectos/grupo-soto-automovil) — Portal B2B y CRM de movilidad comercial con numeración correlativa atómica de pedidos con Prisma transactions.
+- [VeltiaTrust](https://cristianjm.com/proyectos/veltiatrust) — Infraestructura API eIDAS Zero-Storage de notarización digital sin almacenamiento residual.
 
 ## Contacto Directo
 - Email: cristianjimeneztrabajo@gmail.com

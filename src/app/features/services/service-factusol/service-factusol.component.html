@@ -1,0 +1,144 @@
+<article class="service-page">
+  <div class="ambient-glow"></div>
+
+  <div class="container">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+      <a routerLink="/" class="breadcrumb-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        <span>Inicio</span>
+      </a>
+      <span class="breadcrumb-separator">/</span>
+      <span>Servicios</span>
+      <span class="breadcrumb-separator">/</span>
+      <span class="breadcrumb-current">Integración Factusol ERP</span>
+    </nav>
+
+    <!-- Header Hero -->
+    <header class="service-hero">
+      <div class="hero-badges">
+        <span class="badge-tag">Consultoría &amp; Conectores a Medida</span>
+        <span class="badge-pill">
+          <span class="dot-pulse"></span>
+          <span>Desarrollador Oficial de Bentian Bridge</span>
+        </span>
+      </div>
+
+      <h1 class="service-title">Integración de Factusol ERP con Comercio Electrónico</h1>
+      <p class="service-lead">
+        Conecta tu catálogo de Factusol (.accdb) con <strong>WooCommerce</strong> y <strong>PrestaShop</strong> en tiempo real. Sincronización bidireccional automática de tarifas, stock disponible y pedidos web sin bloqueos de base de datos ni picado manual de albaranes.
+      </p>
+
+      <div class="hero-actions">
+        <a href="https://bridge.cristianjm.com/" target="_blank" rel="noopener" class="btn btn-primary">
+          <span>Explorar Bentian ERP Bridge ↗</span>
+        </a>
+        <a routerLink="/" fragment="contacto" class="btn btn-secondary">
+          <span>Solicitar Consultoría Técnica</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Content Sections -->
+    <div class="service-body">
+
+      <!-- Section: El Problema Habitual -->
+      <section class="service-section">
+        <div class="section-title-wrap">
+          <span class="section-eyebrow">01 // El Cuello de Botella</span>
+          <h2 class="section-heading">Por qué fallan los conectores tradicionales de Factusol</h2>
+        </div>
+        <p>
+          Miles de pymes y distribuidores en España gestionan su operativa diaria con Factusol. Sin embargo, al intentar sincronizar con su tienda web (WooCommerce o PrestaShop), surgen problemas estructurales recurrentes:
+        </p>
+        <div class="problems-grid">
+          <div class="problem-card">
+            <h3 class="problem-title">Bloqueo de Base de Datos (.laccdb)</h3>
+            <p>Los conectores obsoletos abren la base de datos en modo exclusivo o realizan consultas pesadas que congelan las pantallas de los usuarios en la oficina.</p>
+          </div>
+          <div class="problem-card">
+            <h3 class="problem-title">Sobreventas por Stock Desfasado</h3>
+            <p>Sincronizar únicamente el stock físico (ACTSTO) provoca vender productos que ya están comprometidos en pedidos de mostrador pendientes de entrega.</p>
+          </div>
+          <div class="problem-card">
+            <h3 class="problem-title">Pérdida de Pedidos ante Cortes</h3>
+            <p>Si la fibra de la empresa o el PC se apagan durante el fin de semana, las ventas online quedan en el limbo y nunca se inyectan en Factusol.</p>
+          </div>
+          <div class="problem-card">
+            <h3 class="problem-title">Puertos Abiertos y Peligro de Ransomware</h3>
+            <p>Abrir puertos en el router o exponer bases de datos Access (.accdb) a internet vulnera cualquier auditoría de ciberseguridad.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Solución con Bentian ERP Bridge -->
+      <section class="service-section">
+        <div class="section-title-wrap">
+          <span class="section-eyebrow">02 // La Solución Definitiva</span>
+          <h2 class="section-heading">Arquitectura Local-First de Alta Resiliencia</h2>
+        </div>
+        <p>
+          A través del software desarrollado <strong>Bentian ERP Bridge</strong> y de integraciones a medida, resuelvo la sincronización aplicando estándares de ingeniería de software empresarial:
+        </p>
+
+        <div class="solutions-grid">
+          <div class="solution-card">
+            <div class="card-icon">⚡</div>
+            <h3 class="card-title">Motor OLEDB Concurrente</h3>
+            <p>Lectura compartida directa (Share Deny None) sobre archivos Access (.accdb y .mdb) con latencias inferiores a 100 ms y cero bloqueos para administración.</p>
+          </div>
+          <div class="solution-card">
+            <div class="card-icon">🛡️</div>
+            <h3 class="card-title">Cola Store-and-Forward (30 Días)</h3>
+            <p>Búfer persistente en SQLite (modo WAL). Los pedidos se custodian localmente si hay un corte de red y se inyectan automáticamente al restaurarse la conexión.</p>
+          </div>
+          <div class="solution-card">
+            <div class="card-icon">📦</div>
+            <h3 class="card-title">Cálculo de Stock Disponible (DISSTO)</h3>
+            <p>Mapeo inteligente: <code>DISSTO = ACTSTO - RESCLI - PENENT</code>. Solo vendes lo que realmente tienes en el almacén disponible para servir.</p>
+          </div>
+          <div class="solution-card">
+            <div class="card-icon">🧾</div>
+            <h3 class="card-title">Inyección Atómica en Serie 1 o W</h3>
+            <p>Los pedidos web se escriben con sus líneas e impuestos en F_PCL, desglosando bases, IVA y Recargo de Equivalencia sin descuadres contables.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case study link -->
+      <section class="service-section case-ref-section">
+        <div class="case-ref-box">
+          <div class="case-ref-content">
+            <span class="case-tag">Caso Real en Producción</span>
+            <h3 class="case-ref-title">Suministros Rubio: +5.000 SKUs Sincronizados</h3>
+            <p class="case-ref-desc">
+              Descubre cómo la empresa líder en suministros industriales eliminó el 100% del picado manual de pedidos y automatizó sus tarifas mayoristas.
+            </p>
+          </div>
+          <a routerLink="/proyectos/suministros-rubio" class="btn btn-secondary">
+            <span>Ver Caso de Estudio &rarr;</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- CTA Final -->
+      <div class="service-cta-banner">
+        <div class="banner-text">
+          <h3 class="banner-title">¿Listo para conectar tu Factusol sin errores?</h3>
+          <p class="banner-desc">
+            Prueba Bentian ERP Bridge durante 60 días sin coste o solicita un estudio de integración personalizada para tu ecommerce.
+          </p>
+        </div>
+        <div class="banner-actions">
+          <a href="https://bridge.cristianjm.com/" target="_blank" rel="noopener" class="btn btn-primary">
+            <span>Descargar Agente de Bentian ↗</span>
+          </a>
+          <a routerLink="/" fragment="contacto" class="btn btn-secondary">
+            <span>Contactar con Cristian</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>
