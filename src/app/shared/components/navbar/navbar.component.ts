@@ -14,6 +14,7 @@ export class NavbarComponent {
   private router = inject(Router);
 
   isMenuOpen = signal<boolean>(false);
+  isBetaActive = signal<boolean>(Date.now() <= new Date('2026-12-31T23:59:59Z').getTime());
 
   toggleMenu() {
     this.isMenuOpen.update(v => !v);
