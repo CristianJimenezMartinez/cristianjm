@@ -18,6 +18,14 @@ export const routes: Routes = [
     loadComponent: () => import('./features/services/service-factusol/service-factusol.component').then(m => m.ServiceFactusolComponent)
   },
   {
+    path: 'servicios/auditoria-verifactu-facturacion',
+    loadComponent: () => import('./features/services/service-verifactu/service-verifactu.component').then(m => m.ServiceVerifactuComponent)
+  },
+  {
+    path: 'servicios/rescate-optimizacion-erp',
+    loadComponent: () => import('./features/services/service-rescue/service-rescue.component').then(m => m.ServiceRescueComponent)
+  },
+  {
     path: 'servicios/arquitectura-cloud-fullstack',
     loadComponent: () => import('./features/services/service-cloud/service-cloud.component').then(m => m.ServiceCloudComponent)
   },

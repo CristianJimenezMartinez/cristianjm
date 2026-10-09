@@ -1,6 +1,8 @@
 /
 /sobre-mi
 /servicios/integracion-erp-factusol
+/servicios/auditoria-verifactu-facturacion
+/servicios/rescate-optimizacion-erp
 /servicios/arquitectura-cloud-fullstack
 /proyectos/bentian-erp-bridge
 /proyectos/suministros-rubio

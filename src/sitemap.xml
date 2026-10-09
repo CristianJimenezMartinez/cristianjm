@@ -26,15 +26,31 @@
   <!-- Servicios Especializados -->
   <url>
     <loc>https://cristianjm.com/servicios/integracion-erp-factusol</loc>
-    <lastmod>2026-10-06T09:00:00+02:00</lastmod>
+    <lastmod>2026-10-09T14:00:00+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/servicios/integracion-erp-factusol" />
     <xhtml:link rel="alternate" hreflang="es" href="https://cristianjm.com/servicios/integracion-erp-factusol" />
   </url>
   <url>
+    <loc>https://cristianjm.com/servicios/auditoria-verifactu-facturacion</loc>
+    <lastmod>2026-10-09T14:00:00+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/servicios/auditoria-verifactu-facturacion" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://cristianjm.com/servicios/auditoria-verifactu-facturacion" />
+  </url>
+  <url>
+    <loc>https://cristianjm.com/servicios/rescate-optimizacion-erp</loc>
+    <lastmod>2026-10-09T14:00:00+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/servicios/rescate-optimizacion-erp" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://cristianjm.com/servicios/rescate-optimizacion-erp" />
+  </url>
+  <url>
     <loc>https://cristianjm.com/servicios/arquitectura-cloud-fullstack</loc>
-    <lastmod>2026-10-06T09:00:00+02:00</lastmod>
+    <lastmod>2026-10-09T14:00:00+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/servicios/arquitectura-cloud-fullstack" />

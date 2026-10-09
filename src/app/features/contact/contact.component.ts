@@ -35,28 +35,28 @@ export class ContactComponent {
     this.submitError.set(null);
     this.submitSuccess.set(false);
 
-    const formData = {
-      access_key: 'YOUR_WEB3FORMS_ACCESS_KEY',
+    const payload = {
       name: this.contactForm.value.name,
       email: this.contactForm.value.email,
       service: this.contactForm.value.service,
       message: this.contactForm.value.message,
-      from_name: 'CristianJM Web Corporativa'
+      source: 'cristianjm.com'
     };
 
-    this.http.post('https://api.web3forms.com/submit', formData).subscribe({
+    this.http.post('https://bridge.cristianjm.com/api/v1/contact', payload).subscribe({
       next: (res: any) => {
         this.isSubmitting.set(false);
-        if (res.success) {
+        if (res?.success) {
           this.submitSuccess.set(true);
           this.contactForm.reset({ service: 'factusol-bridge' });
         } else {
-          this.submitError.set('Ocurrió un error al enviar el mensaje. Inténtalo de nuevo.');
+          this.submitError.set(res?.message || 'Ocurrió un error al procesar el mensaje. Inténtalo de nuevo.');
         }
       },
-      error: () => {
+      error: (err) => {
         this.isSubmitting.set(false);
-        this.submitError.set('No se pudo conectar con el servidor de envíos. Por favor escríbeme directamente a cristianjimeneztrabajo@gmail.com');
+        const errMsg = err?.error?.error?.message || err?.error?.message;
+        this.submitError.set(errMsg || 'No se pudo conectar con el servidor de envíos. Por favor escríbeme directamente a cristianjimeneztrabajo@gmail.com');
       }
     });
   }

@@ -1,0 +1,159 @@
+<article class="service-page">
+  <div class="ambient-glow"></div>
+
+  <div class="container">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+      <a routerLink="/" class="breadcrumb-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        <span>Inicio</span>
+      </a>
+      <span class="breadcrumb-separator">/</span>
+      <span>Servicios</span>
+      <span class="breadcrumb-separator">/</span>
+      <span class="breadcrumb-current">Rescate &amp; Optimización ERP</span>
+    </nav>
+
+    <!-- Header Hero -->
+    <header class="service-hero">
+      <div class="hero-badges">
+        <span class="badge-tag">Intervención Urgente &amp; Rescate</span>
+        <span class="badge-pill">
+          <span class="dot-pulse"></span>
+          <span>Diagnóstico en &lt;24 Horas</span>
+        </span>
+      </div>
+
+      <h1 class="service-title">Rescate y Estabilización de Integraciones ERP &amp; Ecommerce</h1>
+      <p class="service-lead">
+        ¿Tu conector entre Factusol y tu tienda online falla constantemente? Reparación urgente de sincronizaciones rotas con <strong>WooCommerce</strong> y <strong>PrestaShop</strong>. Eliminación de bloqueos de base de datos (.laccdb), caídas por timeout 504 y descuadres de stock o pedidos perdidos.
+      </p>
+
+      <div class="hero-actions">
+        <a routerLink="/" fragment="contacto" class="btn btn-primary">
+          <span>Solicitar Rescate Urgente</span>
+          <span class="arrow">&rarr;</span>
+        </a>
+        <a href="#sintomas" class="btn btn-secondary">
+          <span>Identificar Síntomas Críticos</span>
+          <span class="arrow">&darr;</span>
+        </a>
+      </div>
+
+      <div class="hero-quick-links" style="margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.6rem; font-size: 0.82rem;">
+        <span style="color: var(--color-text-muted); align-self: center;">Averías comunes que resuelvo:</span>
+        <span class="spec-tag" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; padding: 2px 8px; border-radius: 4px; border: 1px solid rgba(245,158,11,0.3);">Error 504 Gateway Timeout</span>
+        <span style="color: var(--color-text-muted);">•</span>
+        <span style="color: var(--color-text-secondary);">Bloqueo .laccdb / Error 3045</span>
+        <span style="color: var(--color-text-muted);">•</span>
+        <span style="color: var(--color-text-secondary);">Rotura de stock por sobreventa</span>
+        <span style="color: var(--color-text-muted);">•</span>
+        <span style="color: var(--color-text-secondary);">Descuadre IVA y Recargo</span>
+      </div>
+    </header>
+
+    <!-- Content Sections -->
+    <div class="service-body">
+
+      <!-- Section: Síntomas Críticos -->
+      <section id="sintomas" class="service-section">
+        <div class="section-title-wrap">
+          <span class="section-eyebrow">01 // Diagnóstico</span>
+          <h2 class="section-heading">Síntomas habituales de una integración al borde del colapso</h2>
+        </div>
+        <p>
+          La mayoría de plugins de sincronización comerciales o scripts PHP antiguos no fueron diseñados para soportar miles de referencias o alta concurrencia. Si sufres alguno de estos problemas, tu negocio está perdiendo ventas y horas de trabajo:
+        </p>
+        <div class="problems-grid">
+          <div class="problem-card">
+            <h3 class="problem-title">El ERP se congela en la oficina (Error 3045)</h3>
+            <p>Al sincronizar, el conector bloquea el archivo de Access (.accdb) en modo exclusivo. Los administrativos no pueden emitir facturas ni cobrar en el mostrador mientras la web actualiza precios.</p>
+          </div>
+          <div class="problem-card">
+            <h3 class="problem-title">Timeouts 504 y sincronización a medias</h3>
+            <p>El proceso tarda más de 60 segundos, el servidor web corta la conexión por timeout y el catálogo queda a medio actualizar: unos productos suben de precio y otros no.</p>
+          </div>
+          <div class="problem-card">
+            <h3 class="problem-title">Pedidos que nunca llegan al ERP</h3>
+            <p>Si la conexión a internet cae o el ordenador del almacén se reinicia por una actualización de Windows durante la noche, las compras web se pierden y nadie prepara el envío.</p>
+          </div>
+          <div class="problem-card">
+            <h3 class="problem-title">Descuadre en céntimos de IVA y Recargo</h3>
+            <p>Diferencias entre el redondeo línea a línea de WooCommerce y el desglose de bases de Factusol, generando descuadres contables y problemas con la gestoría.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Plan de Rescate -->
+      <section class="service-section">
+        <div class="section-title-wrap">
+          <span class="section-eyebrow">02 // Protocolo de Actuación</span>
+          <h2 class="section-heading">Cómo estabilizamos tu sincronización en menos de 24 horas</h2>
+        </div>
+        <p>
+          Intervengo directamente sobre el cuello de botella aplicando ingeniería de software contrastada en entornos de producción de alto volumen:
+        </p>
+
+        <div class="solutions-grid">
+          <div class="solution-card">
+            <div class="card-icon">🩺</div>
+            <h3 class="card-title">Auditoría de Latencia &amp; Consultas</h3>
+            <p>Análisis de los cuellos de botella en la base de datos de Factusol y profiling de las peticiones a la API REST de WooCommerce o PrestaShop.</p>
+          </div>
+          <div class="solution-card">
+            <div class="card-icon">⚡</div>
+            <h3 class="card-title">Transición a Conector Local-First</h3>
+            <p>Sustitución de scripts web pesados por un agente de sincronización concurrente en segundo plano con acceso OLEDB no exclusivo (Share Deny None).</p>
+          </div>
+          <div class="solution-card">
+            <div class="card-icon">📦</div>
+            <h3 class="card-title">Cola SQLite Persistente (Zero Data Loss)</h3>
+            <p>Implementación de un búfer de pedidos tolerante a fallos: cualquier compra web se almacena de forma segura y se inyecta en Factusol en cuanto haya conexión.</p>
+          </div>
+          <div class="solution-card">
+            <div class="card-icon">🎯</div>
+            <h3 class="card-title">Mapeo Fiscal y Validación Exacta</h3>
+            <p>Ajuste de fórmulas de cálculo de impuestos (IVA + Recargo de Equivalencia) para garantizar coincidencia al céntimo entre la pasarela de pago y la factura del ERP.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case study ref -->
+      <section class="service-section case-ref-section">
+        <div class="case-ref-box" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem;">
+          <div class="case-ref-content">
+            <span class="case-tag" style="font-family: var(--font-family-mono); font-size: 0.8rem; color: #fbbf24; text-transform: uppercase;">Estudio de Caso Real</span>
+            <h3 class="case-ref-title" style="font-size: 1.3rem; color: #ffffff; margin: 0.5rem 0;">Suministros Rubio: De timeouts constantes a sincronización en tiempo real</h3>
+            <p class="case-ref-desc" style="font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.6; margin: 0;">
+              Una empresa distribuidora con más de 5.000 artículos en Factusol sufría bloqueos de terminales y pérdida de pedidos web todos los días. Tras migrar a nuestra arquitectura local-first con Bentian ERP Bridge, el tiempo de sincronización se redujo de 45 minutos a segundos, con 0 caídas desde su puesta en marcha.
+            </p>
+          </div>
+          <div>
+            <a routerLink="/proyectos/suministros-rubio" class="btn btn-secondary">
+              <span>Leer caso completo &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Final -->
+      <div class="service-cta-banner">
+        <div class="banner-text">
+          <h3 class="banner-title">¿Tu tienda online o ERP están perdiendo pedidos ahora mismo?</h3>
+          <p class="banner-desc">
+            No esperes a la siguiente campaña o al fin de semana para arreglarlo. Evaluamos tu arquitectura actual y te damos un diagnóstico técnico en menos de 24 horas.
+          </p>
+        </div>
+        <div class="banner-actions">
+          <a routerLink="/" fragment="contacto" class="btn btn-primary">
+            <span>Contactar de Urgencia</span>
+          </a>
+          <a href="mailto:cristianjimeneztrabajo@gmail.com" class="btn btn-secondary">
+            <span>Escribir por Email</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>

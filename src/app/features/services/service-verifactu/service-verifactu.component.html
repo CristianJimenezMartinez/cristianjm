@@ -1,0 +1,179 @@
+<article class="service-page">
+  <div class="ambient-glow"></div>
+
+  <div class="container">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+      <a routerLink="/" class="breadcrumb-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        <span>Inicio</span>
+      </a>
+      <span class="breadcrumb-separator">/</span>
+      <span>Servicios</span>
+      <span class="breadcrumb-separator">/</span>
+      <span class="breadcrumb-current">Auditoría &amp; Adaptación Veri*Factu</span>
+    </nav>
+
+    <!-- Header Hero -->
+    <header class="service-hero">
+      <div class="hero-badges">
+        <span class="badge-tag">Reglamento RD 1007/2023 &amp; Ley 11/2021</span>
+        <span class="badge-pill">
+          <span class="dot-pulse"></span>
+          <span>Cumplimiento Obligatorio AEAT</span>
+        </span>
+      </div>
+
+      <h1 class="service-title">Auditoría Técnica y Adaptación a Veri*Factu</h1>
+      <p class="service-lead">
+        Adapta tu software de facturación, ERP o base de datos (Factusol, desarrollos propios o soluciones legacy) a las exigencias normativas de la <strong>Agencia Tributaria (AEAT)</strong>. Encadenamiento criptográfico SHA-256, códigos QR normalizados y remisión telemática segura sin rehacer tu sistema desde cero.
+      </p>
+
+      <div class="hero-actions">
+        <a routerLink="/" fragment="contacto" class="btn btn-primary">
+          <span>Solicitar Auditoría Veri*Factu</span>
+          <span class="arrow">&rarr;</span>
+        </a>
+        <a href="#requisitos" class="btn btn-secondary">
+          <span>Ver Requisitos Técnicos</span>
+          <span class="arrow">&darr;</span>
+        </a>
+      </div>
+
+      <div class="hero-quick-links" style="margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.6rem; font-size: 0.82rem;">
+        <span style="color: var(--color-text-muted); align-self: center;">Claves de la normativa:</span>
+        <span class="spec-tag" style="background: rgba(239, 68, 68, 0.15); color: #f87171; padding: 2px 8px; border-radius: 4px; border: 1px solid rgba(239,68,68,0.3);">Multas de hasta 50.000 € (Art. 201 bis LGT)</span>
+        <span style="color: var(--color-text-muted);">•</span>
+        <span style="color: var(--color-text-secondary);">Encadenamiento SHA-256</span>
+        <span style="color: var(--color-text-muted);">•</span>
+        <span style="color: var(--color-text-secondary);">Código QR AEAT</span>
+        <span style="color: var(--color-text-muted);">•</span>
+        <span style="color: var(--color-text-secondary);">Declaración Responsable</span>
+      </div>
+    </header>
+
+    <!-- Content Sections -->
+    <div class="service-body">
+
+      <!-- Section: El Desafío Legal y Técnico -->
+      <section class="service-section">
+        <div class="section-title-wrap">
+          <span class="section-eyebrow">01 // El Contexto Normativo</span>
+          <h2 class="section-heading">¿Qué exige el Real Decreto 1007/2023 (Veri*Factu)?</h2>
+        </div>
+        <p>
+          La Ley 11/2021 de medidas de prevención y lucha contra el fraude fiscal y el reglamento desarrollado por el <strong>RD 1007/2023</strong> prohíben explícitamente el uso de software de gestión que permita la alteración de los registros de facturación (los conocidos como "software de doble uso"). Toda pyme, autónomo y empresa con sede en España debe asegurar que sus programas de facturación cumplen cinco principios irrenunciables:
+        </p>
+        <div class="problems-grid">
+          <div class="problem-card">
+            <h3 class="problem-title">Inalterabilidad de Registros</h3>
+            <p>Cada factura generada debe ser definitiva. Queda prohibida la edición o borrado destructivo posterior en bases de datos relacionales o de escritorio (.accdb, SQL).</p>
+          </div>
+          <div class="problem-card">
+            <h3 class="problem-title">Trazabilidad y Encadenamiento</h3>
+            <p>Cada registro de facturación de alta (o anulación) debe incorporar la huella hash (SHA-256) del registro precedente, formando una cadena inmutable tipo blockchain contable.</p>
+          </div>
+          <div class="problem-card">
+            <h3 class="problem-title">Código QR en Cada Factura</h3>
+            <p>Las facturas expedidas (en PDF o papel) deben incluir un código QR normalizado que permita al destinatario verificar su validez directamente en la sede electrónica de la AEAT.</p>
+          </div>
+          <div class="problem-card">
+            <h3 class="problem-title">Declaración de Responsabilidad</h3>
+            <p>El fabricante o desarrollador del software debe certificar formalmente mediante declaración por escrito que el sistema cumple estrictamente con el reglamento.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Requisitos Técnicos y de Arquitectura -->
+      <section id="requisitos" class="service-section">
+        <div class="section-title-wrap">
+          <span class="section-eyebrow">02 // Solución de Ingeniería</span>
+          <h2 class="section-heading">Cómo adapto tu software existente a Veri*Factu</h2>
+        </div>
+        <p>
+          No es necesario desechar tu ERP actual ni migrar a soluciones cerradas que cobran cuotas mensuales abusivas. Mediante capas middleware y librerías seguras, adapto tu infraestructura existente cumpliendo el 100% de las especificaciones de la Orden HAC/1177/2024:
+        </p>
+
+        <div class="solutions-grid">
+          <div class="solution-card">
+            <div class="card-icon">🔐</div>
+            <h3 class="card-title">Motor Criptográfico SHA-256</h3>
+            <p>Implementación del algoritmo oficial de huella: cálculo de hash canónico a partir del NIF emisor, número y serie de factura, fecha de expedición, tipo y cuotas impositivas encadenado con el registro anterior.</p>
+          </div>
+          <div class="solution-card">
+            <div class="card-icon">⚡</div>
+            <h3 class="card-title">Módulo de Remisión Inmediata (mTLS)</h3>
+            <p>Conexión segura por Web Services (SOAP/XML) con los servidores de la Agencia Tributaria utilizando certificados digitales de cliente válidos (FNMT, Camerfirma o de la propia entidad).</p>
+          </div>
+          <div class="solution-card">
+            <div class="card-icon">📱</div>
+            <h3 class="card-title">Generación Dinámica de Código QR</h3>
+            <p>Inyección del código QR normalizado y la leyenda obligatoria (<em>"Factura verificable en la sede electrónica de la AEAT"</em> o <em>"VERI*FACTU"</em>) en los motores de impresión (Crystal Reports, FastReport, HTML/PDF).</p>
+          </div>
+          <div class="solution-card">
+            <div class="card-icon">📋</div>
+            <h3 class="card-title">Registro de Eventos y Auditoría</h3>
+            <p>Estructuración de registros 'append-only' para eventos de arranque, parada, anomalías y volcados periódicos exigidos por las inspecciones tributarias.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Qué incluye el Servicio de Auditoría -->
+      <section class="service-section">
+        <div class="section-title-wrap">
+          <span class="section-eyebrow">03 // Metodología de Trabajo</span>
+          <h2 class="section-heading">Fases de la Consultoría Técnica Veri*Factu</h2>
+        </div>
+        <div class="process-timeline" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+          <div class="step-card" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem;">
+            <div class="step-number" style="font-family: var(--font-family-mono); font-size: 0.9rem; color: #818cf8; font-weight: 700; margin-bottom: 0.5rem;">FASE 1</div>
+            <h3 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">Diagnóstico &amp; Gap Analysis</h3>
+            <p style="font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.5;">
+              Revisión del modelo de datos de facturación, flujos de modificación/anulación y análisis de compatibilidad con los esquemas XSD oficiales.
+            </p>
+          </div>
+          <div class="step-card" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem;">
+            <div class="step-number" style="font-family: var(--font-family-mono); font-size: 0.9rem; color: #818cf8; font-weight: 700; margin-bottom: 0.5rem;">FASE 2</div>
+            <h3 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">Desarrollo o Middleware</h3>
+            <p style="font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.5;">
+              Integración de la librería de hashing, firma digital y generación de QR, o despliegue de un microservicio sidecar autónomo que capture las facturas emitidas.
+            </p>
+          </div>
+          <div class="step-card" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem;">
+            <div class="step-number" style="font-family: var(--font-family-mono); font-size: 0.9rem; color: #818cf8; font-weight: 700; margin-bottom: 0.5rem;">FASE 3</div>
+            <h3 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">Entorno de Pruebas AEAT</h3>
+            <p style="font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.5;">
+              Validación exhaustiva en el entorno de pruebas oficial de la Agencia Tributaria: validación de sintaxis XML, rechazos, reintentos y lectura de QR.
+            </p>
+          </div>
+          <div class="step-card" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem;">
+            <div class="step-number" style="font-family: var(--font-family-mono); font-size: 0.9rem; color: #34d399; font-weight: 700; margin-bottom: 0.5rem;">FASE 4</div>
+            <h3 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">Dictamen &amp; Certificación</h3>
+            <p style="font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.5;">
+              Emisión del informe técnico pericial de cumplimiento normativo y redacción de la Declaración Responsable requerida por la normativa tributaria.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Final -->
+      <div class="service-cta-banner">
+        <div class="banner-text">
+          <h3 class="banner-title">¿Tu software de facturación está listo para la inspección?</h3>
+          <p class="banner-desc">
+            Evita sanciones de hasta 50.000 € por software no conforme. Analizamos tu ERP, base de datos o desarrollo a medida y diseñamos la ruta más rápida y económica hacia el cumplimiento total.
+          </p>
+        </div>
+        <div class="banner-actions">
+          <a routerLink="/" fragment="contacto" class="btn btn-primary">
+            <span>Solicitar Diagnóstico Veri*Factu</span>
+          </a>
+          <a href="mailto:cristianjimeneztrabajo@gmail.com" class="btn btn-secondary">
+            <span>Consultar por Email Directo</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>
