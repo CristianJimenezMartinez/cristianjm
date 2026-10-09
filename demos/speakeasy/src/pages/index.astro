@@ -1,0 +1,151 @@
+---
+import '../styles/global.css';
+import { PARADAS } from '../data/paradas';
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ÉTER | Coctelería Clandestina & Recorrido Inmersivo · Demo de CristianJM</title>
+    <meta name="description" content="Demo interactiva de paseo en vídeo continuo sincronizado con scroll por una coctelería clandestina. Diseñado y desarrollado por Cristian Jiménez Martínez (cristianjm.com)." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="bg-[#090d0a] text-[#f0fdf4] selection:bg-[#4ade80] selection:text-[#090d0a] antialiased overflow-x-hidden">
+    
+    <!-- Barra Superior Flotante: Retorno a cristianjm.com y Badge de Demo -->
+    <header class="fixed top-5 left-0 right-0 z-50 px-4 md:px-8 pointer-events-none">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <a 
+          href="https://cristianjm.com" 
+          target="_self"
+          class="pointer-events-auto inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#0d1410]/80 backdrop-blur-md border border-[#4ade80]/20 text-xs font-medium text-[#f0fdf4] hover:border-[#4ade80] hover:text-[#4ade80] transition-all shadow-lg shadow-black/40 group"
+        >
+          <span class="text-sm transition-transform group-hover:-translate-x-1">←</span>
+          <span>Volver a <strong class="font-semibold text-[#4ade80]">cristianjm.com</strong></span>
+        </a>
+
+        <div class="pointer-events-auto hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0d1410]/80 backdrop-blur-md border border-white/10 text-[11px] uppercase tracking-wider text-emerald-300">
+          <span class="w-2 h-2 rounded-full bg-[#4ade80] animate-pulse"></span>
+          <span>Demo Técnica · Scroll World</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Introductorio -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-4">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#4ade80]/10 border border-[#4ade80]/30 text-xs text-[#4ade80] mb-6">
+        <span>Coctelería Clandestina & Recorrido Inmersivo</span>
+      </div>
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-[#f0fdf4] max-w-4xl">
+        ÉTER <span class="font-serif italic text-[#a3e635]">Speakeasy</span>
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-neutral-400 max-w-xl font-light">
+        Un paseo cinematográfico continuo tras la fachada oculta. Desliza hacia abajo para descender al club.
+      </p>
+
+      <div class="mt-12 flex flex-col items-center gap-3 text-xs tracking-widest uppercase text-neutral-500">
+        <span>Haz Scroll para explorar</span>
+        <div class="w-5 h-9 rounded-full border border-neutral-700 flex items-start justify-center p-1">
+          <div class="w-1.5 h-2.5 rounded-full bg-[#4ade80] animate-bounce"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Escenario Visual Fijo (Scroll Scrubbing) -->
+    <div class="fixed inset-0 w-full h-full pointer-events-none z-0 overflow-hidden bg-[#090d0a]">
+      {PARADAS.map((parada, idx) => (
+        <div 
+          data-stage-item={idx}
+          class={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-out ${idx === 0 ? 'opacity-100' : 'opacity-0'}`}
+        >
+          {parada.videoUrl ? (
+            <video 
+              data-scroll-video
+              src={parada.videoUrl}
+              poster={parada.posterUrl}
+              playsinline
+              muted
+              preload="auto"
+              class="w-full h-full object-cover"
+            ></video>
+          ) : (
+            <img 
+              src={parada.posterUrl} 
+              alt={parada.titulo} 
+              class="w-full h-full object-cover" 
+            />
+          )}
+          <!-- Viñeta cinematográfica y gradiente para legibilidad del texto -->
+          <div class="absolute inset-0 bg-gradient-to-t from-[#090d0a]/90 via-[#090d0a]/20 to-[#090d0a]/60 pointer-events-none"></div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Contenedor del Scroll World -->
+    <main class="relative z-10">
+      {PARADAS.map((parada) => (
+        <section 
+          id={parada.id}
+          data-tour-section
+          class="relative min-h-[140vh] flex items-center px-6 md:px-16 lg:px-24"
+        >
+          <div class="sticky top-1/3 max-w-md p-8 rounded-2xl bg-[#0d1410]/85 backdrop-blur-xl border border-white/10 shadow-2xl">
+            <div class="text-[#a3e635] text-xs font-mono font-semibold tracking-widest uppercase mb-2">
+              {parada.indice} / {PARADAS.length < 10 ? `0${PARADAS.length}` : PARADAS.length}
+            </div>
+            <h2 class="text-3xl font-light tracking-tight text-white mb-2">
+              {parada.titulo}
+            </h2>
+            <h3 class="text-sm font-medium text-[#4ade80] mb-4">
+              {parada.subtitulo}
+            </h3>
+            <p class="text-sm text-neutral-400 leading-relaxed">
+              {parada.descripcion}
+            </p>
+          </div>
+        </section>
+      ))}
+    </main>
+
+    <!-- Cierre & Llamada a la Acción de cristianjm.com -->
+    <footer class="relative min-h-[80vh] flex flex-col items-center justify-center text-center px-4 bg-gradient-to-t from-black to-[#090d0a] border-t border-white/5">
+      <div class="max-w-2xl mx-auto space-y-6">
+        <span class="text-xs uppercase tracking-widest font-mono text-[#4ade80]">
+          Tecnología & Arquitectura Web
+        </span>
+        <h2 class="text-4xl md:text-5xl font-light tracking-tight text-white">
+          ¿Quieres una experiencia interactiva para tu negocio?
+        </h2>
+        <p class="text-neutral-400 text-base">
+          Desarrollado con Astro, GSAP ScrollTrigger, Lenis y modelos de vídeo por IA. Máximo rendimiento a 60 FPS sin ralentizar tu web.
+        </p>
+
+        <div class="pt-6 flex flex-wrap items-center justify-center gap-4">
+          <a 
+            href="https://cristianjm.com/#contacto"
+            target="_self"
+            class="px-7 py-3.5 rounded-full bg-[#4ade80] text-[#090d0a] font-semibold text-sm hover:bg-[#a3e635] transition-colors shadow-lg shadow-[#4ade80]/20"
+          >
+            Solicitar una propuesta web →
+          </a>
+          <a 
+            href="https://cristianjm.com"
+            target="_self"
+            class="px-7 py-3.5 rounded-full bg-white/5 border border-white/10 text-white font-medium text-sm hover:bg-white/10 transition-colors"
+          >
+            Ver más en cristianjm.com
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      import { initScrollWorld } from '../scripts/world';
+      window.addEventListener('DOMContentLoaded', () => {
+        initScrollWorld();
+      });
+    </script>
+  </body>
+</html>
