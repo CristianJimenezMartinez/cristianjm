@@ -1,0 +1,114 @@
+{
+  "campana": "Alianza Partner Oficial con Distribuidores Software DELSOL / Factusol",
+  "total_distribuidores": 9,
+  "distribuidores": [
+    {
+      "id": "DELSOL-01",
+      "nombre": "Grupo Odín",
+      "zona": "Valencia",
+      "categoria": "Distribuidor Nivel Gold Software DELSOL",
+      "web": "https://grupoodin.es",
+      "email": "info@grupoodin.es",
+      "gancho": "Como distribuidor Nivel Gold de Software DELSOL en la Comunidad Valenciana, conocéis de primera mano la demanda continua de clientes de Factusol que necesitan vender online.",
+      "estado": "ENVIADO",
+      "fecha_envio": "2026-10-09T20:22:00.818Z",
+      "resend_id": "01a12254-6b10-72ad-b294-489e253566f1"
+    },
+    {
+      "id": "DELSOL-02",
+      "nombre": "Visión Informática",
+      "zona": "Alicante",
+      "categoria": "Distribuidor Oficial Autorizado DELSOL (+20 años)",
+      "web": "https://visioninformatica.net",
+      "email": "info@visioninformatica.net",
+      "gancho": "Con más de 20 años como distribuidor oficial de Software DELSOL en Alicante, dais soporte y mantenimiento a multitud de empresas con Factusol.",
+      "estado": "ENVIADO",
+      "fecha_envio": "2026-10-09T20:22:31.124Z",
+      "resend_id": "01a12254-e16c-737d-90ff-9e45f7ab62ec"
+    },
+    {
+      "id": "DELSOL-03",
+      "nombre": "inCuatro Informática",
+      "zona": "Valencia",
+      "categoria": "Partner Oficial Software DELSOL",
+      "web": "https://incuatro.com",
+      "email": "info@incuatro.com",
+      "gancho": "En inCuatro gestionáis la infraestructura y el software de gestión DELSOL de numerosas pymes que buscan digitalizar su canal de ventas.",
+      "estado": "ENVIADO",
+      "fecha_envio": "2026-10-09T20:23:01.408Z",
+      "resend_id": "01a12255-579a-74d2-80c4-fd880c84aae4"
+    },
+    {
+      "id": "DELSOL-04",
+      "nombre": "Informática TecnoPC",
+      "zona": "Alicante / Nacional",
+      "categoria": "Distribuidor Autorizado Software DELSOL",
+      "web": "https://informaticatecnopc.com",
+      "email": "comercial@informaticatecnopc.com",
+      "gancho": "Como distribuidores autorizados de Software DELSOL, estáis en contacto directo con empresas que necesitan conectar su facturación con WooCommerce.",
+      "estado": "ENVIADO",
+      "fecha_envio": "2026-10-09T20:23:31.662Z",
+      "resend_id": "01a12255-cdde-7279-99ea-97af50a31b0d"
+    },
+    {
+      "id": "DELSOL-05",
+      "nombre": "Navaclic",
+      "zona": "Madrid / Nacional",
+      "categoria": "Consultor y Distribuidor Certificado DELSOL",
+      "web": "https://navaclic.com",
+      "email": "info@navaclic.com",
+      "gancho": "En Navaclic combináis consultoría especializada y distribución de Software DELSOL para optimizar la operativa de vuestros clientes.",
+      "estado": "ENVIADO",
+      "fecha_envio": "2026-10-09T20:24:01.953Z",
+      "resend_id": "01a12256-4421-7961-b092-99bf57d60ab8"
+    },
+    {
+      "id": "DELSOL-06",
+      "nombre": "Libera Digital",
+      "zona": "Levante / Nacional",
+      "categoria": "Partner Tecnológico & Distribución DELSOL",
+      "web": "https://liberadigital.com",
+      "email": "info@liberadigital.com",
+      "gancho": "En Libera Digital ayudáis a pymes a rentabilizar su ERP DELSOL resolviendo sus retos de gestión y conectividad.",
+      "estado": "ENVIADO",
+      "fecha_envio": "2026-10-09T20:24:32.221Z",
+      "resend_id": "01a12256-ba69-7c2e-b9ad-689ab9adff2b"
+    },
+    {
+      "id": "DELSOL-07",
+      "nombre": "Informática Galindo",
+      "zona": "Málaga / Andalucía",
+      "categoria": "Distribuidor Oficial DELSOL",
+      "web": "https://informaticagalindo.com",
+      "email": "info@informaticagalindo.com",
+      "gancho": "Como distribuidor oficial de Software DELSOL en Andalucía, sois el referente técnico de muchas empresas que utilizan Factusol en su día a día.",
+      "estado": "ENVIADO",
+      "fecha_envio": "2026-10-09T20:25:02.481Z",
+      "resend_id": "01a12257-30ad-7406-bfe4-1f65942c6632"
+    },
+    {
+      "id": "DELSOL-08",
+      "nombre": "Isislan Soluciones",
+      "zona": "Madrid / Centro",
+      "categoria": "Distribuidor e Integrador DELSOL",
+      "web": "https://isislan.com",
+      "email": "info@isislan.com",
+      "gancho": "En Isislan prestáis servicios de mantenimiento integral y soporte avanzado para clientes de la gama Software DELSOL.",
+      "estado": "ENVIADO",
+      "fecha_envio": "2026-10-09T20:25:34.712Z",
+      "resend_id": "01a12257-adc0-778b-9c51-e864c073cf61"
+    },
+    {
+      "id": "DELSOL-09",
+      "nombre": "Remoted Help",
+      "zona": "Nacional",
+      "categoria": "Distribuidor Certificado Software DELSOL",
+      "web": "https://remotedhelp.com",
+      "email": "info@remotedhelp.com",
+      "gancho": "Dais soporte y mantenimiento remoto a nivel nacional para instalaciones de Factusol con necesidades de conectividad web.",
+      "estado": "ENVIADO",
+      "fecha_envio": "2026-10-09T20:26:05.015Z",
+      "resend_id": "01a12258-24e8-7350-b2fe-a89d49b2a71c"
+    }
+  ]
+}

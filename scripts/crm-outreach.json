@@ -1,0 +1,602 @@
+{
+  "historico_enviados": [
+    {
+      "id": "ENV-001",
+      "destinatario": "FCweb",
+      "contacto": "Equipo FCweb",
+      "zona": "Barcelona",
+      "fecha_envio": "2026-10-08",
+      "asunto": "Integraciones de Factusol con WooCommerce en Barcelona / FCweb",
+      "enfoque": "Especialización WooCommerce / Factusol",
+      "estado": "Enviado - Pendiente respuesta",
+      "seguimiento_previsto": "2026-10-14"
+    },
+    {
+      "id": "ENV-002",
+      "destinatario": "Equone",
+      "contacto": "Francisco Javier",
+      "zona": "Campollano (Albacete)",
+      "fecha_envio": "2026-10-08",
+      "asunto": "Integración Factusol ↔ Tiendas Online en Campollano (Beta abierta gratuita)",
+      "enfoque": "Beta abierta gratuita / Socio tecnológico de referencia",
+      "estado": "Enviado - Pendiente respuesta",
+      "seguimiento_previsto": "2026-10-14"
+    },
+    {
+      "id": "ENV-003",
+      "destinatario": "Atalantic",
+      "contacto": "Equipo Atalantic",
+      "zona": "Nacional",
+      "fecha_envio": "2026-10-08",
+      "asunto": "Conector Factusol ↔ PrestaShop / WooCommerce (Beta abierta gratuita)",
+      "enfoque": "Beta abierta gratuita / PrestaShop y WooCommerce",
+      "estado": "Enviado - Pendiente respuesta",
+      "seguimiento_previsto": "2026-10-14"
+    },
+    {
+      "id": "ENV-004",
+      "destinatario": "Carlos (Desarrollador Albacete)",
+      "contacto": "Carlos",
+      "zona": "Albacete",
+      "fecha_envio": "2026-10-08",
+      "asunto": "Conector Factusol ↔ Tiendas Online (Beta abierta gratuita para vuestros clientes)",
+      "enfoque": "Beta abierta gratuita para clientes / Trayectoria local",
+      "estado": "Enviado - Pendiente respuesta",
+      "seguimiento_previsto": "2026-10-14"
+    },
+    {
+      "id": "AB-12",
+      "destinatario": "Createando",
+      "contacto": "Hola equipo de Createando",
+      "zona": "Almansa / Villarrobledo",
+      "fecha_envio": "2026-10-09",
+      "email": "info@createando.com",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Almansa / Villarrobledo)",
+      "resend_id": "01a1222a-efdd-77f7-826f-8fb8377ff5d4",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-14",
+      "destinatario": "Look (Agencia Look)",
+      "contacto": "Equipo de Proyectos",
+      "zona": "Villarrobledo",
+      "fecha_envio": "2026-10-09",
+      "email": "contacto.agencialook@gmail.com",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Villarrobledo)",
+      "resend_id": "01a1222b-6642-7cc9-92f0-042eba194079",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-15",
+      "destinatario": "The Best Design",
+      "contacto": "Hola equipo de The Best Design",
+      "zona": "Villarrobledo",
+      "fecha_envio": "2026-10-09",
+      "email": "info@thebestdesign.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Villarrobledo)",
+      "resend_id": "01a1222b-dc7d-7dd7-ab9f-c826256f6e96",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-11",
+      "destinatario": "Fidbac",
+      "contacto": "Marisa y Juan Carlos (Dirección)",
+      "zona": "Almansa",
+      "fecha_envio": "2026-10-09",
+      "email": "gestion@fidbac.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Almansa)",
+      "resend_id": "01a1222d-08ff-7129-99d8-5503fdee0c2a",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-13",
+      "destinatario": "Javier Navalón",
+      "contacto": "Javier Navalón",
+      "zona": "Almansa",
+      "fecha_envio": "2026-10-09",
+      "email": "contacto@javiernavalon.com",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Almansa)",
+      "resend_id": "01a1222d-7f39-7dfc-933f-57c77a0b9357",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-01",
+      "destinatario": "Nuteco Web",
+      "contacto": "Javi Sánchez Munera (Fundador & CEO)",
+      "zona": "Albacete Capital",
+      "fecha_envio": "2026-10-09",
+      "email": "info@nutecoweb.com",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Albacete Capital)",
+      "resend_id": "01a1222e-c35d-7e4f-8dee-5653533c07dd",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-02",
+      "destinatario": "Estudio Alfa",
+      "contacto": "Dirección Técnica",
+      "zona": "Albacete Capital",
+      "fecha_envio": "2026-10-09",
+      "email": "contacto@estudioalfa.com",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Albacete Capital)",
+      "resend_id": "01a1222f-397f-706e-9e76-f0b4990a9be0",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-03",
+      "destinatario": "BW Marketing",
+      "contacto": "Pedro García (Dirección)",
+      "zona": "Albacete Capital",
+      "fecha_envio": "2026-10-09",
+      "email": "contacto@bwmarketing.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Albacete Capital)",
+      "resend_id": "01a1222f-afab-72d8-8899-cd31e42f3257",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-04",
+      "destinatario": "Chillypills",
+      "contacto": "Equipo de Proyectos",
+      "zona": "Albacete Capital",
+      "fecha_envio": "2026-10-09",
+      "email": "info@chillypills.com",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Albacete Capital)",
+      "resend_id": "01a12230-25c6-7e62-8433-96ab67ef40f4",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-05",
+      "destinatario": "Synergy Web",
+      "contacto": "Hola equipo de Synergy Web",
+      "zona": "Albacete Capital",
+      "fecha_envio": "2026-10-09",
+      "email": "contacto@synergyweb.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Albacete Capital)",
+      "resend_id": "01a12230-9c0c-7bc7-8c3e-4bb79844d795",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-06",
+      "destinatario": "Imedia Comunicación",
+      "contacto": "Hola equipo de Imedia Comunicación",
+      "zona": "Albacete Capital",
+      "fecha_envio": "2026-10-09",
+      "email": "info@imediacomunicacion.com",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Albacete Capital)",
+      "resend_id": "01a12231-1238-71a4-a3d0-82d29378a5d4",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-07",
+      "destinatario": "O2W",
+      "contacto": "Hola equipo de O2W",
+      "zona": "Albacete Capital",
+      "fecha_envio": "2026-10-09",
+      "email": "info@o2w.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Albacete Capital)",
+      "resend_id": "01a12231-88a7-78d9-9b28-c6884c5b33bd",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-08",
+      "destinatario": "SITH Informática",
+      "contacto": "Hola equipo de SITH Informática",
+      "zona": "Campollano (Albacete)",
+      "fecha_envio": "2026-10-09",
+      "email": "info@ssialbacete.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Campollano (Albacete))",
+      "resend_id": "01a12231-fed6-7503-b32f-45223899a64a",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-09",
+      "destinatario": "Oondeo",
+      "contacto": "Hola equipo de Oondeo",
+      "zona": "Campollano (Edificio CEEI, Albacete)",
+      "fecha_envio": "2026-10-09",
+      "email": "info@oondeo.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Campollano (Edificio CEEI, Albacete))",
+      "resend_id": "01a12232-7508-71c6-885b-217ab83fb670",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-10",
+      "destinatario": "Alsoin Informática",
+      "contacto": "Hola equipo de Alsoin Informática",
+      "zona": "Albacete Capital",
+      "fecha_envio": "2026-10-09",
+      "email": "info@alsoin.com",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Albacete Capital)",
+      "resend_id": "01a12232-eb34-774e-928f-859907bb3aa2",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-16",
+      "destinatario": "Magnolia Web",
+      "contacto": "Dirección Magnolia Web",
+      "zona": "Hellín",
+      "fecha_envio": "2026-10-09",
+      "email": "gestion@magnoliaweb.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Hellín)",
+      "resend_id": "01a12233-616b-7025-9590-3f3391bcc108",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-17",
+      "destinatario": "Juan Pedro Muñoz",
+      "contacto": "Juan Pedro Muñoz",
+      "zona": "Hellín",
+      "fecha_envio": "2026-10-09",
+      "email": "contacto@jpmunoz.com",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Hellín)",
+      "resend_id": "01a12233-d79f-7315-9413-187a4a78d5ee",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-18",
+      "destinatario": "VS Informática",
+      "contacto": "Hola equipo de VS Informática",
+      "zona": "La Roda",
+      "fecha_envio": "2026-10-09",
+      "email": "info@vsinformatica.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en La Roda)",
+      "resend_id": "01a12234-4df6-7d7b-a3ab-d5d49e083e1b",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-19",
+      "destinatario": "GiiPYMES",
+      "contacto": "Hola equipo de GiiPYMES",
+      "zona": "Albacete Capital",
+      "fecha_envio": "2026-10-09",
+      "email": "info@giipymes.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Albacete Capital)",
+      "resend_id": "01a12234-c41f-7d99-ba34-6a6986ff1554",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-20",
+      "destinatario": "EA que Web",
+      "contacto": "Antonio Valero Buedo (Fundador)",
+      "zona": "Provincia de Albacete",
+      "fecha_envio": "2026-10-09",
+      "email": "eaqueweb@gmail.com",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Provincia de Albacete)",
+      "resend_id": "01a12235-3a5a-7123-bf67-4816fc1a4e3c",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-21",
+      "destinatario": "La Terrera",
+      "contacto": "Daniel Gómez y María Largo (Fundadores)",
+      "zona": "Casas-Ibáñez",
+      "fecha_envio": "2026-10-09",
+      "email": "info@la-terrera.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Casas-Ibáñez)",
+      "resend_id": "01a12235-b0a6-7b60-a43a-f337534c559a",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-22",
+      "destinatario": "Informática Llorens",
+      "contacto": "Hola equipo de Informática Llorens",
+      "zona": "Caudete",
+      "fecha_envio": "2026-10-09",
+      "email": "info@caudeteesmas.com",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Caudete)",
+      "resend_id": "01a12236-2710-7586-a386-5c1c21af85ef",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-23",
+      "destinatario": "UltraPC",
+      "contacto": "Hola equipo de UltraPC",
+      "zona": "Madrigueras",
+      "fecha_envio": "2026-10-09",
+      "email": "info@ultrapc.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Madrigueras)",
+      "resend_id": "01a12236-9d2c-715a-baae-45c7917cbed4",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-24",
+      "destinatario": "Punto Digital Informática",
+      "contacto": "Hola equipo de Punto Digital Informática",
+      "zona": "Tarazona de la Mancha",
+      "fecha_envio": "2026-10-09",
+      "email": "info@puntodigital.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Tarazona de la Mancha)",
+      "resend_id": "01a12237-1376-7d4f-9238-19109072eaef",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-25",
+      "destinatario": "INFOORDENA / Informática24",
+      "contacto": "Hola equipo de INFOORDENA / Informática24",
+      "zona": "Villamalea",
+      "fecha_envio": "2026-10-09",
+      "email": "info@infoordena.com",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Villamalea)",
+      "resend_id": "01a12237-89a4-7b73-b4b2-d66b9ee38f55",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-26",
+      "destinatario": "PCE Group / Informática Tobarra",
+      "contacto": "Hola equipo de PCE Group / Informática Tobarra",
+      "zona": "Tobarra",
+      "fecha_envio": "2026-10-09",
+      "email": "info@pce-iberica.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Tobarra)",
+      "resend_id": "01a12237-ffe3-72bd-a10d-647b0d336545",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-27",
+      "destinatario": "Grupo Tecon",
+      "contacto": "Hola equipo de Grupo Tecon",
+      "zona": "Albacete Capital & Cobertura Regional",
+      "fecha_envio": "2026-10-09",
+      "email": "info@tecon.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Albacete Capital & Cobertura Regional)",
+      "resend_id": "01a12238-7611-7eff-a060-063baafaa4e7",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-28",
+      "destinatario": "Expertic",
+      "contacto": "Hola equipo de Expertic",
+      "zona": "Albacete Capital",
+      "fecha_envio": "2026-10-09",
+      "email": "info@expertic.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Albacete Capital)",
+      "resend_id": "01a12238-ec4e-7917-a1d2-ce5136dd68f6",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-29",
+      "destinatario": "Inforcon",
+      "contacto": "Hola equipo de Inforcon",
+      "zona": "Albacete Capital & Provincia",
+      "fecha_envio": "2026-10-09",
+      "email": "info@inforcon.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Albacete Capital & Provincia)",
+      "resend_id": "01a12239-627d-739a-8216-e5fd1fa1e61a",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-30",
+      "destinatario": "Q2BSTUDIO",
+      "contacto": "Hola equipo de Q2BSTUDIO",
+      "zona": "Albacete Capital",
+      "fecha_envio": "2026-10-09",
+      "email": "info@q2bstudio.com",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Albacete Capital)",
+      "resend_id": "01a12239-d8a0-78b6-ba0e-c688aa4d4329",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-31",
+      "destinatario": "Piano Marketing",
+      "contacto": "Equipo de Desarrollo Web",
+      "zona": "Albacete Capital",
+      "fecha_envio": "2026-10-09",
+      "email": "info@pianomarketing.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Albacete Capital)",
+      "resend_id": "01a1223a-4ed8-703a-a58d-4ecae3fb1aed",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-32",
+      "destinatario": "NinSoft",
+      "contacto": "Hola equipo de NinSoft",
+      "zona": "Albacete Capital",
+      "fecha_envio": "2026-10-09",
+      "email": "info@ninsoft.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Albacete Capital)",
+      "resend_id": "01a1223a-c52f-76cd-987e-bdfb266969fb",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-33",
+      "destinatario": "Vysite",
+      "contacto": "Hola equipo de Vysite",
+      "zona": "Albacete Capital",
+      "fecha_envio": "2026-10-09",
+      "email": "info@vysite.es",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Albacete Capital)",
+      "resend_id": "01a1223b-3b85-7aab-aed3-dd2a2d6a0a36",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "AB-34",
+      "destinatario": "MDG Servicios Informáticos (BEEP)",
+      "contacto": "Hola equipo de MDG Servicios Informáticos (BEEP)",
+      "zona": "Albacete & Municipios Provincia",
+      "fecha_envio": "2026-10-09",
+      "email": "info@grupomdg.com",
+      "asunto": "Conector Factusol ↔ WooCommerce (Beta gratuita para proyectos en Albacete & Municipios Provincia)",
+      "resend_id": "01a1223b-b1af-7a88-9480-379a81e0098b",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "DELSOL-01",
+      "destinatario": "Grupo Odín",
+      "contacto": "Equipo de Grupo Odín",
+      "zona": "Valencia",
+      "fecha_envio": "2026-10-09",
+      "email": "info@grupoodin.es",
+      "asunto": "Alianza técnica: Conector WooCommerce para vuestros clientes de Factusol en Grupo Odín",
+      "resend_id": "01a12254-6b10-72ad-b294-489e253566f1",
+      "tipo": "DISTRIBUIDOR_DELSOL",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "DELSOL-02",
+      "destinatario": "Visión Informática",
+      "contacto": "Equipo de Visión Informática",
+      "zona": "Alicante",
+      "fecha_envio": "2026-10-09",
+      "email": "info@visioninformatica.net",
+      "asunto": "Alianza técnica: Conector WooCommerce para vuestros clientes de Factusol en Visión Informática",
+      "resend_id": "01a12254-e16c-737d-90ff-9e45f7ab62ec",
+      "tipo": "DISTRIBUIDOR_DELSOL",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "DELSOL-03",
+      "destinatario": "inCuatro Informática",
+      "contacto": "Equipo de inCuatro Informática",
+      "zona": "Valencia",
+      "fecha_envio": "2026-10-09",
+      "email": "info@incuatro.com",
+      "asunto": "Alianza técnica: Conector WooCommerce para vuestros clientes de Factusol en inCuatro Informática",
+      "resend_id": "01a12255-579a-74d2-80c4-fd880c84aae4",
+      "tipo": "DISTRIBUIDOR_DELSOL",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "DELSOL-04",
+      "destinatario": "Informática TecnoPC",
+      "contacto": "Equipo de Informática TecnoPC",
+      "zona": "Alicante / Nacional",
+      "fecha_envio": "2026-10-09",
+      "email": "comercial@informaticatecnopc.com",
+      "asunto": "Alianza técnica: Conector WooCommerce para vuestros clientes de Factusol en Informática TecnoPC",
+      "resend_id": "01a12255-cdde-7279-99ea-97af50a31b0d",
+      "tipo": "DISTRIBUIDOR_DELSOL",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "DELSOL-05",
+      "destinatario": "Navaclic",
+      "contacto": "Equipo de Navaclic",
+      "zona": "Madrid / Nacional",
+      "fecha_envio": "2026-10-09",
+      "email": "info@navaclic.com",
+      "asunto": "Alianza técnica: Conector WooCommerce para vuestros clientes de Factusol en Navaclic",
+      "resend_id": "01a12256-4421-7961-b092-99bf57d60ab8",
+      "tipo": "DISTRIBUIDOR_DELSOL",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "DELSOL-06",
+      "destinatario": "Libera Digital",
+      "contacto": "Equipo de Libera Digital",
+      "zona": "Levante / Nacional",
+      "fecha_envio": "2026-10-09",
+      "email": "info@liberadigital.com",
+      "asunto": "Alianza técnica: Conector WooCommerce para vuestros clientes de Factusol en Libera Digital",
+      "resend_id": "01a12256-ba69-7c2e-b9ad-689ab9adff2b",
+      "tipo": "DISTRIBUIDOR_DELSOL",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "DELSOL-07",
+      "destinatario": "Informática Galindo",
+      "contacto": "Equipo de Informática Galindo",
+      "zona": "Málaga / Andalucía",
+      "fecha_envio": "2026-10-09",
+      "email": "info@informaticagalindo.com",
+      "asunto": "Alianza técnica: Conector WooCommerce para vuestros clientes de Factusol en Informática Galindo",
+      "resend_id": "01a12257-30ad-7406-bfe4-1f65942c6632",
+      "tipo": "DISTRIBUIDOR_DELSOL",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "DELSOL-08",
+      "destinatario": "Isislan Soluciones",
+      "contacto": "Equipo de Isislan Soluciones",
+      "zona": "Madrid / Centro",
+      "fecha_envio": "2026-10-09",
+      "email": "info@isislan.com",
+      "asunto": "Alianza técnica: Conector WooCommerce para vuestros clientes de Factusol en Isislan Soluciones",
+      "resend_id": "01a12257-adc0-778b-9c51-e864c073cf61",
+      "tipo": "DISTRIBUIDOR_DELSOL",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "id": "DELSOL-09",
+      "destinatario": "Remoted Help",
+      "contacto": "Equipo de Remoted Help",
+      "zona": "Nacional",
+      "fecha_envio": "2026-10-09",
+      "email": "info@remotedhelp.com",
+      "asunto": "Alianza técnica: Conector WooCommerce para vuestros clientes de Factusol en Remoted Help",
+      "resend_id": "01a12258-24e8-7350-b2fe-a89d49b2a71c",
+      "tipo": "DISTRIBUIDOR_DELSOL",
+      "estado": "Enviado - Pendiente respuesta"
+    },
+    {
+      "nombreEmpresa": "Software DELSOL S.A. (Central)",
+      "contacto": "Canal Distribución y Comercial",
+      "emails": [
+        "altas.distribucion@sdelsol.com",
+        "comercial@sdelsol.com"
+      ],
+      "ciudad": "Jaén / Mengíbar (Nacional)",
+      "tipo": "FABRICANTE_ERP_ALIANZA_ISV",
+      "fechaEnvio": "2026-10-09T21:06:42.006Z",
+      "asunto": "Propuesta de Solución Tecnológica Homologada: Conector Factusol ↔ WooCommerce (Bentian ERP Bridge)",
+      "resendId": "01a1227d-44e4-74c6-85a6-d405916ac630",
+      "estado": "ENVIADO"
+    }
+  ],
+  "cola_nueva_prospeccion": [
+    {
+      "nombreAgencia": "Soy.es",
+      "email": "info@soy.es",
+      "ciudad": "Alicante / Valencia",
+      "especialidad": "desarrollo avanzado en PrestaShop y e-commerce",
+      "estado": "PENDIENTE_APROBACION"
+    },
+    {
+      "nombreAgencia": "PangoStudio",
+      "email": "hola@pangostudio.com",
+      "ciudad": "Valencia",
+      "especialidad": "tiendas online en WooCommerce y PrestaShop a medida",
+      "estado": "PENDIENTE_APROBACION"
+    },
+    {
+      "nombreAgencia": "Wecomm Solutions",
+      "email": "fcojavier@wecomm.es",
+      "ciudad": "Alicante / Murcia",
+      "especialidad": "mantenimiento y desarrollo integral de comercio electrónico",
+      "estado": "PENDIENTE_APROBACION"
+    },
+    {
+      "nombreAgencia": "Neuraweb",
+      "email": "info@neuraweb.com",
+      "ciudad": "La Rioja",
+      "especialidad": "desarrollo de tiendas WooCommerce de alto rendimiento",
+      "estado": "PENDIENTE_APROBACION"
+    },
+    {
+      "nombreAgencia": "Sysprovider",
+      "email": "comercial@sysprovider.es",
+      "ciudad": "Madrid",
+      "especialidad": "soluciones de comercio electrónico e infraestructura e-commerce",
+      "estado": "PENDIENTE_APROBACION"
+    },
+    {
+      "nombreAgencia": "Jabatec",
+      "email": "info@jabatec.com",
+      "ciudad": "Barcelona",
+      "especialidad": "desarrollo de tiendas online a medida y soporte técnico",
+      "estado": "PENDIENTE_APROBACION"
+    },
+    {
+      "nombreAgencia": "Ganton",
+      "email": "contacto@ganton.es",
+      "ciudad": "Madrid",
+      "especialidad": "desarrollo técnico de tiendas WooCommerce",
+      "estado": "PENDIENTE_APROBACION"
+    },
+    {
+      "nombreAgencia": "Iroot Agency",
+      "email": "info@iroot.es",
+      "ciudad": "Sevilla",
+      "especialidad": "desarrollo y optimización de e-commerce en el sur de España",
+      "estado": "PENDIENTE_APROBACION"
+    }
+  ]
+}

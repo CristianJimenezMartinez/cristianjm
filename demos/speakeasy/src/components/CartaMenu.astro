@@ -1,0 +1,386 @@
+---
+import { CARTA_MENU } from '../data/cocteles';
+---
+
+<!-- Botón Flotante para Abrir la Carta -->
+<div class="fixed bottom-6 right-6 z-40 pointer-events-auto">
+  <button
+    id="btn-abrir-carta"
+    type="button"
+    class="flex items-center gap-3 px-5 py-3 rounded-full bg-[#121c15]/90 hover:bg-[#1a291f] text-[#f0fdf4] border border-[#4ade80]/40 hover:border-[#4ade80] shadow-2xl shadow-black/80 backdrop-blur-md transition-all duration-300 group cursor-pointer"
+  >
+    <span class="w-2.5 h-2.5 rounded-full bg-[#a3e635] animate-ping"></span>
+    <span class="text-xs uppercase tracking-widest font-mono text-[#a3e635] group-hover:text-white transition-colors">
+      📖 Carta Clandestina
+    </span>
+  </button>
+</div>
+
+<!-- Modal 3D Flipbook de la Carta -->
+<div 
+  id="modal-carta" 
+  class="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 bg-black/85 backdrop-blur-xl opacity-0 pointer-events-none transition-opacity duration-400 ease-out"
+>
+  <!-- Botón de Cerrar -->
+  <button 
+    id="btn-cerrar-carta"
+    type="button"
+    class="absolute top-6 right-6 z-50 flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white/80 hover:text-white text-xs font-mono tracking-wider transition-colors cursor-pointer"
+  >
+    <span>Cerrar</span>
+    <span class="text-sm">✕</span>
+  </button>
+
+  <!-- Indicador Superior -->
+  <div class="absolute top-6 left-6 z-50 hidden sm:flex items-center gap-2.5 text-xs text-neutral-400 font-mono uppercase tracking-widest">
+    <span class="text-[#a3e635]">ÉTER SPEAKEASY</span>
+    <span>·</span>
+    <span>Edición Reservada 1920</span>
+  </div>
+
+  <!-- Contenedor del Libro 3D -->
+  <div class="relative w-full max-w-4xl h-[560px] md:h-[620px] flex items-center justify-center select-none" style="perspective: 2000px;">
+    
+    <!-- El Libro -->
+    <div 
+      id="book-container"
+      class="relative w-[340px] md:w-[720px] h-[500px] md:h-[560px] transition-transform duration-700 ease-in-out"
+      style="transform-style: preserve-3d;"
+    >
+      <!-- Lomo Central del Libro (Sombra central que da volumen cuando está abierto) -->
+      <div 
+        id="book-spine"
+        class="absolute left-1/2 top-0 bottom-0 w-8 -translate-x-1/2 z-20 pointer-events-none transition-opacity duration-500 opacity-0 bg-gradient-to-r from-black/40 via-black/80 to-black/40"
+      ></div>
+
+      <!-- Spread 0: PORTADA CERRADA -->
+      <div 
+        data-spread="0"
+        class="book-spread absolute inset-0 w-full h-full flex items-center justify-center cursor-pointer transition-all duration-700 ease-out"
+        style="transform-style: preserve-3d;"
+      >
+        <div class="w-[340px] md:w-[380px] h-[500px] md:h-[560px] rounded-r-2xl rounded-l-md p-8 md:p-12 flex flex-col items-center justify-between text-center relative overflow-hidden shadow-2xl border-2 border-[#855e34]/50 bg-gradient-to-br from-[#1c140e] via-[#0d0906] to-[#1a110a] text-[#f4efe6]">
+          <!-- Filigrana dorada de esquina -->
+          <div class="absolute inset-3 border border-[#c49758]/30 rounded-r-xl pointer-events-none"></div>
+          <div class="absolute inset-5 border border-[#c49758]/20 rounded-r-lg pointer-events-none"></div>
+
+          <div class="pt-6">
+            <span class="text-[10px] uppercase tracking-[0.3em] text-[#c49758] font-mono">
+              Acceso Restringido
+            </span>
+            <div class="w-10 h-[1px] bg-[#c49758]/40 mx-auto mt-2"></div>
+          </div>
+
+          <div class="space-y-4 my-auto">
+            <div class="w-16 h-16 mx-auto rounded-full border border-[#c49758]/40 flex items-center justify-center text-2xl text-[#c49758] font-serif shadow-inner">
+              É
+            </div>
+            <h2 class="text-3xl md:text-4xl font-serif tracking-widest text-[#f5ebd9] uppercase">
+              ÉTER
+            </h2>
+            <p class="text-xs uppercase tracking-[0.25em] text-[#c49758]/80 font-mono">
+              Carta de Elixires & Destilados
+            </p>
+            <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#c49758]/60 to-transparent mx-auto"></div>
+          </div>
+
+          <div class="pb-4">
+            <button 
+              type="button"
+              class="px-6 py-2.5 rounded-full bg-[#c49758]/20 hover:bg-[#c49758]/30 border border-[#c49758]/50 text-xs font-mono uppercase tracking-widest text-[#f5ebd9] transition-all hover:scale-105"
+            >
+              Abrir Carta →
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spread 1: PÁGINAS 1 & 2 (Alquimia & Signatures) -->
+      <div 
+        data-spread="1"
+        class="book-spread absolute inset-0 w-full h-full hidden md:flex items-center justify-center cursor-default transition-all duration-700 ease-out opacity-0 pointer-events-none"
+        style="transform-style: preserve-3d;"
+      >
+        <!-- Página Izquierda: Manifiesto -->
+        <div class="w-[360px] h-[560px] p-10 flex flex-col justify-between rounded-l-2xl border-y border-l border-[#855e34]/40 bg-[#16100b] text-[#f4efe6] relative overflow-hidden shadow-2xl">
+          <div class="absolute inset-3 border border-[#c49758]/20 rounded-l-xl pointer-events-none"></div>
+          <div class="space-y-4">
+            <span class="text-[10px] uppercase font-mono tracking-widest text-[#c49758]">Vol. I · Manifiesto</span>
+            <h3 class="text-2xl font-serif text-[#f5ebd9]">El Secreto del Cristal</h3>
+            <p class="text-xs text-neutral-400 font-serif leading-relaxed italic">
+              "En la penumbra del sótano, el tiempo deja de medirse en minutos y comienza a medirse en gotas de infusión. Cada trago es un homenaje a la rebeldía de quienes desafiaron la prohibición."
+            </p>
+            <div class="pt-4 space-y-2 border-t border-white/5 text-[11px] text-neutral-400 font-mono">
+              <div class="flex justify-between">
+                <span>Hielo:</span>
+                <span class="text-[#c49758]">Esculpido a 73 mm</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Maceración:</span>
+                <span class="text-[#c49758]">Roble & Botánicos Raros</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Contraseña del día:</span>
+                <span class="text-[#a3e635]">"Ámbar 1920"</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-center text-[10px] font-mono text-neutral-600">Página 01</div>
+        </div>
+
+        <!-- Página Derecha: Coctelería de Autor -->
+        <div class="w-[360px] h-[560px] p-10 flex flex-col justify-between rounded-r-2xl border-y border-r border-[#855e34]/40 bg-[#19130d] text-[#f4efe6] relative overflow-hidden shadow-2xl">
+          <div class="absolute inset-3 border border-[#c49758]/20 rounded-r-xl pointer-events-none"></div>
+          <div>
+            <div class="flex items-center justify-between mb-4 border-b border-[#c49758]/30 pb-2">
+              <span class="text-xs uppercase font-serif tracking-wider text-[#c49758]">Coctelería de Autor</span>
+              <span class="text-[10px] font-mono text-neutral-400">Signatures</span>
+            </div>
+            
+            <div class="space-y-5">
+              {CARTA_MENU[0].cocteles.map((coctel) => (
+                <div class="group cursor-pointer hover:bg-white/5 p-2 rounded-lg transition-colors">
+                  <div class="flex justify-between items-baseline mb-1">
+                    <h4 class="text-sm font-serif text-[#f5ebd9] group-hover:text-[#a3e635] transition-colors">{coctel.nombre}</h4>
+                    <span class="text-xs font-mono font-semibold text-[#c49758]">{coctel.precio}</span>
+                  </div>
+                  <p class="text-[11px] text-neutral-400 leading-snug line-clamp-2">{coctel.descripcion}</p>
+                  <div class="flex gap-1.5 mt-1.5">
+                    {coctel.notas.map((n) => (
+                      <span class="text-[9px] px-1.5 py-0.5 rounded bg-white/5 text-[#c49758] border border-[#c49758]/20">{n}</span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="text-center text-[10px] font-mono text-neutral-600">Página 02</div>
+        </div>
+      </div>
+
+      <!-- Spread 2: PÁGINAS 3 & 4 (Destilados Prohibidos & Maridaje) -->
+      <div 
+        data-spread="2"
+        class="book-spread absolute inset-0 w-full h-full hidden md:flex items-center justify-center cursor-default transition-all duration-700 ease-out opacity-0 pointer-events-none"
+        style="transform-style: preserve-3d;"
+      >
+        <!-- Página Izquierda: Destilados Prohibidos -->
+        <div class="w-[360px] h-[560px] p-10 flex flex-col justify-between rounded-l-2xl border-y border-l border-[#855e34]/40 bg-[#16100b] text-[#f4efe6] relative overflow-hidden shadow-2xl">
+          <div class="absolute inset-3 border border-[#c49758]/20 rounded-l-xl pointer-events-none"></div>
+          <div>
+            <div class="flex items-center justify-between mb-4 border-b border-[#c49758]/30 pb-2">
+              <span class="text-xs uppercase font-serif tracking-wider text-[#c49758]">Destilados Prohibidos</span>
+              <span class="text-[10px] font-mono text-neutral-400">1920 Clásicos</span>
+            </div>
+
+            <div class="space-y-6">
+              {CARTA_MENU[1].cocteles.slice(0, 2).map((coctel) => (
+                <div class="group cursor-pointer hover:bg-white/5 p-2 rounded-lg transition-colors">
+                  <div class="flex justify-between items-baseline mb-1">
+                    <h4 class="text-sm font-serif text-[#f5ebd9] group-hover:text-[#a3e635] transition-colors">{coctel.nombre}</h4>
+                    <span class="text-xs font-mono font-semibold text-[#c49758]">{coctel.precio}</span>
+                  </div>
+                  <p class="text-[11px] text-neutral-400 leading-snug">{coctel.descripcion}</p>
+                  <div class="flex gap-1.5 mt-2">
+                    {coctel.notas.map((n) => (
+                      <span class="text-[9px] px-1.5 py-0.5 rounded bg-white/5 text-[#c49758] border border-[#c49758]/20">{n}</span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="text-center text-[10px] font-mono text-neutral-600">Página 03</div>
+        </div>
+
+        <!-- Página Derecha: Bocados de Maridaje -->
+        <div class="w-[360px] h-[560px] p-10 flex flex-col justify-between rounded-r-2xl border-y border-r border-[#855e34]/40 bg-[#19130d] text-[#f4efe6] relative overflow-hidden shadow-2xl">
+          <div class="absolute inset-3 border border-[#c49758]/20 rounded-r-xl pointer-events-none"></div>
+          <div>
+            <div class="flex items-center justify-between mb-4 border-b border-[#c49758]/30 pb-2">
+              <span class="text-xs uppercase font-serif tracking-wider text-[#c49758]">Maridaje Clandestino</span>
+              <span class="text-[10px] font-mono text-neutral-400">Acompañamiento</span>
+            </div>
+
+            <div class="space-y-6">
+              {CARTA_MENU[1].cocteles.slice(2).map((coctel) => (
+                <div class="p-3 rounded-lg bg-white/5 border border-white/5">
+                  <div class="flex justify-between items-baseline mb-1">
+                    <h4 class="text-sm font-serif text-[#f5ebd9]">{coctel.nombre}</h4>
+                    <span class="text-xs font-mono font-semibold text-[#c49758]">{coctel.precio}</span>
+                  </div>
+                  <p class="text-[11px] text-neutral-400 leading-snug">{coctel.descripcion}</p>
+                </div>
+              ))}
+
+              <div class="mt-8 p-4 rounded-xl border border-[#c49758]/30 bg-[#c49758]/10 text-center space-y-2">
+                <span class="text-[11px] font-serif text-[#f5ebd9] block">¿Deseas una mesa en el Velvet Lounge?</span>
+                <span class="text-[10px] font-mono text-[#a3e635] block">Consulta con el camarero del umbral</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-center text-[10px] font-mono text-neutral-600">Página 04</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Barra de Navegación Inferior (Controles para pasar de hoja) -->
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4 bg-[#121c15]/90 border border-white/10 px-6 py-2.5 rounded-full shadow-2xl backdrop-blur-md">
+    <button 
+      id="btn-pagina-ant" 
+      type="button" 
+      class="text-xs font-mono text-neutral-400 hover:text-white px-3 py-1 rounded-full hover:bg-white/10 transition-colors cursor-pointer disabled:opacity-30 disabled:pointer-events-none"
+    >
+      ← Anterior
+    </button>
+
+    <span id="indicador-pagina" class="text-xs font-mono text-[#a3e635] px-2 min-w-[90px] text-center">
+      Portada
+    </span>
+
+    <button 
+      id="btn-pagina-sig" 
+      type="button" 
+      class="text-xs font-mono text-[#a3e635] hover:text-white px-3 py-1 rounded-full hover:bg-[#a3e635]/20 transition-colors cursor-pointer disabled:opacity-30 disabled:pointer-events-none"
+    >
+      Siguiente →
+    </button>
+  </div>
+</div>
+
+<script>
+  // Control interactivo del 3D Flipbook de la Carta
+  let paginaActual = 0;
+  const totalSpreads = 3; // 0 = Portada, 1 = Pág 1-2, 2 = Pág 3-4
+
+  // Audio sintético nativo con Web Audio API para el roce de pasar la página
+  function playPaperSound() {
+    try {
+      const audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
+      const bufferSize = audioCtx.sampleRate * 0.12; // 120 ms
+      const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+      const output = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        output[i] = Math.random() * 2 - 1;
+      }
+      const whiteNoise = audioCtx.createBufferSource();
+      whiteNoise.buffer = buffer;
+
+      const filter = audioCtx.createBiquadFilter();
+      filter.type = 'bandpass';
+      filter.frequency.value = 1800;
+      filter.Q.value = 2.5;
+
+      const gain = audioCtx.createGain();
+      gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.11);
+
+      whiteNoise.connect(filter);
+      filter.connect(gain);
+      gain.connect(audioCtx.destination);
+      whiteNoise.start();
+    } catch (e) {
+      // Ignorar si el navegador bloquea audio antes de interacción
+    }
+  }
+
+  function actualizarLibro() {
+    const spreads = document.querySelectorAll<HTMLElement>('.book-spread');
+    const spine = document.getElementById('book-spine');
+    const indicador = document.getElementById('indicador-pagina');
+    const btnAnt = document.getElementById('btn-pagina-ant') as HTMLButtonElement;
+    const btnSig = document.getElementById('btn-pagina-sig') as HTMLButtonElement;
+
+    spreads.forEach((spread, idx) => {
+      if (idx === paginaActual) {
+        spread.classList.remove('opacity-0', 'pointer-events-none');
+        spread.classList.add('opacity-100');
+        if (idx > 0) spread.classList.add('md:flex');
+      } else {
+        spread.classList.remove('opacity-100');
+        spread.classList.add('opacity-0', 'pointer-events-none');
+      }
+    });
+
+    if (spine) {
+      if (paginaActual === 0) {
+        spine.classList.remove('opacity-100');
+        spine.classList.add('opacity-0');
+      } else {
+        spine.classList.remove('opacity-0');
+        spine.classList.add('opacity-100');
+      }
+    }
+
+    if (indicador) {
+      if (paginaActual === 0) indicador.innerText = 'Portada';
+      else if (paginaActual === 1) indicador.innerText = 'Pág. 01 - 02';
+      else if (paginaActual === 2) indicador.innerText = 'Pág. 03 - 04';
+    }
+
+    if (btnAnt) btnAnt.disabled = paginaActual === 0;
+    if (btnSig) btnSig.disabled = paginaActual === totalSpreads - 1;
+
+    playPaperSound();
+  }
+
+  function abrirCarta() {
+    const modal = document.getElementById('modal-carta');
+    if (!modal) return;
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    modal.classList.add('opacity-100', 'pointer-events-auto');
+    actualizarLibro();
+  }
+
+  function cerrarCarta() {
+    const modal = document.getElementById('modal-carta');
+    if (!modal) return;
+    modal.classList.remove('opacity-100', 'pointer-events-auto');
+    modal.classList.add('opacity-0', 'pointer-events-none');
+  }
+
+  function irPaginaSiguiente() {
+    if (paginaActual < totalSpreads - 1) {
+      paginaActual++;
+      actualizarLibro();
+    }
+  }
+
+  function irPaginaAnterior() {
+    if (paginaActual > 0) {
+      paginaActual--;
+      actualizarLibro();
+    }
+  }
+
+  // Inicializar listeners en el cliente
+  window.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('btn-abrir-carta')?.addEventListener('click', abrirCarta);
+    document.getElementById('btn-abrir-carta-hero')?.addEventListener('click', abrirCarta);
+    document.getElementById('btn-cerrar-carta')?.addEventListener('click', cerrarCarta);
+    document.getElementById('btn-pagina-sig')?.addEventListener('click', irPaginaSiguiente);
+    document.getElementById('btn-pagina-ant')?.addEventListener('click', irPaginaAnterior);
+
+    // Clic en la portada para abrir
+    document.querySelector('[data-spread="0"]')?.addEventListener('click', irPaginaSiguiente);
+
+    // Cerrar con Escape y navegar con flechas
+    window.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('modal-carta');
+      if (modal && modal.classList.contains('opacity-100')) {
+        if (e.key === 'Escape') cerrarCarta();
+        if (e.key === 'ArrowRight') irPaginaSiguiente();
+        if (e.key === 'ArrowLeft') irPaginaAnterior();
+      }
+    });
+
+    // Cerrar al hacer clic en el backdrop fuera del libro
+    document.getElementById('modal-carta')?.addEventListener('click', (e) => {
+      if ((e.target as HTMLElement).id === 'modal-carta') {
+        cerrarCarta();
+      }
+    });
+  });
+</script>
