@@ -39,7 +39,7 @@ let processedCount = 0;
 for (const filePath of htmlFiles) {
   const relativeDir = path.relative(DIST_BROWSER, path.dirname(filePath)).replace(/\\/g, '/');
   const route = relativeDir === '' ? '/' : `/${relativeDir}`;
-  const canonicalUrl = route === '/' ? `${BASE_URL}/` : `${BASE_URL}${route}`;
+  const canonicalUrl = `${BASE_URL}${route.endsWith('/') ? route : route + '/'}`;
 
   let content = fs.readFileSync(filePath, 'utf8');
 
@@ -61,65 +61,67 @@ for (const filePath of htmlFiles) {
     content = content.replace('</head>', `  ${newOgUrlTag}\n</head>`);
   }
 
-  // 3. Inject BreadcrumbList JSON-LD if not present
-  if (!content.includes('"@type": "BreadcrumbList"')) {
-    let breadcrumbItems = [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Inicio",
-        "item": `${BASE_URL}/`
-      }
-    ];
+  // 3. Inject BreadcrumbList JSON-LD
+  // Clean up any previously injected BreadcrumbList to guarantee fresh trailing-slash URLs
+  const existingBreadcrumbRegex = /\s*<script\s+type=["']application\/ld\+json["']>\s*\{[\s\S]*?"@type":\s*"BreadcrumbList"[\s\S]*?<\/script>/i;
+  content = content.replace(existingBreadcrumbRegex, '');
 
-    if (route.startsWith('/proyectos/')) {
-      const slug = route.replace('/proyectos/', '');
-      const projectName = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-      breadcrumbItems.push({
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Proyectos",
-        "item": `${BASE_URL}/#proyectos`
-      });
-      breadcrumbItems.push({
-        "@type": "ListItem",
-        "position": 3,
-        "name": projectName,
-        "item": canonicalUrl
-      });
-    } else if (route.startsWith('/servicios/')) {
-      const serviceSlug = route.replace('/servicios/', '');
-      const serviceName = serviceSlug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-      breadcrumbItems.push({
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Servicios",
-        "item": `${BASE_URL}/#servicios`
-      });
-      breadcrumbItems.push({
-        "@type": "ListItem",
-        "position": 3,
-        "name": serviceName,
-        "item": canonicalUrl
-      });
-    } else if (route === '/sobre-mi') {
-      breadcrumbItems.push({
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Sobre Mí",
-        "item": canonicalUrl
-      });
+  let breadcrumbItems = [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": `${BASE_URL}/`
     }
+  ];
 
-    if (breadcrumbItems.length > 1) {
-      const breadcrumbSchema = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": breadcrumbItems
-      };
-      const schemaScript = `\n  <script type="application/ld+json">\n${JSON.stringify(breadcrumbSchema, null, 2)}\n  </script>`;
-      content = content.replace('</head>', `${schemaScript}\n</head>`);
-    }
+  if (route.startsWith('/proyectos/')) {
+    const slug = route.replace('/proyectos/', '').replace(/\/$/, '');
+    const projectName = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Proyectos",
+      "item": `${BASE_URL}/#proyectos`
+    });
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      "position": 3,
+      "name": projectName,
+      "item": canonicalUrl
+    });
+  } else if (route.startsWith('/servicios/')) {
+    const serviceSlug = route.replace('/servicios/', '').replace(/\/$/, '');
+    const serviceName = serviceSlug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Servicios",
+      "item": `${BASE_URL}/#servicios`
+    });
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      "position": 3,
+      "name": serviceName,
+      "item": canonicalUrl
+    });
+  } else if (route === '/sobre-mi' || route === '/sobre-mi/') {
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Sobre Mí",
+      "item": canonicalUrl
+    });
+  }
+
+  if (breadcrumbItems.length > 1) {
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumbItems
+    };
+    const schemaScript = `\n  <script type="application/ld+json">\n${JSON.stringify(breadcrumbSchema, null, 2)}\n  </script>`;
+    content = content.replace('</head>', `${schemaScript}\n</head>`);
   }
 
   fs.writeFileSync(filePath, content, 'utf8');

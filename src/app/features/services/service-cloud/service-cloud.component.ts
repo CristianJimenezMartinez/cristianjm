@@ -18,7 +18,7 @@ export class ServiceCloudComponent implements OnInit {
       title: 'Arquitectura Cloud & Desarrollo Full-Stack | CristianJM',
       description: 'Consultoría y desarrollo de arquitecturas cloud de alta disponibilidad: NestJS, Angular SSR, PostgreSQL, Go y Docker con despliegues atómicos CI/CD en producción.',
       keywords: 'Arquitectura Cloud, Consultor NestJS, Angular SSR, PostgreSQL, Microservicios, Docker, DevOps, Cristian Jiménez Martínez',
-      canonicalUrl: 'https://cristianjm.com/servicios/arquitectura-cloud-fullstack'
+      canonicalUrl: 'https://cristianjm.com/servicios/arquitectura-cloud-fullstack/'
     });
   }
 }

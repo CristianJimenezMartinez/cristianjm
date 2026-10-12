@@ -18,7 +18,7 @@ export class AboutPageComponent implements OnInit {
       title: 'Sobre Mí — Cristian Jiménez Martínez | Arquitecto de Software & Consultor ERP',
       description: 'Conoce la trayectoria, principios de ingeniería y experiencia de Cristian Jiménez Martínez en arquitecturas de alta resiliencia, Bentian ERP Bridge, Node.js, C#, Go y Angular.',
       keywords: 'Cristian Jiménez Martínez, CristianJM, Arquitecto de Software, Bentian ERP Bridge, Factusol ERP, Angular, NestJS, Go, PostgreSQL, Consultor Cloud',
-      canonicalUrl: 'https://cristianjm.com/sobre-mi'
+      canonicalUrl: 'https://cristianjm.com/sobre-mi/'
     });
   }
 }

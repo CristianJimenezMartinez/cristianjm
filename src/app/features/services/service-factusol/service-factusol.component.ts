@@ -18,7 +18,7 @@ export class ServiceFactusolComponent implements OnInit {
       title: 'Integración Factusol ERP con WooCommerce y PrestaShop | CristianJM',
       description: 'Consultoría especializada y desarrollo de conectores para Factusol ERP. Sincronización de catálogo, stock disponible DISSTO y pedidos en tiempo real con Bentian ERP Bridge.',
       keywords: 'Integración Factusol ERP, Conector Factusol WooCommerce, Sincronizar Factusol PrestaShop, Factusol OLEDB, Bentian ERP Bridge, Cristian Jiménez Martínez',
-      canonicalUrl: 'https://cristianjm.com/servicios/integracion-erp-factusol'
+      canonicalUrl: 'https://cristianjm.com/servicios/integracion-erp-factusol/'
     });
   }
 }

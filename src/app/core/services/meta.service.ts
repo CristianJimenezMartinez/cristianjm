@@ -17,19 +17,30 @@ export class MetaService {
     this.meta.updateTag({ property: 'og:description', content: descriptionText });
 
     if (canonicalUrl) {
-      this.meta.updateTag({ property: 'og:url', content: canonicalUrl });
-      this.setCanonicalUrl(canonicalUrl);
+      const normalizedUrl = this.normalizeUrl(canonicalUrl);
+      this.meta.updateTag({ property: 'og:url', content: normalizedUrl });
+      this.setCanonicalUrl(normalizedUrl);
     }
   }
 
   setCanonicalUrl(url: string) {
+    const normalizedUrl = this.normalizeUrl(url);
     let link: HTMLLinkElement | null = this.document.querySelector("link[rel='canonical']");
     if (!link) {
       link = this.document.createElement('link');
       link.setAttribute('rel', 'canonical');
       this.document.head.appendChild(link);
     }
-    link.setAttribute('href', url);
+    link.setAttribute('href', normalizedUrl);
+  }
+
+  private normalizeUrl(url: string): string {
+    if (!url) return url;
+    // Normalize path to ensure canonical trailing slash on HTML pages
+    if (!url.endsWith('/') && !url.includes('?') && !url.includes('#') && !/\.[a-z0-9]+$/i.test(url)) {
+      return url + '/';
+    }
+    return url;
   }
 
   updateTags(tags: { title: string; description: string; keywords?: string; canonicalUrl?: string }) {

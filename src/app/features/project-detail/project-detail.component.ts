@@ -39,7 +39,7 @@ export class ProjectDetailComponent implements OnInit {
   private updateSeo(project: Project): void {
     const title = `${project.title} — Caso de Estudio & Arquitectura | CristianJM`;
     const description = project.fullDescription || project.description;
-    const canonicalUrl = `https://cristianjm.com/proyectos/${project.slug}`;
+    const canonicalUrl = `https://cristianjm.com/proyectos/${project.slug}/`;
     this.metaService.updateTags({
       title,
       description,

@@ -18,7 +18,7 @@ export class ServiceRescueComponent implements OnInit {
       title: 'Rescate Técnico de Integraciones ERP & Ecommerce Caídas | CristianJM',
       description: 'Intervención de emergencia y estabilización de conectores ERP (Factusol, desarrollos a medida) con WooCommerce y PrestaShop. Eliminación de bloqueos de base de datos (.laccdb), caídas por timeout 504 y pedidos perdidos.',
       keywords: 'Rescate integración ERP, Reparar conector Factusol, Error bloqueo laccdb, Sincronización WooCommerce caída, Fallo pedidos PrestaShop Factusol, Timeout conector ERP, Cristian Jiménez Martínez',
-      canonicalUrl: 'https://cristianjm.com/servicios/rescate-optimizacion-erp'
+      canonicalUrl: 'https://cristianjm.com/servicios/rescate-optimizacion-erp/'
     });
   }
 }

@@ -7,22 +7,22 @@
 
 ## Especialización & Consultoría
 - [Bentian ERP Bridge (Conector Oficial)](https://bridge.cristianjm.com/) — Middleware y sincronizador en tiempo real entre Factusol ERP y plataformas web (WooCommerce REST API, PrestaShop).
-- [Integración Factusol ERP](https://cristianjm.com/servicios/integracion-erp-factusol) — Conectores a medida para comercio electrónico y Factusol.
-- [Arquitectura Cloud & Full-Stack](https://cristianjm.com/servicios/arquitectura-cloud-fullstack) — NestJS, Angular SSR, PostgreSQL y Docker.
-- [Sobre Mí](https://cristianjm.com/sobre-mi) — Principios de ingeniería y trayectoria.
+- [Integración Factusol ERP](https://cristianjm.com/servicios/integracion-erp-factusol/) — Conectores a medida para comercio electrónico y Factusol.
+- [Arquitectura Cloud & Full-Stack](https://cristianjm.com/servicios/arquitectura-cloud-fullstack/) — NestJS, Angular SSR, PostgreSQL y Docker.
+- [Sobre Mí](https://cristianjm.com/sobre-mi/) — Principios de ingeniería y trayectoria.
 
 ## Proyectos y Casos de Estudio en Producción
-- [Bentian ERP Bridge](https://cristianjm.com/proyectos/bentian-erp-bridge) — Middleware local-first para Factusol ERP, WooCommerce y PrestaShop (Web: https://bridge.cristianjm.com/).
-- [Suministros Rubio](https://cristianjm.com/proyectos/suministros-rubio) — Sincronización desatendida entre base de datos Access/Factusol local y tienda web B2B (+5.000 SKUs).
-- [Praedium Fundus](https://cristianjm.com/proyectos/praedium-fundus) — Plataforma de inversión en activos inmobiliarios adjudicados, deuda bancaria NPL y suelo industrial (Web: https://praediumfundus.es/).
-- [OrganiSoto](https://cristianjm.com/proyectos/organi-soto) — Motor de contabilidad autónoma en Go con corte inteligente de fajos y auditoría fiscal con Google Gemini Flash Vision.
-- [SotoTime](https://cristianjm.com/proyectos/sototime) — Plataforma SaaS de control de jornada laboral con ledger criptográfico inmutable SHA-256 (Art. 34.9 ET) y firma digital FNMT.
-- [Grupo Soto Holding](https://cristianjm.com/proyectos/grupo-soto-holding) — Infraestructura cloud centralizada en VPS de IONOS con Nginx Hardened, PM2, NestJS y Angular SSR.
-- [Serenity Wellness Center](https://cristianjm.com/proyectos/serenity-wellness) — Ecosistema omnicanal para estudio boutique de Pilates Reformer (Web SSR + App Android Google Play + TPV físico).
-- [PoseidonFlow](https://cristianjm.com/proyectos/poseidon-flow) — Automatización operativa de centros de lavado con WebSockets, telefonía CTI a coste cero y balanceo de turnos.
-- [Nova Ventanas y Puertas](https://cristianjm.com/proyectos/nova-ventanas) — Showroom digital Passivhaus y cotizador express en 3 pasos con cálculo de ayudas NextGen EU.
-- [Grupo Soto Automóvil](https://cristianjm.com/proyectos/grupo-soto-automovil) — Portal B2B y CRM de movilidad comercial con numeración correlativa atómica de pedidos con Prisma transactions.
-- [VeltiaTrust](https://cristianjm.com/proyectos/veltiatrust) — Infraestructura API eIDAS Zero-Storage de notarización digital sin almacenamiento residual.
+- [Bentian ERP Bridge](https://cristianjm.com/proyectos/bentian-erp-bridge/) — Middleware local-first para Factusol ERP, WooCommerce y PrestaShop (Web: https://bridge.cristianjm.com/).
+- [Suministros Rubio](https://cristianjm.com/proyectos/suministros-rubio/) — Sincronización desatendida entre base de datos Access/Factusol local y tienda web B2B (+5.000 SKUs).
+- [Praedium Fundus](https://cristianjm.com/proyectos/praedium-fundus/) — Plataforma de inversión en activos inmobiliarios adjudicados, deuda bancaria NPL y suelo industrial (Web: https://praediumfundus.es/).
+- [OrganiSoto](https://cristianjm.com/proyectos/organi-soto/) — Motor de contabilidad autónoma en Go con corte inteligente de fajos y auditoría fiscal con Google Gemini Flash Vision.
+- [SotoTime](https://cristianjm.com/proyectos/sototime/) — Plataforma SaaS de control de jornada laboral con ledger criptográfico inmutable SHA-256 (Art. 34.9 ET) y firma digital FNMT.
+- [Grupo Soto Holding](https://cristianjm.com/proyectos/grupo-soto-holding/) — Infraestructura cloud centralizada en VPS de IONOS con Nginx Hardened, PM2, NestJS y Angular SSR.
+- [Serenity Wellness Center](https://cristianjm.com/proyectos/serenity-wellness/) — Ecosistema omnicanal para estudio boutique de Pilates Reformer (Web SSR + App Android Google Play + TPV físico).
+- [PoseidonFlow](https://cristianjm.com/proyectos/poseidon-flow/) — Automatización operativa de centros de lavado con WebSockets, telefonía CTI a coste cero y balanceo de turnos.
+- [Nova Ventanas y Puertas](https://cristianjm.com/proyectos/nova-ventanas/) — Showroom digital Passivhaus y cotizador express en 3 pasos con cálculo de ayudas NextGen EU.
+- [Grupo Soto Automóvil](https://cristianjm.com/proyectos/grupo-soto-automovil/) — Portal B2B y CRM de movilidad comercial con numeración correlativa atómica de pedidos con Prisma transactions.
+- [VeltiaTrust](https://cristianjm.com/proyectos/veltiatrust/) — Infraestructura API eIDAS Zero-Storage de notarización digital sin almacenamiento residual.
 
 ## Contacto Directo
 - Email: cristianjimeneztrabajo@gmail.com
