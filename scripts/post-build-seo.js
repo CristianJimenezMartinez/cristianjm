@@ -61,6 +61,9 @@ for (const filePath of htmlFiles) {
     content = content.replace('</head>', `  ${newOgUrlTag}\n</head>`);
   }
 
+  // 2b. Normalize internal anchor hrefs to include trailing slash (prevent 308 crawl redirects)
+  content = content.replace(/href="(\/(?:sobre-mi|proyectos\/[a-z0-9-]+|servicios\/[a-z0-9-]+))"/gi, 'href="$1/"');
+
   // 3. Inject BreadcrumbList JSON-LD
   // Clean up any previously injected BreadcrumbList to guarantee fresh trailing-slash URLs
   const existingBreadcrumbRegex = /\s*<script\s+type=["']application\/ld\+json["']>\s*\{[\s\S]*?"@type":\s*"BreadcrumbList"[\s\S]*?<\/script>/i;
