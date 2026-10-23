@@ -459,6 +459,20 @@ async function deepServerAndMailAudit(domain, finalUrl, isWordPress, discoveredE
     } catch {}
   }
 
+  // 5. Inteligencia Pública de Credenciales Filtradas / Infostealers (Hudson Rock OSINT)
+  info.leakedCredentialsCount = 0;
+  info.leakedUrls = [];
+  try {
+    const hrRes = await fetchUrl(`https://cavalier.hudsonrock.com/api/json/v2/osint-tools/search-by-domain?domain=${encodeURIComponent(cleanDom)}`, 4500, 1);
+    if (hrRes.statusCode === 200 && hrRes.body.trim().startsWith('{')) {
+      const hrData = JSON.parse(hrRes.body);
+      info.leakedCredentialsCount = Number(hrData.total || 0);
+      if (hrData.data && Array.isArray(hrData.data.all_urls)) {
+        info.leakedUrls = hrData.data.all_urls.slice(0, 3).map((u) => `${u.url} (${u.occurrence} cuentas)`);
+      }
+    }
+  } catch {}
+
   return info;
 }
 
@@ -549,6 +563,10 @@ async function auditAndCrawlCompany(domain, modo, dossierDir) {
   }
   if (serverInfo.xmlRpcOpen) {
     issues.push('Pasarela /xmlrpc.php abierta a ataques de fuerza bruta');
+  }
+  if (serverInfo.leakedCredentialsCount > 0) {
+    score = Math.max(12, score - 12);
+    issues.push(`ALERTA INFOSTEALER: ${serverInfo.leakedCredentialsCount} credenciales asociadas a ${domain} detectadas en filtraciones (${serverInfo.leakedUrls.join(', ')})`);
   }
 
   // Detector de Solapamiento / Competencia en modo Partner
