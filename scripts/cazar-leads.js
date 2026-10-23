@@ -17,6 +17,7 @@
 const https = require('https');
 const http = require('http');
 const tls = require('tls');
+const crypto = require('crypto');
 const dns = require('dns').promises;
 const fs = require('fs');
 const path = require('path');
@@ -360,7 +361,7 @@ Sin necesidad de rehacer ni cambiar el diseño de vuestra web actual, nos encarg
   return filePath;
 }
 
-async function deepServerAndMailAudit(domain, finalUrl, isWordPress) {
+async function deepServerAndMailAudit(domain, finalUrl, isWordPress, discoveredEmails = []) {
   const info = {
     ip: 'N/D',
     serverHost: 'N/D',
@@ -422,9 +423,28 @@ async function deepServerAndMailAudit(domain, finalUrl, isWordPress) {
       if (wpRes.statusCode === 200 && wpRes.body.trim().startsWith('[')) {
         const parsed = JSON.parse(wpRes.body);
         if (Array.isArray(parsed)) {
+          const candidateEmails = new Set(discoveredEmails.map((e) => e.toLowerCase().trim()));
+          for (const pref of ['info', 'administracion', 'gerencia', 'direccion', 'admin', 'web', 'contacto', 'ventas', 'pedidos', 'soporte']) {
+            candidateEmails.add(`${pref}@${cleanDom}`);
+          }
+          for (const u of parsed) {
+            if (u.slug) candidateEmails.add(`${String(u.slug).toLowerCase()}@${cleanDom}`);
+            if (u.name) candidateEmails.add(`${String(u.name).toLowerCase().replace(/\s+/g, '')}@${cleanDom}`);
+          }
+
+          const md5Map = new Map();
+          for (const em of candidateEmails) {
+            md5Map.set(crypto.createHash('md5').update(em).digest('hex'), em);
+          }
+
           info.wpExposedAdmins = parsed
             .slice(0, 4)
-            .map((u) => `${u.name || u.slug} (login: ${u.slug})`)
+            .map((u) => {
+              const avatarStr = JSON.stringify(u.avatar_urls || {});
+              const hashMatch = avatarStr.match(/\/avatar\/([a-f0-9]{32})/i);
+              const matchedEmail = hashMatch ? md5Map.get(hashMatch[1].toLowerCase()) : null;
+              return `${u.name || u.slug} (login: ${u.slug}${matchedEmail ? ` · email MD5: ${matchedEmail}` : ''})`;
+            })
             .filter(Boolean);
         }
       }
@@ -517,7 +537,7 @@ async function auditAndCrawlCompany(domain, modo, dossierDir) {
   const hasEcommerce = stack.some((s) => /WooCommerce|PrestaShop|Shopify/i.test(s));
   const isWordPress = stack.some((s) => /WordPress|WooCommerce/i.test(s));
 
-  const serverInfo = await deepServerAndMailAudit(domain, probe.finalUrl, isWordPress);
+  const serverInfo = await deepServerAndMailAudit(domain, probe.finalUrl, isWordPress, contacts.emails);
 
   if (serverInfo.dmarcVulnerable) {
     score = Math.max(12, score - 8);
