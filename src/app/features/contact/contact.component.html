@@ -24,7 +24,7 @@
             <div class="method-details">
               <span class="method-label">TELÉFONO &amp; WHATSAPP DIRECTO EMPRESAS</span>
               <a href="tel:+34617205053" class="method-value">+34 617 205 053</a>
-              <a href="https://wa.me/34617205053?text=Hola%20Cristian,%20te%20escribo%20desde%20cristianjm.com%20para%20consultar%20un%20servicio%20para%20mi%20empresa." target="_blank" rel="noopener noreferrer" class="method-sublink">Abrir chat en WhatsApp Business &rarr;</a>
+              <a href="https://wa.me/34617205053?text=Hola%20Cristian,%20te%20escribo%20desde%20cristianjm.com%20para%20consultar%20un%20servicio%20para%20mi%20empresa." target="_blank" rel="noopener noreferrer" class="method-sublink">Abrir conversación en WhatsApp Business</a>
             </div>
           </div>
 
@@ -111,9 +111,10 @@
               </optgroup>
               <optgroup label="Proyectos e Intervenciones Específicas">
                 <option value="factusol-bridge">Bentian ERP Bridge / Integración Factusol con WooCommerce o PrestaShop</option>
+                <option value="custom-software">Desarrollo de Software a Medida, IA Documental o App/TPV</option>
                 <option value="verifactu-audit">Auditoría Técnica y Adaptación Veri*Factu (RD 1007/2023)</option>
                 <option value="erp-rescue">Rescate Urgente de Integración ERP o Servidor Caído (&lt;24h)</option>
-                <option value="software-architecture">Desarrollo de Software a Medida &amp; Arquitectura Cloud</option>
+                <option value="software-architecture">Arquitectura Cloud, NestJS &amp; Microservicios</option>
                 <option value="other">Otro asunto o propuesta personalizada</option>
               </optgroup>
             </select>
@@ -134,7 +135,7 @@
           </div>
 
           <div *ngIf="submitSuccess()" class="alert alert-success">
-            ¡Solicitud recibida correctamente! Me pondré en contacto contigo en menos de 24 horas.
+            Solicitud recibida correctamente. Me pondré en contacto contigo en menos de 24 horas.
           </div>
 
           <div *ngIf="submitError()" class="alert alert-danger">
@@ -142,7 +143,7 @@
           </div>
 
           <button type="submit" class="btn btn-primary btn-submit" [disabled]="isSubmitting()">
-            <span *ngIf="!isSubmitting()">Enviar Solicitud Directa <span class="arrow">&rarr;</span></span>
+            <span *ngIf="!isSubmitting()">Enviar Solicitud Directa</span>
             <span *ngIf="isSubmitting()">Enviando consulta...</span>
           </button>
         </form>

@@ -1,6 +1,8 @@
 /
 /sobre-mi
 /servicios/integracion-erp-factusol
+/servicios/mantenimiento-web-ciberseguridad-empresas
+/servicios/desarrollo-software-medida-ia-automatizacion
 /servicios/auditoria-verifactu-facturacion
 /servicios/rescate-optimizacion-erp
 /servicios/arquitectura-cloud-fullstack

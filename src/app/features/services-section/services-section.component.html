@@ -1,109 +1,149 @@
 <section id="servicios" class="section services-overview-section">
   <div class="container">
     <div class="section-header-centered">
-      <span class="section-eyebrow">Especialización &amp; Alto Rendimiento</span>
-      <h2 class="section-title">Servicios de <span class="accent">Ingeniería, Ciberseguridad &amp; ERP</span></h2>
+      <span class="section-eyebrow">Áreas de Especialización B2B</span>
+      <h2 class="section-title">Ingeniería de Software, <span class="accent">Ciberseguridad &amp; ERP</span></h2>
       <p class="section-subtitle">
-        Arquitectura de software, ciberseguridad perimetral y consultoría técnica de alta disponibilidad. Soluciones diseñadas para empresas que no pueden permitirse caídas de sincronización, brechas de seguridad en Node.js/PHP, descuadres de almacén ni sanciones de la Agencia Tributaria.
+        Arquitectura de sistemas, mantenimiento blindado de servidores y conectores en tiempo real. Soluciones diseñadas para empresas que exigen continuidad operativa, código auditado y cumplimiento normativo.
       </p>
     </div>
 
     <div class="services-cards-grid">
-      <!-- Card 1: Factusol ERP -->
+      <!-- Card 01: Factusol ERP -->
       <article class="service-card highlight-card">
-        <div class="card-badge">Flagship &amp; Especialidad</div>
-        <div class="card-icon-wrap icon-indigo">
-          <span class="service-glyph">⚡</span>
+        <div class="card-top-bar">
+          <span class="card-index">01</span>
+          <span class="card-badge">Especialidad Principal</span>
         </div>
         <h3 class="card-heading">Integración Factusol ERP con WooCommerce y PrestaShop</h3>
         <p class="card-desc">
           Conexión en tiempo real sobre la base de datos de Factusol (.accdb) mediante motor OLEDB de lectura concurrente. Cálculo de stock disponible real (DISSTO) e inyección automática de pedidos sin bloqueos ni picado manual.
         </p>
         <ul class="card-features">
-          <li>✓ Cero bloqueos de archivo (.laccdb) en horario de tienda</li>
-          <li>✓ Persistencia JSON Atómico Certificado y cola Store-and-Forward</li>
-          <li>✓ Desglose atómico de bases, IVA y Recargo de Equivalencia</li>
+          <li>Cero bloqueos de archivo (.laccdb) en horario de oficina</li>
+          <li>Persistencia JSON Atómico Certificado y cola Store-and-Forward</li>
+          <li>Desglose atómico de bases, IVA y Recargo de Equivalencia</li>
         </ul>
         <div class="card-footer">
           <a routerLink="/servicios/integracion-erp-factusol" class="service-link">
-            <span>Ver detalles de integración</span>
-            <span class="arrow">&rarr;</span>
+            <span>Explorar servicio de integración Factusol</span>
           </a>
         </div>
       </article>
 
-      <!-- Card 2: Veri*Factu -->
-      <article class="service-card">
-        <div class="card-badge badge-urgent">Reglamento RD 1007/2023</div>
-        <div class="card-icon-wrap icon-emerald">
-          <span class="service-glyph">🛡️</span>
+      <!-- Card 02: Mantenimiento Web, Ciberseguridad & DevSecOps -->
+      <article class="service-card highlight-card">
+        <div class="card-top-bar">
+          <span class="card-index">02</span>
+          <span class="card-badge badge-urgent">Suscripción B2B</span>
         </div>
-        <h3 class="card-heading">Auditoría y Certificación Veri*Factu (AEAT)</h3>
+        <h3 class="card-heading">Mantenimiento Web, Ciberseguridad Node.js/PHP y DevSecOps</h3>
+        <p class="card-desc">
+          Administración integral de plataformas empresariales, migración a repositorios privados en GitHub con despliegues automáticos sin caídas y parcheo continuo frente a vulnerabilidades críticas (CVE).
+        </p>
+        <ul class="card-features">
+          <li>Actualización proactiva de runtimes LTS (Node.js 22+, PHP 8.3+)</li>
+          <li>Servidor central con Nginx Hardened, TLS 1.3 y copias diarias</li>
+          <li>Soporte multi-tecnología aunque tu empresa no tenga equipo IT</li>
+        </ul>
+        <div class="card-footer">
+          <a routerLink="/servicios/mantenimiento-web-ciberseguridad-empresas" class="service-link">
+            <span>Explorar mantenimiento y ciberseguridad</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 03: Desarrollo de Software a Medida, IA & Automatización -->
+      <article class="service-card">
+        <div class="card-top-bar">
+          <span class="card-index">03</span>
+          <span class="card-badge">Sistemas a Medida</span>
+        </div>
+        <h3 class="card-heading">Desarrollo de Software a Medida, IA y Automatización</h3>
+        <p class="card-desc">
+          Construcción de herramientas propietarias para eliminar procesos manuales: lectura y contabilización de facturas con Inteligencia Artificial, servicios nativos Windows en Go/C#, portales B2B y apps Android con TPV.
+        </p>
+        <ul class="card-features">
+          <li>Motores de IA documental y validación fiscal (A3, Contasol, Sage)</li>
+          <li>Portales mayoristas B2B, intranets y telefonía CTI por WebSockets</li>
+          <li>Aplicaciones móviles en Google Play y mostrador TPV físico</li>
+        </ul>
+        <div class="card-footer">
+          <a routerLink="/servicios/desarrollo-software-medida-ia-automatizacion" class="service-link">
+            <span>Explorar desarrollo a medida e IA</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 04: Veri*Factu -->
+      <article class="service-card">
+        <div class="card-top-bar">
+          <span class="card-index">04</span>
+          <span class="card-badge badge-urgent">RD 1007/2023 AEAT</span>
+        </div>
+        <h3 class="card-heading">Auditoría y Adaptación Técnica Veri*Factu (AEAT)</h3>
         <p class="card-desc">
           Adaptación técnica obligatoria de programas de facturación y ERPs a la Ley Antifraude 11/2021. Implementación de encadenamiento criptográfico SHA-256, códigos QR normalizados y remisión segura por mTLS a Hacienda.
         </p>
         <ul class="card-features">
-          <li>✓ Evita multas de hasta 50.000 € por software no conforme</li>
-          <li>✓ Hashing encadenado inalterable y logs de trazabilidad</li>
-          <li>✓ Emisión de informe técnico y Declaración Responsable</li>
+          <li>Prevención de sanciones de hasta 50.000 € por software no conforme</li>
+          <li>Huella encadenada inalterable y registro de eventos de auditoría</li>
+          <li>Emisión de dictamen técnico y Declaración Responsable</li>
         </ul>
         <div class="card-footer">
           <a routerLink="/servicios/auditoria-verifactu-facturacion" class="service-link">
-            <span>Auditar mi software</span>
-            <span class="arrow">&rarr;</span>
+            <span>Explorar auditoría Veri*Factu</span>
           </a>
         </div>
       </article>
 
-      <!-- Card 3: Rescate ERP -->
+      <!-- Card 05: Rescate ERP -->
       <article class="service-card">
-        <div class="card-badge badge-rescue">Intervención &lt;24 Horas</div>
-        <div class="card-icon-wrap icon-amber">
-          <span class="service-glyph">🚨</span>
+        <div class="card-top-bar">
+          <span class="card-index">05</span>
+          <span class="card-badge badge-rescue">Respuesta &lt;24 Horas</span>
         </div>
         <h3 class="card-heading">Rescate y Estabilización de Integraciones ERP</h3>
         <p class="card-desc">
-          Diagnóstico y reparación urgente para ecommerce que sufren caídas de sincronización, cuellos de botella por timeout 504 o pérdidas de pedidos durante picos de venta.
+          Diagnóstico e intervención urgente para tiendas online que sufren caídas de sincronización, cuellos de botella por timeout 504, bloqueos exclusivos de Access o pérdida de pedidos en campañas de alto tráfico.
         </p>
         <ul class="card-features">
-          <li>✓ Solución definitiva al Error 3045 (bloqueo exclusivo)</li>
-          <li>✓ Optimización de consultas pesadas y endpoints lentos</li>
-          <li>✓ Auditoría y cuadre de céntimos en pedidos web</li>
+          <li>Solución definitiva al Error 3045 (bloqueo exclusivo .laccdb)</li>
+          <li>Sustitución de scripts lentos por arquitectura Local-First</li>
+          <li>Conciliación exacta al céntimo en impuestos y recargos</li>
         </ul>
         <div class="card-footer">
           <a routerLink="/servicios/rescate-optimizacion-erp" class="service-link">
-            <span>Solicitar rescate técnico</span>
-            <span class="arrow">&rarr;</span>
+            <span>Explorar servicio de rescate técnico</span>
           </a>
         </div>
       </article>
 
-      <!-- Card 4: Arquitectura Cloud & DevSecOps -->
+      <!-- Card 06: Arquitectura Cloud -->
       <article class="service-card">
-        <div class="card-badge">Cloud &amp; DevSecOps</div>
-        <div class="card-icon-wrap icon-cyan">
-          <span class="service-glyph">☁️</span>
+        <div class="card-top-bar">
+          <span class="card-index">06</span>
+          <span class="card-badge">Cloud &amp; Microservicios</span>
         </div>
-        <h3 class="card-heading">Arquitectura Cloud, DevSecOps &amp; Servidores Gestionados</h3>
+        <h3 class="card-heading">Arquitectura Cloud, NestJS y Plataformas Full-Stack</h3>
         <p class="card-desc">
-          Gobernanza técnica integral en servidor central de alto rendimiento, despliegues automatizados desde GitHub Actions sin caídas y parcheo continuo de vulnerabilidades (CVE) en Node.js, PHP, Angular y PostgreSQL.
+          Diseño y consolidación de infraestructuras cloud de alto rendimiento y coste contenido para holdings y plataformas SaaS. Microservicios en NestJS 11, Angular SSR, PostgreSQL multi-esquema y contenedores Docker.
         </p>
         <ul class="card-features">
-          <li>✓ Parcheo proactivo ante CVEs críticas (Node.js, PHP, npm)</li>
-          <li>✓ Despliegues CI/CD desde GitHub con Zero-Downtime</li>
-          <li>✓ Copias de seguridad diarias cifradas y monitorización 24/7</li>
+          <li>Consolidación de múltiples portales en servidores VPS optimizados</li>
+          <li>Compilación externa en GitHub Actions para proteger la memoria RAM</li>
+          <li>Criptografía asimétrica Ed25519 y arquitectura Zero-Trust</li>
         </ul>
         <div class="card-footer">
           <a routerLink="/servicios/arquitectura-cloud-fullstack" class="service-link">
-            <span>Explorar arquitectura y planes</span>
-            <span class="arrow">&rarr;</span>
+            <span>Explorar arquitectura cloud</span>
           </a>
         </div>
       </article>
     </div>
 
     <!-- ========================================================================= -->
-    <!-- NUEVO BLOQUE B2B: PLANES DE INGENIERÍA GESTIONADA & CIBERSEGURIDAD (200-500€) -->
+    <!-- BLOQUE B2B: PLANES DE INGENIERÍA GESTIONADA & CIBERSEGURIDAD (200-500€)    -->
     <!-- ========================================================================= -->
     <div id="planes-empresas" class="managed-plans-wrapper">
       <div class="managed-header">
@@ -114,30 +154,30 @@
             <span>Capacidad de Onboarding: Máximo 4 nuevas empresas al mes</span>
           </span>
         </div>
-        <h3 class="managed-title">Tu Departamento de Ingeniería, <span class="accent">Ciberseguridad &amp; Cloud</span> por una fracción de coste</h3>
+        <h3 class="managed-title">Tu Departamento de Ingeniería, <span class="accent">Ciberseguridad &amp; Cloud</span> por una cuota fija mensual</h3>
         <p class="managed-subtitle">
-          Delego tu infraestructura en un entorno empresarial blindado, con repositorios privados en GitHub, despliegues atómicos automatizados y actualización continua de seguridad en <strong>Node.js, TypeScript, Angular, React/Next.js, PHP y bases de datos</strong>. Trato directo con el Arquitecto de Software, sin intermediarios.
+          Centralizo la infraestructura de tu empresa en un entorno blindado, con repositorios privados en GitHub, despliegues atómicos automatizados y actualización continua de seguridad en <strong>Node.js, TypeScript, Angular, React/Next.js, PHP y bases de datos</strong>. Trato directo con el Arquitecto de Software, sin intermediarios.
         </p>
       </div>
 
       <!-- Security & DevSecOps Guarantee Strip -->
       <div class="security-shield-strip">
         <div class="shield-item">
-          <span class="shield-icon">🔒</span>
+          <span class="shield-code">01 // SEGURIDAD</span>
           <div class="shield-text">
             <strong>Parcheo Activo Anti-CVE</strong>
-            <span>Actualización inmediata de versiones LTS (Node.js 22+, PHP 8.3+, dependencias) frente a vulnerabilidades RCE y DoS.</span>
+            <span>Actualización controlada de versiones LTS (Node.js 22+, PHP 8.3+, librerías) frente a vulnerabilidades de ejecución remota.</span>
           </div>
         </div>
         <div class="shield-item">
-          <span class="shield-icon">⚙️</span>
+          <span class="shield-code">02 // DESPLIEGUES</span>
           <div class="shield-text">
             <strong>GitHub CI/CD Zero-Downtime</strong>
-            <span>Todo el código versionado y apuntado en GitHub privado. Despliegues automáticos sin interrumpir las ventas.</span>
+            <span>Todo el código versionado y documentado en GitHub privado. Despliegues automáticos sin interrumpir la operativa.</span>
           </div>
         </div>
         <div class="shield-item">
-          <span class="shield-icon">🛡️</span>
+          <span class="shield-code">03 // CONTINUIDAD</span>
           <div class="shield-text">
             <strong>Hardening &amp; Backups Cifrados</strong>
             <span>Nginx Hardened (TLS 1.3, HSTS), ocultación de cabeceras de servidor y copias de seguridad diarias externas.</span>
@@ -162,18 +202,17 @@
           </div>
 
           <ul class="plan-features">
-            <li><span class="check">✓</span> <strong>Alojamiento o gestión en servidor central</strong> de alto rendimiento (Nginx Hardened + TLS 1.3)</li>
-            <li><span class="check">✓</span> <strong>Repositorio privado en GitHub</strong> con pipeline CI/CD de despliegue automático sin caídas</li>
-            <li><span class="check">✓</span> <strong>Parcheo mensual y urgente de seguridad (CVE)</strong> en Node.js, PHP y librerías críticas</li>
-            <li><span class="check">✓</span> <strong>Ocultación de huella digital</strong> de servidor (protección frente a escáneres Shodan/bots)</li>
-            <li><span class="check">✓</span> <strong>Copias de seguridad diarias</strong> automatizadas de código y base de datos</li>
-            <li><span class="check">✓</span> <strong>Monitorización 24/7</strong> de disponibilidad, certificados SSL y consumo de RAM/CPU</li>
+            <li><span class="check">—</span> <span><strong>Alojamiento o gestión en servidor central</strong> de alto rendimiento (Nginx Hardened + TLS 1.3)</span></li>
+            <li><span class="check">—</span> <span><strong>Repositorio privado en GitHub</strong> con pipeline CI/CD de despliegue automático sin caídas</span></li>
+            <li><span class="check">—</span> <span><strong>Parcheo mensual y urgente de seguridad (CVE)</strong> en Node.js, PHP y dependencias críticas</span></li>
+            <li><span class="check">—</span> <span><strong>Ocultación de huella digital</strong> de servidor frente a escáneres automatizados</span></li>
+            <li><span class="check">—</span> <span><strong>Copias de seguridad diarias</strong> automatizadas de código y base de datos</span></li>
+            <li><span class="check">—</span> <span><strong>Monitorización 24/7</strong> de disponibilidad, certificados SSL y consumo de recursos</span></li>
           </ul>
 
           <div class="plan-actions">
             <a href="#contacto" (click)="selectPlan('plan-cloud-200', $event)" class="btn-plan btn-plan-outline">
               <span>Solicitar Alta Plan 200 €</span>
-              <span class="arrow">&rarr;</span>
             </a>
             <a href="https://wa.me/34617205053?text=Hola%20Cristian,%20me%20interesa%20el%20Plan%20Blindaje%20Cloud%20y%20DevSecOps%20(200%E2%82%AC/mes)%20para%20mi%20empresa." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-mini">
               <span>Consultar por WhatsApp Directo</span>
@@ -192,26 +231,25 @@
               <span class="period">/ mes <small>+ IVA</small></span>
             </div>
             <p class="plan-summary">
-              La solución llave en mano para distribuidores y comercios: infraestructura web blindada más sincronización continua con tu ERP local.
+              La solución integral para distribuidores y comercios: infraestructura web blindada más sincronización continua con tu ERP local.
             </p>
           </div>
 
           <ul class="plan-features">
-            <li><span class="check">✓</span> <strong>Todo lo incluido en el Plan Blindaje Cloud (200 €)</strong></li>
-            <li><span class="check">✓</span> <strong>Licencia y gestión de Bentian ERP Bridge</strong> (Factusol / ERP a WooCommerce o PrestaShop)</li>
-            <li><span class="check">✓</span> <strong>Supervisión activa de sincronización</strong> de stock real (DISSTO), tarifas 1–5 y pedidos web</li>
-            <li><span class="check">✓</span> <strong>Mantenimiento evolutivo ligero</strong> (hasta 3h/mes para ajustes en web, pasarela Stripe/Redsys o catálogo)</li>
-            <li><span class="check">✓</span> <strong>Garantía de cuadre fiscal</strong> de pedidos (IVA, Recargo de Equivalencia y series contables)</li>
-            <li><span class="check">✓</span> <strong>Canal directo de soporte técnico</strong> por teléfono y WhatsApp Business (&lt; 4h laborables)</li>
+            <li><span class="check">—</span> <span><strong>Todo lo incluido en el Plan Blindaje Cloud (200 €)</strong></span></li>
+            <li><span class="check">—</span> <span><strong>Licencia y gestión de Bentian ERP Bridge</strong> (Factusol / ERP a WooCommerce o PrestaShop)</span></li>
+            <li><span class="check">—</span> <span><strong>Supervisión activa de sincronización</strong> de stock real (DISSTO), tarifas 1–5 y pedidos web</span></li>
+            <li><span class="check">—</span> <span><strong>Mantenimiento evolutivo ligero</strong> (hasta 3h/mes para ajustes en web, pasarela de pago o catálogo)</span></li>
+            <li><span class="check">—</span> <span><strong>Garantía de cuadre fiscal</strong> de pedidos (IVA, Recargo de Equivalencia y series contables)</span></li>
+            <li><span class="check">—</span> <span><strong>Canal directo de soporte técnico</strong> por teléfono y WhatsApp Business (&lt; 4h laborables)</span></li>
           </ul>
 
           <div class="plan-actions">
             <a href="#contacto" (click)="selectPlan('plan-erp-350', $event)" class="btn-plan btn-plan-primary">
               <span>Solicitar Alta Plan 350 €</span>
-              <span class="arrow">&rarr;</span>
             </a>
             <a href="https://wa.me/34617205053?text=Hola%20Cristian,%20me%20interesa%20el%20Plan%20Operativa%20Total%20y%20ERP%2024/7%20(350%E2%82%AC/mes)%20para%20mi%20empresa." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-mini">
-              <span>Hablar por WhatsApp (+34 617 205 053)</span>
+              <span>WhatsApp Directo: +34 617 205 053</span>
             </a>
           </div>
         </article>
@@ -231,18 +269,17 @@
           </div>
 
           <ul class="plan-features">
-            <li><span class="check">✓</span> <strong>Todo lo incluido en el Plan Operativa Total (350 €)</strong></li>
-            <li><span class="check">✓</span> <strong>Bolsa mensual de ingeniería (hasta 8h/mes)</strong> para nuevas funciones, módulos o automatizaciones</li>
-            <li><span class="check">✓</span> <strong>Soporte Multi-Tecnología completo:</strong> Node.js/NestJS, Angular, React/Next.js, PHP, Go y C#</li>
-            <li><span class="check">✓</span> <strong>Auditoría de ciberseguridad mensual</strong>, tests de carga y optimización de consultas SQL/PostgreSQL</li>
-            <li><span class="check">✓</span> <strong>Consultoría de cumplimiento normativo</strong> (Veri*Factu AEAT, inmutabilidad de logs y RGPD)</li>
-            <li><span class="check">✓</span> <strong>SLA Prioritario y línea directa</strong> con el Arquitecto para incidencias críticas</li>
+            <li><span class="check">—</span> <span><strong>Todo lo incluido en el Plan Operativa Total (350 €)</strong></span></li>
+            <li><span class="check">—</span> <span><strong>Bolsa mensual de ingeniería (hasta 8h/mes)</strong> para nuevas funciones, módulos o automatizaciones</span></li>
+            <li><span class="check">—</span> <span><strong>Soporte Multi-Tecnología completo:</strong> Node.js/NestJS, Angular, React/Next.js, PHP, Go y C#</span></li>
+            <li><span class="check">—</span> <span><strong>Auditoría de ciberseguridad mensual</strong>, tests de rendimiento y optimización SQL/PostgreSQL</span></li>
+            <li><span class="check">—</span> <span><strong>Consultoría de cumplimiento normativo</strong> (Veri*Factu AEAT, inmutabilidad de logs y RGPD)</span></li>
+            <li><span class="check">—</span> <span><strong>SLA Prioritario y línea directa</strong> con el Arquitecto para intervenciones críticas</span></li>
           </ul>
 
           <div class="plan-actions">
             <a href="#contacto" (click)="selectPlan('plan-partner-500', $event)" class="btn-plan btn-plan-outline">
               <span>Solicitar Alta Plan 500 €</span>
-              <span class="arrow">&rarr;</span>
             </a>
             <a href="https://wa.me/34617205053?text=Hola%20Cristian,%20me%20interesa%20el%20Plan%20Partner%20Tecnol%C3%B3gico%20(500%E2%82%AC/mes)%20para%20mi%20empresa." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-mini">
               <span>Consultar por WhatsApp Directo</span>
@@ -255,14 +292,14 @@
       <div class="enterprise-direct-bar">
         <div class="direct-bar-info">
           <span class="direct-badge">ATENCIÓN DIRECTA A EMPRESAS</span>
-          <p>¿No tienes equipo interno en Node.js, Angular o PHP, o tu proveedor actual te ha dejado sin soporte? Migro tu plataforma a GitHub y la dejo blindada sin interrumpir tu negocio.</p>
+          <p>¿No tienes equipo interno en Node.js, Angular o PHP, o tu proveedor actual te ha dejado sin soporte? Migro tu plataforma a GitHub y la dejo blindada sin interrumpir tu operativa.</p>
         </div>
         <div class="direct-bar-contacts">
           <a href="tel:+34617205053" class="direct-pill">
-            <span>📞 +34 617 205 053</span>
+            <span>Tel. +34 617 205 053</span>
           </a>
           <a href="mailto:cristian@cristianjm.com" class="direct-pill">
-            <span>✉️ cristian&#64;cristianjm.com</span>
+            <span>cristian&#64;cristianjm.com</span>
           </a>
         </div>
       </div>

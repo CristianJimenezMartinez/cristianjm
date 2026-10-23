@@ -18,6 +18,14 @@ export const routes: Routes = [
     loadComponent: () => import('./features/services/service-factusol/service-factusol.component').then(m => m.ServiceFactusolComponent)
   },
   {
+    path: 'servicios/mantenimiento-web-ciberseguridad-empresas',
+    loadComponent: () => import('./features/services/service-cybersecurity/service-cybersecurity.component').then(m => m.ServiceCybersecurityComponent)
+  },
+  {
+    path: 'servicios/desarrollo-software-medida-ia-automatizacion',
+    loadComponent: () => import('./features/services/service-custom-software/service-custom-software.component').then(m => m.ServiceCustomSoftwareComponent)
+  },
+  {
     path: 'servicios/auditoria-verifactu-facturacion',
     loadComponent: () => import('./features/services/service-verifactu/service-verifactu.component').then(m => m.ServiceVerifactuComponent)
   },

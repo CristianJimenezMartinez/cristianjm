@@ -5,11 +5,10 @@
     <!-- Breadcrumb -->
     <nav class="breadcrumb-bar" aria-label="Breadcrumb">
       <a routerLink="/" class="breadcrumb-link">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
         <span>Inicio</span>
       </a>
       <span class="breadcrumb-separator">/</span>
-      <span>Servicios</span>
+      <a routerLink="/" fragment="servicios" class="breadcrumb-link">Servicios</a>
       <span class="breadcrumb-separator">/</span>
       <span class="breadcrumb-current">Integración Factusol ERP</span>
     </nav>
@@ -31,22 +30,22 @@
 
       <div class="hero-actions">
         <a href="https://bridge.cristianjm.com/" target="_blank" rel="noopener" class="btn btn-primary">
-          <span>Explorar Bentian ERP Bridge ↗</span>
+          <span>Explorar Bentian ERP Bridge</span>
         </a>
         <a routerLink="/" fragment="contacto" class="btn btn-secondary">
           <span>Solicitar Consultoría Técnica</span>
         </a>
       </div>
 
-      <div class="hero-quick-links" style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.8rem;">
+      <div class="hero-quick-links" style="margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.8rem;">
         <span style="color: var(--color-text-muted); align-self: center;">Recursos oficiales del conector:</span>
-        <a href="https://bridge.cristianjm.com/factusol-woocommerce/" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: underline;">Factusol WooCommerce ↗</a>
-        <span style="color: var(--color-text-muted);">•</span>
-        <a href="https://bridge.cristianjm.com/factusol-prestashop/" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: underline;">Factusol PrestaShop ↗</a>
-        <span style="color: var(--color-text-muted);">•</span>
-        <a href="https://bridge.cristianjm.com/alternativa-delsol-conecta/" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: underline;">Alternativa DELSOL Conecta ↗</a>
-        <span style="color: var(--color-text-muted);">•</span>
-        <a href="https://bridge.cristianjm.com/docs/factusol/matriz-compatibilidad/" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: underline;">Matriz Factusol 2018–2026 ↗</a>
+        <a href="https://bridge.cristianjm.com/factusol-woocommerce/" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: underline;">Factusol WooCommerce</a>
+        <span style="color: var(--color-text-muted);">·</span>
+        <a href="https://bridge.cristianjm.com/factusol-prestashop/" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: underline;">Factusol PrestaShop</a>
+        <span style="color: var(--color-text-muted);">·</span>
+        <a href="https://bridge.cristianjm.com/alternativa-delsol-conecta/" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: underline;">Alternativa DELSOL Conecta</a>
+        <span style="color: var(--color-text-muted);">·</span>
+        <a href="https://bridge.cristianjm.com/docs/factusol/matriz-compatibilidad/" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: underline;">Matriz Factusol 2018–2026</a>
       </div>
     </header>
 
@@ -94,22 +93,22 @@
 
         <div class="solutions-grid">
           <div class="solution-card">
-            <div class="card-icon">⚡</div>
+            <div class="card-icon" style="font-family: monospace; font-size: 0.8rem; color: #34d399; font-weight: 700;">01 // OLEDB</div>
             <h3 class="card-title">Motor OLEDB Concurrente</h3>
             <p>Lectura compartida directa (Share Deny None) sobre archivos Access (.accdb y .mdb) con latencias inferiores a 100 ms y cero bloqueos para administración.</p>
           </div>
           <div class="solution-card">
-            <div class="card-icon">🛡️</div>
+            <div class="card-icon" style="font-family: monospace; font-size: 0.8rem; color: #34d399; font-weight: 700;">02 // PERSISTENCIA</div>
             <h3 class="card-title">Cola Store-and-Forward (30 Días)</h3>
             <p>Persistencia local con JSON Atómico Certificado y respaldo Anti-Wiping. Los pedidos se custodian de forma segura si hay un corte de red y se inyectan automáticamente al restaurarse la conexión.</p>
           </div>
           <div class="solution-card">
-            <div class="card-icon">📦</div>
+            <div class="card-icon" style="font-family: monospace; font-size: 0.8rem; color: #34d399; font-weight: 700;">03 // STOCK REAL</div>
             <h3 class="card-title">Cálculo de Stock Disponible (DISSTO)</h3>
             <p>Mapeo inteligente: <code>DISSTO = ACTSTO - RESCLI - PENENT</code>. Solo vendes lo que realmente tienes en el almacén disponible para servir.</p>
           </div>
           <div class="solution-card">
-            <div class="card-icon">🧾</div>
+            <div class="card-icon" style="font-family: monospace; font-size: 0.8rem; color: #34d399; font-weight: 700;">04 // FACTURACIÓN</div>
             <h3 class="card-title">Inyección Atómica en Serie 1 o W</h3>
             <p>Los pedidos web se escriben con sus líneas e impuestos en F_PCL, desglosando bases, IVA y Recargo de Equivalencia sin descuadres contables.</p>
           </div>
@@ -127,7 +126,7 @@
             </p>
           </div>
           <a routerLink="/proyectos/suministros-rubio" class="btn btn-secondary">
-            <span>Ver Caso de Estudio &rarr;</span>
+            <span>Ver Caso de Estudio</span>
           </a>
         </div>
       </section>
@@ -142,7 +141,7 @@
         </div>
         <div class="banner-actions">
           <a href="https://bridge.cristianjm.com/" target="_blank" rel="noopener" class="btn btn-primary">
-            <span>Descargar Agente de Bentian ↗</span>
+            <span>Descargar Agente de Bentian</span>
           </a>
           <a routerLink="/" fragment="contacto" class="btn btn-secondary">
             <span>Contactar con Cristian</span>

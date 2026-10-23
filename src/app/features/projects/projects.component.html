@@ -56,11 +56,9 @@
               <div class="flagship-cta">
                 <a [routerLink]="['/proyectos', flagship.slug]" class="btn btn-secondary">
                   <span>Ver Caso de Estudio Detallado</span>
-                  <span class="arrow">&rarr;</span>
                 </a>
                 <a [href]="flagship.liveUrl" target="_blank" rel="noopener" class="btn btn-indigo">
                   <span>Entrar a Bentian ERP Bridge</span>
-                  <span class="arrow">&rarr;</span>
                 </a>
               </div>
             </div>
@@ -95,11 +93,10 @@
           <div class="bento-footer">
             <a [routerLink]="['/proyectos', project.slug]" class="bento-link">
               <span>Ver caso de estudio</span>
-              <span class="arrow">&rarr;</span>
             </a>
             @if (project.liveUrl) {
               <a [href]="project.liveUrl" target="_blank" rel="noopener" class="bento-link-external" title="Visitar sitio oficial">
-                <span>Web oficial ↗</span>
+                <span>Sitio oficial</span>
               </a>
             }
           </div>

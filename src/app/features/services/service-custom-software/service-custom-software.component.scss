@@ -1,0 +1,61 @@
+@import '../service-cybersecurity/service-cybersecurity.component.scss';
+
+.cases-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  .case-mini-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1.6rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: border-color 0.2s ease, background 0.2s ease;
+
+    &:hover {
+      border-color: rgba(16, 185, 129, 0.35);
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .case-sector {
+      font-family: $font-family-mono;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: $emerald-light;
+      letter-spacing: 0.06em;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    p {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: $text-secondary;
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    .case-link-text {
+      font-family: $font-family-mono;
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-top: 0.35rem;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }
+}

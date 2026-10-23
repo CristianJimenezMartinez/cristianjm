@@ -10,15 +10,17 @@
 - **Plan Operativa Total & ERP 24/7 (350 €/mes)**: Todo el blindaje Cloud + licencia y supervisión activa de Bentian ERP Bridge (sincronización Factusol/ERP con WooCommerce o PrestaShop), garantía de cuadre fiscal y hasta 3h/mes de soporte evolutivo.
 - **Plan Partner Tecnológico & CTO Externo (500 €/mes)**: Todo lo anterior + bolsa mensual de hasta 8h de ingeniería dedicada (Node.js, Angular, React/Next.js, PHP, Go, C#), auditoría de seguridad mensual y SLA prioritario.
 
-## Especialización & Consultoría
+## 6 Áreas de Especialización & Servicios Indexados
 - [Bentian ERP Bridge (Conector Oficial)](https://bridge.cristianjm.com/) — Middleware y sincronizador en tiempo real entre Factusol ERP y plataformas web (WooCommerce REST API, PrestaShop).
 - [Integración Factusol ERP](https://cristianjm.com/servicios/integracion-erp-factusol/) — Conectores a medida para comercio electrónico y Factusol.
-- [Arquitectura Cloud, DevSecOps & Planes B2B](https://cristianjm.com/servicios/arquitectura-cloud-fullstack/) — Servidores gestionados, GitHub CI/CD, parcheo CVE, NestJS, Angular SSR y PostgreSQL.
+- [Mantenimiento Web, Ciberseguridad Node.js/PHP & DevSecOps](https://cristianjm.com/servicios/mantenimiento-web-ciberseguridad-empresas/) — Suscripción mensual para empresas, parcheo CVE, GitHub CI/CD y servidores gestionados.
+- [Desarrollo de Software a Medida, IA & Automatización](https://cristianjm.com/servicios/desarrollo-software-medida-ia-automatizacion/) — Automatización documental con IA, servicios Windows en Go/C#, portales B2B, apps Android y TPV.
 - [Auditoría Veri*Factu (AEAT)](https://cristianjm.com/servicios/auditoria-verifactu-facturacion/) — Adaptación técnica al RD 1007/2023 y Ley Antifraude.
 - [Rescate y Estabilización ERP](https://cristianjm.com/servicios/rescate-optimizacion-erp/) — Intervención urgente en menos de 24 horas.
+- [Arquitectura Cloud, NestJS & Full-Stack](https://cristianjm.com/servicios/arquitectura-cloud-fullstack/) — Consolidación cloud, microservicios y PostgreSQL.
 - [Sobre Mí](https://cristianjm.com/sobre-mi/) — Principios de ingeniería y trayectoria.
 
-## Proyectos y Casos de Estudio en Producción
+## 11 Proyectos y Casos de Estudio en Producción
 - [Bentian ERP Bridge](https://cristianjm.com/proyectos/bentian-erp-bridge/) — Middleware local-first para Factusol ERP, WooCommerce y PrestaShop (Web: https://bridge.cristianjm.com/).
 - [Suministros Rubio](https://cristianjm.com/proyectos/suministros-rubio/) — Sincronización desatendida entre base de datos Access/Factusol local y tienda web B2B (+5.000 SKUs).
 - [Praedium Fundus](https://cristianjm.com/proyectos/praedium-fundus/) — Plataforma de inversión en activos inmobiliarios adjudicados, deuda bancaria NPL y suelo industrial (Web: https://praediumfundus.es/).

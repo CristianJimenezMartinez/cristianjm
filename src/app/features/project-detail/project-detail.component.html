@@ -6,7 +6,6 @@
       <!-- Breadcrumb & Back navigation -->
       <nav class="breadcrumb-bar" aria-label="Breadcrumb">
         <a routerLink="/" class="breadcrumb-link">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
           <span>Inicio</span>
         </a>
         <span class="breadcrumb-separator">/</span>
@@ -49,7 +48,6 @@
             <div class="meta-item cta-meta">
               <a [href]="p.liveUrl" target="_blank" rel="noopener" class="btn btn-primary">
                 <span>Acceder a la Plataforma</span>
-                <span class="arrow">&rarr;</span>
               </a>
             </div>
           }
@@ -118,7 +116,7 @@
             <ul class="features-list">
               @for (feature of p.keyFeatures; track feature) {
                 <li class="feature-item">
-                  <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
                   <span>{{ feature }}</span>
                 </li>
               }
@@ -150,11 +148,10 @@
           <div class="cta-buttons">
             <a routerLink="/" fragment="contacto" class="btn btn-primary">
               <span>Hablemos de tu Proyecto</span>
-              <span class="arrow">&rarr;</span>
             </a>
             @if (p.liveUrl) {
               <a [href]="p.liveUrl" target="_blank" rel="noopener" class="btn btn-secondary">
-                <span>Ver Sitio Oficial ↗</span>
+                <span>Ver Sitio Oficial</span>
               </a>
             }
           </div>
@@ -180,7 +177,6 @@
               <p class="related-desc">{{ rel.tagline }}</p>
               <div class="related-link">
                 <span>Explorar caso de estudio</span>
-                <span class="arrow">&rarr;</span>
               </div>
             </a>
           }

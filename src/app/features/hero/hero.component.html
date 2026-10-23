@@ -1,5 +1,4 @@
 <section id="inicio" class="hero-section">
-  <!-- Subtle ambient aura behind grid -->
   <div class="hero-glow-indigo"></div>
   <div class="hero-glow-emerald"></div>
 
@@ -10,12 +9,12 @@
       <div class="hero-left">
         <div class="hero-badge-group">
           <a href="https://bridge.cristianjm.com/" target="_blank" rel="noopener" class="hero-badge hero-bridge-badge">
-            <span class="badge-dot pulse-emerald"></span>
-            <span>Flagship: <strong>Bentian ERP Bridge</strong> &rarr;</span>
+            <span class="badge-dot"></span>
+            <span>Producto Propio: <strong>Bentian ERP Bridge</strong></span>
           </a>
           <span class="hero-status-pill">
             <span class="status-live-dot"></span>
-            <span>Disponible para Arquitectura &amp; Proyectos</span>
+            <span>Ingeniería B2B, DevSecOps &amp; Integración ERP</span>
           </span>
         </div>
 
@@ -26,26 +25,19 @@
         </h1>
 
         <p class="hero-subtitle">
-          Soy <strong>Cristian Jiménez Martínez (CristianJM)</strong>, Full Stack Developer &amp; Software Architect. <strong>Arquitecto y Desarrollador de Bentian ERP Bridge:</strong> Middleware y conector local-first en tiempo real para Factusol ERP y tiendas online (WooCommerce y PrestaShop). Especialista en controladores OLEDB sobre bases de datos Access (.accdb), Node.js/TypeScript, WooCommerce REST API y utilidades nativas en C#.
+          Soy <strong>Cristian Jiménez Martínez (CristianJM)</strong>, Arquitecto de Software, especialista en Ciberseguridad DevSecOps y fundador de <strong>Bentian ERP Bridge</strong>. Diseño infraestructuras críticas, automatizo despliegues CI/CD desde GitHub, protejo servidores empresariales (Node.js, PHP, Angular, PostgreSQL) y conecto Factusol ERP con WooCommerce y PrestaShop en tiempo real.
         </p>
 
         <div class="hero-actions">
-          <a href="https://bridge.cristianjm.com/" target="_blank" rel="noopener" class="btn btn-primary">
-            <span>Ver Bentian ERP Bridge</span>
-            <span class="arrow">&rarr;</span>
-          </a>
-          <a href="#planes-empresas" class="btn btn-secondary">
+          <a href="#planes-empresas" class="btn btn-primary">
             <span>Planes Empresas (200 € – 500 €/mes)</span>
-            <span class="arrow">&darr;</span>
+          </a>
+          <a href="https://bridge.cristianjm.com/" target="_blank" rel="noopener" class="btn btn-secondary">
+            <span>Ver Bentian ERP Bridge</span>
           </a>
         </div>
 
         <div class="hero-spec-strip">
-          <div class="spec-item">
-            <span class="spec-dot"></span>
-            <span>Arquitectura Local-First</span>
-          </div>
-          <span class="spec-divider">/</span>
           <div class="spec-item">
             <span class="spec-dot"></span>
             <span>Factusol OLEDB &amp; Access (.accdb)</span>
@@ -53,7 +45,12 @@
           <span class="spec-divider">/</span>
           <div class="spec-item">
             <span class="spec-dot"></span>
-            <span>WooCommerce REST API &amp; C#</span>
+            <span>DevSecOps &amp; GitHub CI/CD</span>
+          </div>
+          <span class="spec-divider">/</span>
+          <div class="spec-item">
+            <span class="spec-dot"></span>
+            <span>Node.js · Angular · Go · C# · PHP</span>
           </div>
         </div>
       </div>
@@ -71,10 +68,10 @@
               </div>
               <div class="blueprint-title">
                 <span class="icon-pulse"></span>
-                <span class="title-text">Bentian Engine <span class="title-sub">— Realtime Topology</span></span>
+                <span class="title-text">Bentian Engine <span class="title-sub">— Arquitectura en Producción</span></span>
               </div>
             </div>
-            <div class="blueprint-tag">LOCAL-FIRST LIVE</div>
+            <div class="blueprint-tag">LOCAL-FIRST &amp; CLOUD</div>
           </div>
 
           <!-- Topology Diagram -->
@@ -82,11 +79,11 @@
             <!-- Node 1: Factusol Local -->
             <div class="topo-node node-erp">
               <div class="node-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
               </div>
               <div class="node-content">
-                <div class="node-label">FACTUSOL ERP LOCAL</div>
-                <div class="node-sub">Access .accdb · Red LAN / NAS</div>
+                <div class="node-label">FACTUSOL ERP &amp; SISTEMAS LOCALES</div>
+                <div class="node-sub">Access .accdb · Red LAN / NAS · Servicios Windows</div>
               </div>
               <div class="node-status-tag">OLEDB CONCURRENTE</div>
             </div>
@@ -97,19 +94,19 @@
                 <span class="stream-packet packet-1"></span>
                 <span class="stream-packet packet-2"></span>
               </div>
-              <div class="stream-badge">Store-and-Forward &lt;42ms</div>
+              <div class="stream-badge">JSON Atómico &lt;42ms</div>
             </div>
 
             <!-- Node 2: Bentian Core Middleware -->
             <div class="topo-node node-bridge">
               <div class="node-icon icon-indigo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
               </div>
               <div class="node-content">
-                <div class="node-label">BENTIAN ERP BRIDGE</div>
-                <div class="node-sub">Node.js/TypeScript &amp; C# · Local-First</div>
+                <div class="node-label">BENTIAN BRIDGE &amp; DEVSECOPS</div>
+                <div class="node-sub">Node.js 22 LTS · C# · Go · GitHub CI/CD</div>
               </div>
-              <div class="node-status-tag tag-indigo">BUFFER SEGURO (0 PENDIENTES)</div>
+              <div class="node-status-tag tag-indigo">BLINDAJE ACTIVO</div>
             </div>
 
             <!-- Pipeline Connector 2 -->
@@ -118,19 +115,19 @@
                 <span class="stream-packet packet-3"></span>
                 <span class="stream-packet packet-4"></span>
               </div>
-              <div class="stream-badge">Encrypted TLS 1.3 REST</div>
+              <div class="stream-badge">TLS 1.3 + HSTS</div>
             </div>
 
             <!-- Node 3: Cloud eCommerce -->
             <div class="topo-node node-cloud">
               <div class="node-icon icon-cloud">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 11 4-7"/><path d="m19 11-4-7"/><path d="M2 11h20"/><path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8c.9 0 1.8-.7 2-1.6l1.6-7.4"/><path d="m9 11 1 9"/><path d="m15 11-1 9"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
               </div>
               <div class="node-content">
-                <div class="node-label">TIENDA ONLINE / ECOMMERCE</div>
-                <div class="node-sub">WooCommerce REST API · PrestaShop</div>
+                <div class="node-label">INFRAESTRUCTURA WEB &amp; E-COMMERCE</div>
+                <div class="node-sub">WooCommerce · PrestaShop · Angular SSR · NestJS</div>
               </div>
-              <div class="node-status-tag tag-cyan">SINCRONIZADO</div>
+              <div class="node-status-tag tag-cyan">99.9% UPTIME</div>
             </div>
           </div>
 
@@ -138,19 +135,19 @@
           <div class="blueprint-footer">
             <div class="metric-cell">
               <div class="metric-num">&lt;42ms</div>
-              <div class="metric-text">Latencia Sync</div>
+              <div class="metric-text">Latencia OLEDB</div>
             </div>
             <div class="metric-cell">
               <div class="metric-num">30 Días</div>
-              <div class="metric-text">Tolerancia Offline</div>
+              <div class="metric-text">Cola Offline</div>
             </div>
             <div class="metric-cell">
               <div class="metric-num">0 Puertos</div>
               <div class="metric-text">Zero-Exposure</div>
             </div>
             <div class="metric-cell">
-              <div class="metric-num">100%</div>
-              <div class="metric-text">Stock Fiable</div>
+              <div class="metric-num">24/7</div>
+              <div class="metric-text">Soporte B2B</div>
             </div>
           </div>
         </div>

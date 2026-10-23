@@ -1,7 +1,7 @@
 <nav class="navbar">
   <div class="container navbar-container">
     <a routerLink="/" class="logo" (click)="scrollTo('', $event)">
-      <img src="assets/CJ-logo-Sage-Forest-Lime.png" alt="CristianJM Logo" class="logo-img" width="48" height="48" fetchpriority="high">
+      <img src="assets/CJ-logo-Sage-Forest-Lime.png" alt="CristianJM Logo" class="logo-img" width="44" height="44" fetchpriority="high">
       <span class="logo-text">Cristian<span class="highlight">JM</span></span>
     </a>
 
@@ -31,13 +31,8 @@
         <a routerLink="/" fragment="contacto" (click)="scrollTo('contacto', $event)">Contacto</a>
       </li>
       <li class="nav-item cta-item">
-        <a *ngIf="isBetaActive()" href="https://bridge.cristianjm.com/beta/" target="_blank" rel="noopener" class="nav-btn beta-nav-btn" (click)="closeMenu()" title="Solicita tu Clave Gratuita para la Beta Pública de Factusol">
-          <span class="beta-pulse"></span>
-          <span>🎁 Beta Factusol (Gratis)</span>
-          <span class="nav-arrow">&rarr;</span>
-        </a>
-        <a *ngIf="!isBetaActive()" href="https://bridge.cristianjm.com/" target="_blank" rel="noopener" class="nav-btn" (click)="closeMenu()">
-          Bentian ERP Bridge <span class="nav-arrow">&rarr;</span>
+        <a href="https://bridge.cristianjm.com/" target="_blank" rel="noopener" class="nav-btn" (click)="closeMenu()">
+          <span>Bentian ERP Bridge</span>
         </a>
       </li>
     </ul>
