@@ -30,7 +30,9 @@ const BLOCKED_DOMAINS = [
   'wikipedia.org', 'boe.es', 'agenciatributaria.', 'seg-social.', 'gva.es', 'ayto-', 'diputacion',
   'tripadvisor.', 'trustpilot.', 'yelp.', 'foursquare.', 'cylex.', 'hotfrog.', 'europages.',
   'kompass.com', 'vulka.es', 'guias11811.es', '11870.com', 'qdq.com', 'citiservi.es', 'empresite.',
-  'cristianjm.com', 'w3.org', 'schema.org', 'cloudflare.com', 'wordpress.org', 'wordpress.com'
+  'cristianjm.com', 'w3.org', 'schema.org', 'cloudflare.com', 'wordpress.org', 'wordpress.com',
+  'claude.ai', 'openai.com', 'informa.es', 'definicion.de', 'rae.es', 'gestorias.es', 'engranollers.com',
+  'ufd.es', 'edistribucion.com', 'naturgy.', 'endesa.', 'iberdrola.'
 ];
 
 function parseArgs() {
