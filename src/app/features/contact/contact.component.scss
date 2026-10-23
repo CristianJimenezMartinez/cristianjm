@@ -5,6 +5,341 @@
   position: relative;
   background: linear-gradient(180deg, transparent 0%, rgba(14, 17, 24, 0.5) 100%);
 
+  // ── Live Domain Security Analyzer ───────────────────
+  .live-audit-card {
+    @include bento-card(#0c0f17);
+    padding: 2.25rem;
+    margin-bottom: 2.5rem;
+    border-color: rgba(16, 185, 129, 0.25);
+
+    @media (max-width: 640px) {
+      padding: 1.5rem 1.25rem;
+    }
+
+    .audit-header {
+      margin-bottom: 1.35rem;
+
+      .audit-badge {
+        display: inline-block;
+        font-family: $font-family-mono;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        color: $emerald-light;
+        background: rgba(16, 185, 129, 0.08);
+        border: 1px solid rgba(16, 185, 129, 0.22);
+        padding: 0.22rem 0.65rem;
+        border-radius: 4px;
+        margin-bottom: 0.65rem;
+      }
+
+      .audit-heading {
+        font-size: 1.35rem;
+        font-weight: 800;
+        color: #ffffff;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.35rem;
+      }
+
+      .audit-sub {
+        font-size: 0.9rem;
+        color: $text-secondary;
+        line-height: 1.55;
+      }
+    }
+
+    .audit-search-bar {
+      display: flex;
+      gap: 0.85rem;
+      align-items: stretch;
+
+      @media (max-width: 720px) {
+        flex-direction: column;
+      }
+
+      .audit-input-wrapper {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        background: rgba(8, 10, 15, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 8px;
+        padding: 0 1rem;
+        transition: border-color 0.2s ease;
+
+        &:focus-within {
+          border-color: $emerald;
+        }
+
+        .protocol-prefix {
+          font-family: $font-family-mono;
+          font-size: 0.84rem;
+          color: $text-muted;
+          margin-right: 0.35rem;
+          user-select: none;
+        }
+
+        input {
+          width: 100%;
+          background: transparent;
+          border: none;
+          outline: none;
+          color: #ffffff;
+          font-family: $font-family-mono;
+          font-size: 0.92rem;
+          padding: 0.85rem 0;
+
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.28);
+          }
+        }
+      }
+
+      .audit-btn {
+        white-space: nowrap;
+        padding: 0.85rem 1.65rem;
+      }
+    }
+
+    .audit-alert-error {
+      margin-top: 1rem;
+      padding: 0.85rem 1.15rem;
+      border-radius: 8px;
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.28);
+      color: #fca5a5;
+      font-size: 0.86rem;
+    }
+
+    .audit-results-panel {
+      margin-top: 1.75rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .results-top-strip {
+        display: grid;
+        grid-template-columns: 230px 1fr;
+        gap: 1.25rem;
+        align-items: stretch;
+
+        @media (max-width: 860px) {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .score-block {
+        background: rgba(255, 255, 255, 0.025);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        padding: 1.15rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .score-label {
+          font-family: $font-family-mono;
+          font-size: 0.65rem;
+          color: $text-muted;
+          letter-spacing: 0.06em;
+        }
+
+        .score-number {
+          font-family: $font-family-mono;
+          font-size: 2.35rem;
+          font-weight: 800;
+          color: #ffffff;
+          line-height: 1.1;
+          margin: 0.3rem 0;
+
+          small {
+            font-size: 0.95rem;
+            color: $text-muted;
+            font-weight: 600;
+          }
+        }
+
+        .risk-pill {
+          font-family: $font-family-mono;
+          font-size: 0.68rem;
+          font-weight: 700;
+          padding: 0.2rem 0.6rem;
+          border-radius: 4px;
+        }
+
+        &.score-low {
+          border-color: rgba(239, 68, 68, 0.4);
+          .score-number { color: #f87171; }
+          .risk-pill { background: rgba(239, 68, 68, 0.15); color: #fca5a5; }
+        }
+
+        &.score-mid {
+          border-color: rgba(245, 158, 11, 0.4);
+          .score-number { color: #fbbf24; }
+          .risk-pill { background: rgba(245, 158, 11, 0.15); color: #fde68a; }
+        }
+
+        &.score-high {
+          border-color: rgba(16, 185, 129, 0.4);
+          .score-number { color: $emerald-light; }
+          .risk-pill { background: rgba(16, 185, 129, 0.15); color: $emerald-light; }
+        }
+      }
+
+      .telemetry-summary-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.85rem;
+
+        @media (max-width: 540px) {
+          grid-template-columns: 1fr;
+        }
+
+        .tel-item {
+          background: rgba(255, 255, 255, 0.02);
+          border: 1px solid rgba(255, 255, 255, 0.07);
+          border-radius: 8px;
+          padding: 0.8rem 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 0.2rem;
+
+          .tel-key {
+            font-family: $font-family-mono;
+            font-size: 0.64rem;
+            color: $text-muted;
+            letter-spacing: 0.05em;
+          }
+
+          .tel-val {
+            font-family: $font-family-mono;
+            font-size: 0.86rem;
+            font-weight: 700;
+            color: #ffffff;
+            word-break: break-all;
+          }
+        }
+      }
+
+      .checks-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.9rem;
+
+        @media (max-width: 768px) {
+          grid-template-columns: 1fr;
+        }
+
+        .check-card {
+          background: rgba(255, 255, 255, 0.02);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-left: 3px solid rgba(255, 255, 255, 0.2);
+          border-radius: 8px;
+          padding: 1rem 1.15rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.35rem;
+
+          .check-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+
+            .check-title {
+              font-size: 0.86rem;
+              font-weight: 700;
+              color: #ffffff;
+            }
+
+            .check-badge {
+              font-family: $font-family-mono;
+              font-size: 0.62rem;
+              font-weight: 700;
+              padding: 0.15rem 0.45rem;
+              border-radius: 4px;
+              flex-shrink: 0;
+            }
+          }
+
+          .check-current {
+            font-family: $font-family-mono;
+            font-size: 0.76rem;
+            color: $text-secondary;
+          }
+
+          .check-rec {
+            font-size: 0.78rem;
+            color: $text-muted;
+            line-height: 1.45;
+          }
+
+          &.status-fail {
+            border-left-color: #ef4444;
+            .check-badge { background: rgba(239, 68, 68, 0.14); color: #fca5a5; }
+          }
+
+          &.status-warn {
+            border-left-color: #f59e0b;
+            .check-badge { background: rgba(245, 158, 11, 0.14); color: #fde68a; }
+          }
+
+          &.status-pass {
+            border-left-color: $emerald;
+            .check-badge { background: rgba(16, 185, 129, 0.14); color: $emerald-light; }
+          }
+        }
+      }
+
+      .audit-action-bar {
+        background: rgba(16, 185, 129, 0.05);
+        border: 1px solid rgba(16, 185, 129, 0.25);
+        border-radius: 10px;
+        padding: 1.25rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+
+        .action-bar-text {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+          max-width: 600px;
+
+          strong {
+            font-size: 0.95rem;
+            color: #ffffff;
+          }
+
+          span {
+            font-size: 0.84rem;
+            color: $text-secondary;
+          }
+        }
+
+        .action-bar-buttons {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 0.85rem;
+
+          @media (max-width: 640px) {
+            width: 100%;
+            flex-direction: column;
+            .btn { width: 100%; }
+          }
+        }
+      }
+    }
+  }
+
   .contact-grid {
     display: grid;
     grid-template-columns: 0.8fr 1.2fr;
@@ -19,7 +354,7 @@
 
   // ── Info Card ───────────────────────────────────────
   .contact-info-card {
-    @include bento-card(#0e111a);
+    @include bento-card(#0c0f17);
     padding: 2.5rem;
 
     @media (max-width: 576px) {
@@ -55,12 +390,11 @@
         background: rgba(255, 255, 255, 0.025);
         border: 1px solid rgba(255, 255, 255, 0.06);
         border-radius: 10px;
-        transition: all 0.2s ease;
+        transition: border-color 0.2s ease, background-color 0.2s ease;
 
         &:hover {
           background: rgba(255, 255, 255, 0.045);
           border-color: rgba(16, 185, 129, 0.3);
-          transform: translateX(3px);
         }
 
         .method-icon-box {
@@ -146,7 +480,6 @@
         height: 6px;
         border-radius: 50%;
         background: $emerald;
-        box-shadow: 0 0 6px $emerald;
         flex-shrink: 0;
       }
     }
@@ -154,7 +487,7 @@
 
   // ── Form Card ───────────────────────────────────────
   .contact-form-card {
-    @include bento-card(#0e111a);
+    @include bento-card(#0c0f17);
     padding: 2.5rem;
 
     @media (max-width: 576px) {
@@ -172,7 +505,7 @@
     }
 
     .form-group {
-      margin-bottom: 1.35rem;
+      margin-bottom: 1.25rem;
 
       label {
         display: block;
@@ -181,20 +514,19 @@
         font-weight: 600;
         color: $text-secondary;
         letter-spacing: 0.02em;
-        margin-bottom: 0.55rem;
+        margin-bottom: 0.5rem;
       }
 
       input, select, textarea {
         width: 100%;
         background: rgba(8, 10, 15, 0.75);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        padding: 0.85rem 1.15rem;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        padding: 0.82rem 1.1rem;
         color: #ffffff;
         font-family: $font-family-sans;
-        font-size: 0.92rem;
-        transition: all 0.2s ease;
-        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+        font-size: 0.9rem;
+        transition: border-color 0.2s ease, background-color 0.2s ease;
 
         &::placeholder {
           color: rgba(255, 255, 255, 0.25);
@@ -203,27 +535,25 @@
         &:focus {
           outline: none;
           border-color: $emerald;
-          background: rgba(12, 16, 24, 0.9);
-          box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+          background: rgba(12, 16, 24, 0.95);
         }
 
         &.error {
           border-color: #ef4444;
-          box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
         }
       }
 
       select {
         cursor: pointer;
         option {
-          background: #0e111a;
+          background: #0c0f17;
           color: #ffffff;
         }
       }
 
       textarea {
         resize: vertical;
-        min-height: 120px;
+        min-height: 115px;
         line-height: 1.6;
       }
 
@@ -240,7 +570,7 @@
       padding: 0.95rem 1.25rem;
       border-radius: 8px;
       font-size: 0.88rem;
-      margin-bottom: 1.35rem;
+      margin-bottom: 1.25rem;
       font-weight: 500;
 
       &.alert-success {
@@ -259,9 +589,8 @@
     .btn-submit {
       width: 100%;
       padding: 0.95rem 1.5rem;
-      font-size: 0.96rem;
+      font-size: 0.94rem;
       font-weight: 700;
-      letter-spacing: -0.01em;
 
       &:disabled {
         opacity: 0.6;

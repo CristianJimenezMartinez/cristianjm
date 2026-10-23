@@ -1,14 +1,112 @@
 <section id="contacto" class="section contact-section">
   <div class="container">
     <div class="section-header-centered">
-      <span class="section-eyebrow">Canal Directo B2B &amp; Contratación</span>
-      <h2 class="section-title">Hablemos directamente de tu <span class="accent">empresa</span></h2>
+      <span class="section-eyebrow">Diagnóstico en Vivo &amp; Contratación B2B</span>
+      <h2 class="section-title">Audita tu web y hablemos de tu <span class="accent">empresa</span></h2>
       <p class="section-subtitle">
-        Trato directo conmigo, sin comerciales intermediarios ni centralitas. Si quieres blindar tu infraestructura web, delegar tus despliegues CI/CD o conectar Factusol ERP en tiempo real, escríbeme o llámame hoy mismo.
+        Comprueba en tiempo real el estado de blindaje de tu servidor o ponte en contacto directo conmigo sin intermediarios para delegar tu infraestructura, ciberseguridad o sincronización con Factusol ERP.
       </p>
     </div>
 
-    <div class="contact-grid">
+    <!-- ========================================================================= -->
+    <!-- ANALIZADOR EN VIVO DE SEGURIDAD Y SERVIDOR B2B                            -->
+    <!-- ========================================================================= -->
+    <div id="auditoria-web" class="live-audit-card">
+      <div class="audit-header">
+        <div class="audit-title-group">
+          <span class="audit-badge">HERRAMIENTA TÉCNICA GRATUITA · INSPECCIÓN PASIVA OWASP</span>
+          <h3 class="audit-heading">Analizador en Vivo de Seguridad Web, Cabeceras y Servidor</h3>
+          <p class="audit-sub">
+            Introduce el dominio de tu empresa para verificar al instante su protocolo TLS, latencia de servidor (TTFB), fugas de versión (Anti-CVE) y cabeceras de blindaje perimetral.
+          </p>
+        </div>
+      </div>
+
+      <form class="audit-search-bar" (ngSubmit)="runDomainAudit()">
+        <div class="audit-input-wrapper">
+          <span class="protocol-prefix">https://</span>
+          <input
+            type="text"
+            name="auditDomainInput"
+            [(ngModel)]="auditDomainInput"
+            placeholder="www.tuempresa.com"
+            aria-label="Dominio web de tu empresa"
+            [disabled]="isAuditing()">
+        </div>
+        <button type="submit" class="btn btn-primary audit-btn" [disabled]="isAuditing()">
+          <span *ngIf="!isAuditing()">Analizar Dominio Ahora</span>
+          <span *ngIf="isAuditing()">Analizando cabeceras y TLS...</span>
+        </button>
+      </form>
+
+      <div *ngIf="auditError()" class="audit-alert-error">
+        {{ auditError() }}
+      </div>
+
+      <!-- Resultado en Vivo del Diagnóstico -->
+      @if (auditResult(); as res) {
+        <div class="audit-results-panel">
+          <div class="results-top-strip">
+            <div class="score-block" [class.score-low]="res.score < 50" [class.score-mid]="res.score >= 50 && res.score < 85" [class.score-high]="res.score >= 85">
+              <span class="score-label">PUNTUACIÓN DE BLINDAJE</span>
+              <div class="score-number">{{ res.score }}<small>/100</small></div>
+              <span class="risk-pill">EXPOSICIÓN: {{ res.riskLevel }}</span>
+            </div>
+
+            <div class="telemetry-summary-grid">
+              <div class="tel-item">
+                <span class="tel-key">DOMINIO ANALIZADO</span>
+                <span class="tel-val">{{ res.domain }}</span>
+              </div>
+              <div class="tel-item">
+                <span class="tel-key">LATENCIA SERVIDOR (TTFB)</span>
+                <span class="tel-val">{{ res.ttfbMs }} ms</span>
+              </div>
+              <div class="tel-item">
+                <span class="tel-key">PROTOCOLO CIFRADO</span>
+                <span class="tel-val">{{ res.tlsProtocol || 'Sin TLS 1.3' }}</span>
+              </div>
+              <div class="tel-item">
+                <span class="tel-key">HUELLA SERVIDOR / WAF</span>
+                <span class="tel-val">{{ res.exposedServer || res.wafDetected || 'Oculta' }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="checks-grid">
+            @for (chk of res.checks; track chk.id) {
+              <div class="check-card" [class.status-fail]="chk.status === 'fail'" [class.status-warn]="chk.status === 'warn'" [class.status-pass]="chk.status === 'pass'">
+                <div class="check-top">
+                  <span class="check-title">{{ chk.label }}</span>
+                  <span class="check-badge">
+                    {{ chk.status === 'pass' ? 'CORRECTO' : chk.status === 'warn' ? 'MEJORABLE' : 'VULNERABLE' }}
+                  </span>
+                </div>
+                <div class="check-current">{{ chk.value }}</div>
+                <div class="check-rec">{{ chk.recommendation }}</div>
+              </div>
+            }
+          </div>
+
+          <div class="audit-action-bar">
+            <div class="action-bar-text">
+              <strong>¿Quieres dejar {{ res.domain }} blindado al 100% en servidor endurecido y GitHub CI/CD?</strong>
+              <span>Corrijo todas las cabeceras expuestas, oculto la huella del servidor y gestiono la seguridad y copias diarias por una cuota fija mensual.</span>
+            </div>
+            <div class="action-bar-buttons">
+              <button type="button" class="btn btn-primary" (click)="applyAuditToForm(res)">
+                <span>Solicitar Blindaje de {{ res.domain }}</span>
+              </button>
+              <a [href]="getWhatsAppAuditUrl(res)" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <span>Enviar Diagnóstico por WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="contact-grid" id="contact-form-box">
       <!-- Direct Contact Card -->
       <div class="contact-info-card">
         <h3 class="info-title">Línea Directa de Ingeniería</h3>
@@ -101,10 +199,31 @@
             </div>
           </div>
 
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Teléfono / WhatsApp Directo (Recomendado)</label>
+              <input
+                id="phone"
+                type="tel"
+                formControlName="phone"
+                placeholder="Ej. +34 600 000 000">
+            </div>
+
+            <div class="form-group">
+              <label for="website">Dominio Web de la Empresa</label>
+              <input
+                id="website"
+                type="text"
+                formControlName="website"
+                placeholder="Ej. www.tuempresa.com">
+            </div>
+          </div>
+
           <div class="form-group">
             <label for="service">Servicio o Plan Mensual de Interés *</label>
             <select id="service" formControlName="service">
-              <optgroup label="Planes Mensuales de Ingeniería Gestionada (B2B)">
+              <optgroup label="Auditoría &amp; Planes Mensuales B2B (200 € – 500 €/mes)">
+                <option value="audit-remediation">Diagnóstico Inicial de Seguridad, Servidor y ERP (Sin Coste para Empresas)</option>
                 <option value="plan-erp-350">Plan 350 €/mes — Operativa Total: Cloud Blindado + E-Commerce + ERP 24/7 (Recomendado)</option>
                 <option value="plan-cloud-200">Plan 200 €/mes — Blindaje Cloud, GitHub CI/CD &amp; Parcheo Seguridad (Node/PHP)</option>
                 <option value="plan-partner-500">Plan 500 €/mes — Partner Tecnológico, Evolución Continua &amp; CTO Externo</option>
@@ -126,7 +245,7 @@
               id="message"
               rows="5"
               formControlName="message"
-              placeholder="Indica brevemente el dominio de tu web, qué tecnologías utilizas (Node.js, PHP, WooCommerce, Factusol...) o qué objetivo buscas resolver..."
+              placeholder="Indica brevemente qué tecnologías utilizas (Node.js, PHP, WooCommerce, Factusol...) o qué objetivo buscas resolver..."
               [class.error]="contactForm.get('message')?.touched && contactForm.get('message')?.invalid">
             </textarea>
             <span *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.invalid" class="error-msg">
@@ -135,7 +254,7 @@
           </div>
 
           <div *ngIf="submitSuccess()" class="alert alert-success">
-            Solicitud recibida correctamente. Me pondré en contacto contigo en menos de 24 horas.
+            Solicitud recibida correctamente. Me pondré en contacto contigo en menos de 24 horas laborables.
           </div>
 
           <div *ngIf="submitError()" class="alert alert-danger">
