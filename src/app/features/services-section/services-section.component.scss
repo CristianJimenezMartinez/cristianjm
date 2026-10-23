@@ -445,11 +445,14 @@
       transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 
       &.btn-plan-primary {
-        background: $emerald;
-        color: #08090d;
+        background: #059669;
+        border: 1px solid #10b981;
+        color: #ffffff;
 
         &:hover {
-          background: $emerald-light;
+          background: #10b981;
+          border-color: #34d399;
+          color: #ffffff;
         }
       }
 

@@ -161,14 +161,15 @@ button { font-family: inherit; cursor: pointer; }
   text-align: center;
 
   &.btn-primary {
-    background: #10b981;
-    color: #06080c;
+    background: #059669;
+    color: #ffffff;
     font-weight: 700;
-    border-color: rgba(255, 255, 255, 0.12);
+    border-color: #10b981;
 
     &:hover {
-      background: #34d399;
-      color: #06080c;
+      background: #10b981;
+      border-color: #34d399;
+      color: #ffffff;
     }
   }
 
@@ -179,9 +180,9 @@ button { font-family: inherit; cursor: pointer; }
     border-color: rgba(16, 185, 129, 0.38);
 
     &:hover {
-      background: #10b981;
-      color: #06080c;
-      border-color: #10b981;
+      background: rgba(16, 185, 129, 0.26);
+      color: #ffffff;
+      border-color: $emerald-light;
     }
   }
 
