@@ -27,9 +27,9 @@ export class ProjectsService {
       ],
       problem: 'Las pymes y distribuidores que gestionan su facturación y almacén en Factusol sufren roturas continuas de existencias entre tienda física y web, picado manual de albaranes y bloqueos concurrentes de archivo (.ldb/.laccdb) al intentar conectar Access a internet.',
       challenge: 'Exponer o consultar una base de datos Microsoft Access (.accdb) compartida en red local sin bloquear a los usuarios administrativos que facturan en la oficina, garantizando la inalterabilidad requerida por la Ley Antifraude y el reglamento Veri*Factu.',
-      solution: 'Arquitectura Local-First con agente residente Windows x64 en Node.js/TypeScript y C# nativo. Implementa un motor OLEDB de lectura no bloqueante (Share Deny None), una cola SQLite (WAL) Store-and-Forward que custodia pedidos ante cortes de fibra y una sincronización punto a punto con WooCommerce REST API y PrestaShop cifrada con TLS 1.3.',
+      solution: 'Arquitectura Local-First con agente residente Windows x64 en Node.js/TypeScript y C# nativo. Implementa un motor OLEDB de lectura no bloqueante (Share Deny None), persistencia local JSON Atómico Certificado en AppData (.tmp + reemplazo atómico y backup .bak) con cola Store-and-Forward que custodia pedidos ante cortes de fibra, y sincronización punto a punto con WooCommerce REST API y PrestaShop cifrada con TLS 1.3.',
       description: 'Conector de escritorio Windows x64 desarrollado con Node.js/TypeScript y C#, arquitectura Local-First, motor OLEDB de ultra-baja latencia sobre Access (.accdb) y sincronización continua con WooCommerce REST API y PrestaShop.',
-      fullDescription: 'Bentian ERP Bridge es una infraestructura empresarial puente de alta resiliencia diseñada para Factusol ERP, WooCommerce y PrestaShop. Incluye servicio de escritorio en segundo plano, portal SaaS, cola SQLite offline, deadman switch de monitorización, tolerancia a caídas de red y transacciones atómicas sobre OLEDB.',
+      fullDescription: 'Bentian ERP Bridge es una infraestructura empresarial puente de alta resiliencia diseñada para Factusol ERP, WooCommerce y PrestaShop. Incluye servicio de escritorio en segundo plano, portal SaaS, persistencia local JSON atómico certificado con protección Anti-Wiping, deadman switch de monitorización, tolerancia a caídas de red y transacciones atómicas sobre OLEDB.',
       pillars: [
         {
           icon: 'database',
@@ -39,7 +39,7 @@ export class ProjectsService {
         {
           icon: 'shield-check',
           title: 'Store-and-Forward (30 Días)',
-          description: 'Cola transaccional en SQLite local (modo WAL). Los pedidos web permanecen retenidos y protegidos aunque el PC esté apagado o se corte la fibra, inyectándose al reiniciar.'
+          description: 'Persistencia local mediante JSON Atómico Certificado (.tmp + renameSync y respaldo .bak). Los pedidos web permanecen retenidos y protegidos aunque el PC esté apagado o se corte la fibra, inyectándose al reiniciar.'
         },
         {
           icon: 'refresh-cw',
@@ -64,10 +64,10 @@ export class ProjectsService {
       architectureDetails: [
         'Agente local en Node.js 22 LTS empaquetado como binario x64 de Windows.',
         'Conector Factusol OLEDB desacoplado con llamadas COM/OLEDB sobre Microsoft Access Database Engine.',
-        'Buffer local transaccional SQLite con modo WAL para tolerancia absoluta a fallos de alimentación.',
+        'Motor de almacenamiento local JSON Atómico Certificado en %APPDATA% con protección Anti-Wiping de rutas NAS/UNC.',
         'API Central en NestJS con PostgreSQL multi-tenant y distribución de releases seguras en Hetzner Cloud.'
       ],
-      stack: ['TypeScript', 'Node.js', 'C#', 'Factusol OLEDB', 'Access (.accdb)', 'SQLite (WAL)', 'WooCommerce REST API', 'PrestaShop', 'PostgreSQL', 'Docker', 'Ed25519']
+      stack: ['TypeScript', 'Node.js', 'C#', 'Factusol OLEDB', 'Access (.accdb)', 'JSON Atómico (Anti-Wiping)', 'WooCommerce REST API', 'PrestaShop', 'PostgreSQL', 'Docker', 'Ed25519']
     },
     {
       id: 'suministros-rubio',

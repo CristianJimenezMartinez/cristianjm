@@ -110,6 +110,20 @@
               color: $emerald-light;
             }
           }
+
+          .method-sublink {
+            font-family: $font-family-mono;
+            font-size: 0.74rem;
+            color: $emerald-light;
+            text-decoration: none;
+            margin-top: 0.2rem;
+            opacity: 0.9;
+
+            &:hover {
+              text-decoration: underline;
+              opacity: 1;
+            }
+          }
         }
       }
     }

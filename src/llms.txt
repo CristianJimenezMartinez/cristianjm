@@ -1,14 +1,21 @@
-# CristianJM — Software Architect & Creador de Bentian ERP Bridge
+# CristianJM — Software Architect, DevSecOps & Creador de Bentian ERP Bridge
 # Author: Cristian Jiménez Martínez (CristianJM)
 # Website: https://cristianjm.com
 # Copyright (c) 2026 Cristian Jiménez Martínez. All rights reserved.
 
-> Cristian Jiménez Martínez (CristianJM) es Arquitecto de Software y Desarrollador Full-Stack. Fundador y Creador de Bentian ERP Bridge: Middleware y conector local-first en tiempo real para Factusol ERP y tiendas online (WooCommerce y PrestaShop). Especialista en controladores OLEDB sobre bases de datos Access (.accdb), Node.js/TypeScript, C#, Go y Angular SSR.
+> Cristian Jiménez Martínez (CristianJM) es Arquitecto de Software, especialista en Ciberseguridad DevSecOps y Desarrollador Full-Stack. Fundador y Creador de Bentian ERP Bridge: Middleware y conector local-first en tiempo real para Factusol ERP y tiendas online (WooCommerce y PrestaShop). Especialista en controladores OLEDB sobre bases de datos Access (.accdb), Node.js/TypeScript, C#, Go, PHP y Angular SSR.
+
+## Planes Mensuales de Ingeniería Gestionada para Empresas (B2B)
+- **Plan Blindaje Cloud & DevSecOps (200 €/mes)**: Alojamiento o gestión en servidor central (Nginx Hardened + TLS 1.3), repositorio privado en GitHub con CI/CD Zero-Downtime, parcheo activo contra vulnerabilidades CVE en Node.js y PHP, copias de seguridad diarias cifradas y monitorización 24/7.
+- **Plan Operativa Total & ERP 24/7 (350 €/mes)**: Todo el blindaje Cloud + licencia y supervisión activa de Bentian ERP Bridge (sincronización Factusol/ERP con WooCommerce o PrestaShop), garantía de cuadre fiscal y hasta 3h/mes de soporte evolutivo.
+- **Plan Partner Tecnológico & CTO Externo (500 €/mes)**: Todo lo anterior + bolsa mensual de hasta 8h de ingeniería dedicada (Node.js, Angular, React/Next.js, PHP, Go, C#), auditoría de seguridad mensual y SLA prioritario.
 
 ## Especialización & Consultoría
 - [Bentian ERP Bridge (Conector Oficial)](https://bridge.cristianjm.com/) — Middleware y sincronizador en tiempo real entre Factusol ERP y plataformas web (WooCommerce REST API, PrestaShop).
 - [Integración Factusol ERP](https://cristianjm.com/servicios/integracion-erp-factusol/) — Conectores a medida para comercio electrónico y Factusol.
-- [Arquitectura Cloud & Full-Stack](https://cristianjm.com/servicios/arquitectura-cloud-fullstack/) — NestJS, Angular SSR, PostgreSQL y Docker.
+- [Arquitectura Cloud, DevSecOps & Planes B2B](https://cristianjm.com/servicios/arquitectura-cloud-fullstack/) — Servidores gestionados, GitHub CI/CD, parcheo CVE, NestJS, Angular SSR y PostgreSQL.
+- [Auditoría Veri*Factu (AEAT)](https://cristianjm.com/servicios/auditoria-verifactu-facturacion/) — Adaptación técnica al RD 1007/2023 y Ley Antifraude.
+- [Rescate y Estabilización ERP](https://cristianjm.com/servicios/rescate-optimizacion-erp/) — Intervención urgente en menos de 24 horas.
 - [Sobre Mí](https://cristianjm.com/sobre-mi/) — Principios de ingeniería y trayectoria.
 
 ## Proyectos y Casos de Estudio en Producción
@@ -24,8 +31,10 @@
 - [Grupo Soto Automóvil](https://cristianjm.com/proyectos/grupo-soto-automovil/) — Portal B2B y CRM de movilidad comercial con numeración correlativa atómica de pedidos con Prisma transactions.
 - [VeltiaTrust](https://cristianjm.com/proyectos/veltiatrust/) — Infraestructura API eIDAS Zero-Storage de notarización digital sin almacenamiento residual.
 
-## Contacto Directo
-- Email: cristianjimeneztrabajo@gmail.com
-- [Formulario de contacto oficial](https://cristianjm.com/#contacto)
+## Contacto Directo Empresas
+- Teléfono y WhatsApp Business: +34 617 205 053 (https://wa.me/34617205053)
+- Email Corporativo: cristian@cristianjm.com
+- Email Directo: cristianjimeneztrabajo@gmail.com
+- [Formulario de contratación y contacto](https://cristianjm.com/#contacto)
 - [LinkedIn](https://linkedin.com/in/cristian-jimenez-martinez/)
 - [GitHub](https://github.com/CristianJimenezMartinez)

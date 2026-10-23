@@ -88,7 +88,7 @@
               <h3 class="principle-title">Diseño Tolerante al Fallo (Store-and-Forward)</h3>
             </div>
             <p class="principle-desc">
-              Todo sistema en producción debe asumir que la fibra óptica se cortará, la corriente se apagará o un archivo de base de datos (.accdb) se bloqueará temporalmente. Las colas persistentes en SQLite aseguran cero pérdidas transaccionales.
+              Todo sistema en producción debe asumir que la fibra óptica se cortará, la corriente se apagará o un archivo de base de datos (.accdb) se bloqueará temporalmente. El almacenamiento local mediante JSON Atómico Certificado (.tmp + reemplazo atómico y backup .bak) y colas Store-and-Forward asegura cero pérdidas transaccionales.
             </p>
           </div>
 
@@ -130,7 +130,7 @@
               <span class="tech-tag">Go (Golang Puro)</span>
               <span class="tech-tag">Factusol OLEDB</span>
               <span class="tech-tag">Access (.accdb / .mdb)</span>
-              <span class="tech-tag">SQLite (Modo WAL)</span>
+              <span class="tech-tag">JSON Atómico (Anti-Wiping)</span>
               <span class="tech-tag">Windows Service SCM</span>
             </div>
           </div>

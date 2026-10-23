@@ -2,9 +2,9 @@
   <div class="container">
     <div class="section-header-centered">
       <span class="section-eyebrow">Especialización &amp; Alto Rendimiento</span>
-      <h2 class="section-title">Servicios de <span class="accent">Ingeniería &amp; ERP</span></h2>
+      <h2 class="section-title">Servicios de <span class="accent">Ingeniería, Ciberseguridad &amp; ERP</span></h2>
       <p class="section-subtitle">
-        Arquitectura de software y consultoría técnica de alta disponibilidad. Soluciones diseñadas para empresas que no pueden permitirse caídas de sincronización, descuadres de almacén ni sanciones de la Agencia Tributaria.
+        Arquitectura de software, ciberseguridad perimetral y consultoría técnica de alta disponibilidad. Soluciones diseñadas para empresas que no pueden permitirse caídas de sincronización, brechas de seguridad en Node.js/PHP, descuadres de almacén ni sanciones de la Agencia Tributaria.
       </p>
     </div>
 
@@ -21,7 +21,7 @@
         </p>
         <ul class="card-features">
           <li>✓ Cero bloqueos de archivo (.laccdb) en horario de tienda</li>
-          <li>✓ Cola Store-and-Forward tolerante a cortes de fibra</li>
+          <li>✓ Persistencia JSON Atómico Certificado y cola Store-and-Forward</li>
           <li>✓ Desglose atómico de bases, IVA y Recargo de Equivalencia</li>
         </ul>
         <div class="card-footer">
@@ -78,28 +78,194 @@
         </div>
       </article>
 
-      <!-- Card 4: Arquitectura Cloud -->
+      <!-- Card 4: Arquitectura Cloud & DevSecOps -->
       <article class="service-card">
-        <div class="card-badge">Escalabilidad &amp; Cloud</div>
+        <div class="card-badge">Cloud &amp; DevSecOps</div>
         <div class="card-icon-wrap icon-cyan">
           <span class="service-glyph">☁️</span>
         </div>
-        <h3 class="card-heading">Arquitectura Cloud &amp; Middleware a Medida</h3>
+        <h3 class="card-heading">Arquitectura Cloud, DevSecOps &amp; Servidores Gestionados</h3>
         <p class="card-desc">
-          Diseño e implementación de microservicios robustos, APIs REST/gRPC y pipelines de automatización en TypeScript/Node.js, Go y C#. Sistemas distribuidos con resiliencia de datos probada.
+          Gobernanza técnica integral en servidor central de alto rendimiento, despliegues automatizados desde GitHub Actions sin caídas y parcheo continuo de vulnerabilidades (CVE) en Node.js, PHP, Angular y PostgreSQL.
         </p>
         <ul class="card-features">
-          <li>✓ APIs con latencias inferiores a 50 ms</li>
-          <li>✓ Arquitecturas Serverless y contenedores Docker en Hetzner</li>
-          <li>✓ Seguridad criptográfica y firmas asimétricas Ed25519</li>
+          <li>✓ Parcheo proactivo ante CVEs críticas (Node.js, PHP, npm)</li>
+          <li>✓ Despliegues CI/CD desde GitHub con Zero-Downtime</li>
+          <li>✓ Copias de seguridad diarias cifradas y monitorización 24/7</li>
         </ul>
         <div class="card-footer">
           <a routerLink="/servicios/arquitectura-cloud-fullstack" class="service-link">
-            <span>Explorar arquitectura cloud</span>
+            <span>Explorar arquitectura y planes</span>
             <span class="arrow">&rarr;</span>
           </a>
         </div>
       </article>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- NUEVO BLOQUE B2B: PLANES DE INGENIERÍA GESTIONADA & CIBERSEGURIDAD (200-500€) -->
+    <!-- ========================================================================= -->
+    <div id="planes-empresas" class="managed-plans-wrapper">
+      <div class="managed-header">
+        <div class="managed-badges">
+          <span class="managed-eyebrow">SUSCRIPCIÓN EMPRESARIAL B2B · SIN PERMANENCIA</span>
+          <span class="onboarding-cap-badge">
+            <span class="cap-dot"></span>
+            <span>Capacidad de Onboarding: Máximo 4 nuevas empresas al mes</span>
+          </span>
+        </div>
+        <h3 class="managed-title">Tu Departamento de Ingeniería, <span class="accent">Ciberseguridad &amp; Cloud</span> por una fracción de coste</h3>
+        <p class="managed-subtitle">
+          Delego tu infraestructura en un entorno empresarial blindado, con repositorios privados en GitHub, despliegues atómicos automatizados y actualización continua de seguridad en <strong>Node.js, TypeScript, Angular, React/Next.js, PHP y bases de datos</strong>. Trato directo con el Arquitecto de Software, sin intermediarios.
+        </p>
+      </div>
+
+      <!-- Security & DevSecOps Guarantee Strip -->
+      <div class="security-shield-strip">
+        <div class="shield-item">
+          <span class="shield-icon">🔒</span>
+          <div class="shield-text">
+            <strong>Parcheo Activo Anti-CVE</strong>
+            <span>Actualización inmediata de versiones LTS (Node.js 22+, PHP 8.3+, dependencias) frente a vulnerabilidades RCE y DoS.</span>
+          </div>
+        </div>
+        <div class="shield-item">
+          <span class="shield-icon">⚙️</span>
+          <div class="shield-text">
+            <strong>GitHub CI/CD Zero-Downtime</strong>
+            <span>Todo el código versionado y apuntado en GitHub privado. Despliegues automáticos sin interrumpir las ventas.</span>
+          </div>
+        </div>
+        <div class="shield-item">
+          <span class="shield-icon">🛡️</span>
+          <div class="shield-text">
+            <strong>Hardening &amp; Backups Cifrados</strong>
+            <span>Nginx Hardened (TLS 1.3, HSTS), ocultación de cabeceras de servidor y copias de seguridad diarias externas.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing Grid: 200€ / 350€ / 500€ -->
+      <div class="pricing-grid">
+        <!-- Plan 1: 200 € / mes -->
+        <article class="pricing-card">
+          <div class="plan-top">
+            <span class="plan-tier">INFRAESTRUCTURA &amp; SEGURIDAD</span>
+            <h4 class="plan-name">Blindaje Cloud &amp; DevSecOps</h4>
+            <div class="plan-price">
+              <span class="amount">200 €</span>
+              <span class="period">/ mes <small>+ IVA</small></span>
+            </div>
+            <p class="plan-summary">
+              Para empresas con web o aplicación en producción que necesitan máxima seguridad, servidor optimizado y despliegues profesionales en GitHub.
+            </p>
+          </div>
+
+          <ul class="plan-features">
+            <li><span class="check">✓</span> <strong>Alojamiento o gestión en servidor central</strong> de alto rendimiento (Nginx Hardened + TLS 1.3)</li>
+            <li><span class="check">✓</span> <strong>Repositorio privado en GitHub</strong> con pipeline CI/CD de despliegue automático sin caídas</li>
+            <li><span class="check">✓</span> <strong>Parcheo mensual y urgente de seguridad (CVE)</strong> en Node.js, PHP y librerías críticas</li>
+            <li><span class="check">✓</span> <strong>Ocultación de huella digital</strong> de servidor (protección frente a escáneres Shodan/bots)</li>
+            <li><span class="check">✓</span> <strong>Copias de seguridad diarias</strong> automatizadas de código y base de datos</li>
+            <li><span class="check">✓</span> <strong>Monitorización 24/7</strong> de disponibilidad, certificados SSL y consumo de RAM/CPU</li>
+          </ul>
+
+          <div class="plan-actions">
+            <a href="#contacto" (click)="selectPlan('plan-cloud-200', $event)" class="btn-plan btn-plan-outline">
+              <span>Solicitar Alta Plan 200 €</span>
+              <span class="arrow">&rarr;</span>
+            </a>
+            <a href="https://wa.me/34617205053?text=Hola%20Cristian,%20me%20interesa%20el%20Plan%20Blindaje%20Cloud%20y%20DevSecOps%20(200%E2%82%AC/mes)%20para%20mi%20empresa." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-mini">
+              <span>Consultar por WhatsApp Directo</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Plan 2: 350 € / mes (Recomendado) -->
+        <article class="pricing-card featured-plan">
+          <div class="popular-ribbon">MÁS ELEGIDO POR EMPRESAS</div>
+          <div class="plan-top">
+            <span class="plan-tier">CLOUD + E-COMMERCE + ERP</span>
+            <h4 class="plan-name">Operativa Total &amp; ERP 24/7</h4>
+            <div class="plan-price">
+              <span class="amount">350 €</span>
+              <span class="period">/ mes <small>+ IVA</small></span>
+            </div>
+            <p class="plan-summary">
+              La solución llave en mano para distribuidores y comercios: infraestructura web blindada más sincronización continua con tu ERP local.
+            </p>
+          </div>
+
+          <ul class="plan-features">
+            <li><span class="check">✓</span> <strong>Todo lo incluido en el Plan Blindaje Cloud (200 €)</strong></li>
+            <li><span class="check">✓</span> <strong>Licencia y gestión de Bentian ERP Bridge</strong> (Factusol / ERP a WooCommerce o PrestaShop)</li>
+            <li><span class="check">✓</span> <strong>Supervisión activa de sincronización</strong> de stock real (DISSTO), tarifas 1–5 y pedidos web</li>
+            <li><span class="check">✓</span> <strong>Mantenimiento evolutivo ligero</strong> (hasta 3h/mes para ajustes en web, pasarela Stripe/Redsys o catálogo)</li>
+            <li><span class="check">✓</span> <strong>Garantía de cuadre fiscal</strong> de pedidos (IVA, Recargo de Equivalencia y series contables)</li>
+            <li><span class="check">✓</span> <strong>Canal directo de soporte técnico</strong> por teléfono y WhatsApp Business (&lt; 4h laborables)</li>
+          </ul>
+
+          <div class="plan-actions">
+            <a href="#contacto" (click)="selectPlan('plan-erp-350', $event)" class="btn-plan btn-plan-primary">
+              <span>Solicitar Alta Plan 350 €</span>
+              <span class="arrow">&rarr;</span>
+            </a>
+            <a href="https://wa.me/34617205053?text=Hola%20Cristian,%20me%20interesa%20el%20Plan%20Operativa%20Total%20y%20ERP%2024/7%20(350%E2%82%AC/mes)%20para%20mi%20empresa." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-mini">
+              <span>Hablar por WhatsApp (+34 617 205 053)</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Plan 3: 500 € / mes -->
+        <article class="pricing-card">
+          <div class="plan-top">
+            <span class="plan-tier">INGENIERÍA DEDICADA &amp; CTO</span>
+            <h4 class="plan-name">Partner Tecnológico &amp; Evolución</h4>
+            <div class="plan-price">
+              <span class="amount">500 €</span>
+              <span class="period">/ mes <small>+ IVA</small></span>
+            </div>
+            <p class="plan-summary">
+              Para empresas en expansión o holdings que requieren desarrollo continuo de nuevas funcionalidades, soporte multi-stack y dirección técnica.
+            </p>
+          </div>
+
+          <ul class="plan-features">
+            <li><span class="check">✓</span> <strong>Todo lo incluido en el Plan Operativa Total (350 €)</strong></li>
+            <li><span class="check">✓</span> <strong>Bolsa mensual de ingeniería (hasta 8h/mes)</strong> para nuevas funciones, módulos o automatizaciones</li>
+            <li><span class="check">✓</span> <strong>Soporte Multi-Tecnología completo:</strong> Node.js/NestJS, Angular, React/Next.js, PHP, Go y C#</li>
+            <li><span class="check">✓</span> <strong>Auditoría de ciberseguridad mensual</strong>, tests de carga y optimización de consultas SQL/PostgreSQL</li>
+            <li><span class="check">✓</span> <strong>Consultoría de cumplimiento normativo</strong> (Veri*Factu AEAT, inmutabilidad de logs y RGPD)</li>
+            <li><span class="check">✓</span> <strong>SLA Prioritario y línea directa</strong> con el Arquitecto para incidencias críticas</li>
+          </ul>
+
+          <div class="plan-actions">
+            <a href="#contacto" (click)="selectPlan('plan-partner-500', $event)" class="btn-plan btn-plan-outline">
+              <span>Solicitar Alta Plan 500 €</span>
+              <span class="arrow">&rarr;</span>
+            </a>
+            <a href="https://wa.me/34617205053?text=Hola%20Cristian,%20me%20interesa%20el%20Plan%20Partner%20Tecnol%C3%B3gico%20(500%E2%82%AC/mes)%20para%20mi%20empresa." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-mini">
+              <span>Consultar por WhatsApp Directo</span>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Direct Enterprise Contact Footer Bar inside Pricing -->
+      <div class="enterprise-direct-bar">
+        <div class="direct-bar-info">
+          <span class="direct-badge">ATENCIÓN DIRECTA A EMPRESAS</span>
+          <p>¿No tienes equipo interno en Node.js, Angular o PHP, o tu proveedor actual te ha dejado sin soporte? Migro tu plataforma a GitHub y la dejo blindada sin interrumpir tu negocio.</p>
+        </div>
+        <div class="direct-bar-contacts">
+          <a href="tel:+34617205053" class="direct-pill">
+            <span>📞 +34 617 205 053</span>
+          </a>
+          <a href="mailto:cristian@cristianjm.com" class="direct-pill">
+            <span>✉️ cristian&#64;cristianjm.com</span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>

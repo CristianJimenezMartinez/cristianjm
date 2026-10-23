@@ -162,3 +162,381 @@
     }
   }
 }
+
+/* ========================================================================= */
+/* PLANES B2B GESTIONADOS (200€ / 350€ / 500€)                               */
+/* ========================================================================= */
+.managed-plans-wrapper {
+  margin-top: 5rem;
+  padding-top: 4.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.managed-header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.managed-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.1rem;
+}
+
+.managed-eyebrow {
+  font-family: $font-family-mono;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: $emerald-light;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+}
+
+.onboarding-cap-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: $font-family-mono;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #fbbf24;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+
+  .cap-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fbbf24;
+    box-shadow: 0 0 8px #fbbf24;
+  }
+}
+
+.managed-title {
+  font-size: clamp(1.75rem, 3.2vw, 2.4rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+
+  .accent {
+    color: $emerald-light;
+  }
+}
+
+.managed-subtitle {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: $text-secondary;
+
+  strong {
+    color: #ffffff;
+  }
+}
+
+/* Security Strip */
+.security-shield-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+  background: rgba(16, 185, 129, 0.04);
+  border: 1px solid rgba(16, 185, 129, 0.18);
+  border-radius: 14px;
+  padding: 1.35rem 1.5rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+
+  .shield-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+
+    .shield-icon {
+      font-size: 1.35rem;
+      line-height: 1;
+      margin-top: 0.1rem;
+    }
+
+    .shield-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+
+      strong {
+        font-size: 0.9rem;
+        color: #ffffff;
+        font-weight: 700;
+      }
+
+      span {
+        font-size: 0.8rem;
+        color: $text-secondary;
+        line-height: 1.45;
+      }
+    }
+  }
+}
+
+/* Pricing Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pricing-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba(16, 185, 129, 0.35);
+  }
+
+  &.featured-plan {
+    background: linear-gradient(160deg, rgba(16, 185, 129, 0.09) 0%, rgba(14, 17, 26, 0.95) 100%);
+    border: 1px solid rgba(16, 185, 129, 0.45);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  }
+
+  .popular-ribbon {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $emerald;
+    color: #08090d;
+    font-family: $font-family-mono;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    padding: 0.25rem 0.85rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .plan-top {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.35rem;
+
+    .plan-tier {
+      font-family: $font-family-mono;
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: $emerald-light;
+      letter-spacing: 0.06em;
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    .plan-name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+    }
+
+    .plan-price {
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+      margin-bottom: 0.75rem;
+
+      .amount {
+        font-size: 2.25rem;
+        font-weight: 900;
+        color: #ffffff;
+        letter-spacing: -0.03em;
+      }
+
+      .period {
+        font-family: $font-family-mono;
+        font-size: 0.82rem;
+        color: $text-secondary;
+
+        small {
+          font-size: 0.72rem;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .plan-summary {
+      font-size: 0.86rem;
+      line-height: 1.55;
+      color: $text-secondary;
+      margin: 0;
+    }
+  }
+
+  .plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.75rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+
+    li {
+      font-size: 0.84rem;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.82);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+
+      .check {
+        color: $emerald-light;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      strong {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .plan-actions {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+
+    .btn-plan {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-family: $font-family-mono;
+      font-size: 0.84rem;
+      font-weight: 700;
+      padding: 0.8rem 1.2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+
+      &.btn-plan-primary {
+        background: $emerald;
+        color: #08090d;
+        box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+
+        &:hover {
+          background: lighten($emerald, 5%);
+        }
+      }
+
+      &.btn-plan-outline {
+        background: rgba(255, 255, 255, 0.05);
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+
+        &:hover {
+          border-color: $emerald-light;
+          color: $emerald-light;
+          background: rgba(16, 185, 129, 0.08);
+        }
+      }
+    }
+
+    .btn-whatsapp-mini {
+      text-align: center;
+      font-family: $font-family-mono;
+      font-size: 0.74rem;
+      color: $text-secondary;
+      text-decoration: none;
+      padding: 0.3rem;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #34d399;
+      }
+    }
+  }
+}
+
+.enterprise-direct-bar {
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.35rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+
+  @media (max-width: 820px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .direct-bar-info {
+    .direct-badge {
+      font-family: $font-family-mono;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #a5b4fc;
+      letter-spacing: 0.06em;
+      display: inline-block;
+      margin-bottom: 0.3rem;
+    }
+
+    p {
+      font-size: 0.88rem;
+      color: $text-secondary;
+      margin: 0;
+      line-height: 1.5;
+    }
+  }
+
+  .direct-bar-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    flex-shrink: 0;
+
+    .direct-pill {
+      font-family: $font-family-mono;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 0.55rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+
+      &:hover {
+        border-color: $emerald-light;
+        color: $emerald-light;
+      }
+    }
+  }
+}

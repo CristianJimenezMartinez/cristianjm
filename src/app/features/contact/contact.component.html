@@ -1,29 +1,41 @@
 <section id="contacto" class="section contact-section">
   <div class="container">
     <div class="section-header-centered">
-      <span class="section-eyebrow">Canal Oficial &amp; Comunicación</span>
-      <h2 class="section-title">Hablemos de tu <span class="accent">proyecto</span></h2>
+      <span class="section-eyebrow">Canal Directo B2B &amp; Contratación</span>
+      <h2 class="section-title">Hablemos directamente de tu <span class="accent">empresa</span></h2>
       <p class="section-subtitle">
-        Si tienes un reto técnico, necesitas sincronizar Factusol ERP con tu tienda online o te interesa Bentian ERP Bridge, conversemos. Respondo en menos de 24 horas.
+        Trato directo conmigo, sin comerciales intermediarios ni centralitas. Si quieres blindar tu infraestructura web, delegar tus despliegues CI/CD o conectar Factusol ERP en tiempo real, escríbeme o llámame hoy mismo.
       </p>
     </div>
 
     <div class="contact-grid">
       <!-- Direct Contact Card -->
       <div class="contact-info-card">
-        <h3 class="info-title">Contacto Directo</h3>
+        <h3 class="info-title">Línea Directa de Ingeniería</h3>
         <p class="info-desc">
-          Prefiero las conversaciones técnicas y de negocio directas, sin capas intermedias. Puedes escribirme por correo o conectar a través de redes profesionales:
+          Atención directa a gerentes, directores de operaciones y responsables IT. Respuesta garantizada en el mismo día laborable:
         </p>
 
         <div class="contact-methods">
+          <div class="method-item">
+            <div class="method-icon-box icon-whatsapp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="method-details">
+              <span class="method-label">TELÉFONO &amp; WHATSAPP DIRECTO EMPRESAS</span>
+              <a href="tel:+34617205053" class="method-value">+34 617 205 053</a>
+              <a href="https://wa.me/34617205053?text=Hola%20Cristian,%20te%20escribo%20desde%20cristianjm.com%20para%20consultar%20un%20servicio%20para%20mi%20empresa." target="_blank" rel="noopener noreferrer" class="method-sublink">Abrir chat en WhatsApp Business &rarr;</a>
+            </div>
+          </div>
+
           <div class="method-item">
             <div class="method-icon-box">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             </div>
             <div class="method-details">
-              <span class="method-label">CORREO ELECTRÓNICO</span>
-              <a href="mailto:cristianjimeneztrabajo@gmail.com" class="method-value">cristianjimeneztrabajo&#64;gmail.com</a>
+              <span class="method-label">CORREO CORPORATIVO &amp; OFICIAL</span>
+              <a href="mailto:cristian@cristianjm.com" class="method-value">cristian&#64;cristianjm.com</a>
+              <a href="mailto:cristianjimeneztrabajo@gmail.com" class="method-sublink">cristianjimeneztrabajo&#64;gmail.com</a>
             </div>
           </div>
 
@@ -54,7 +66,7 @@
 
         <div class="contact-trust-pill">
           <span class="status-dot"></span>
-          <span>Disponible para nuevos proyectos e integraciones · 2026</span>
+          <span>Facturación B2B mensual · Acuerdo de Confidencialidad (NDA) incluido</span>
         </div>
       </div>
 
@@ -68,20 +80,20 @@
                 id="name"
                 type="text"
                 formControlName="name"
-                placeholder="Ej. María García / Empresa XYZ"
+                placeholder="Ej. María García / Distribuciones S.L."
                 [class.error]="contactForm.get('name')?.touched && contactForm.get('name')?.invalid">
               <span *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid" class="error-msg">
-                Por favor introduce tu nombre.
+                Por favor introduce tu nombre o empresa.
               </span>
             </div>
 
             <div class="form-group">
-              <label for="email">Correo Electrónico *</label>
+              <label for="email">Correo Electrónico Corporativo *</label>
               <input
                 id="email"
                 type="email"
                 formControlName="email"
-                placeholder="tu@empresa.com"
+                placeholder="direccion@tuempresa.com"
                 [class.error]="contactForm.get('email')?.touched && contactForm.get('email')?.invalid">
               <span *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid" class="error-msg">
                 Introduce un correo electrónico válido.
@@ -90,24 +102,30 @@
           </div>
 
           <div class="form-group">
-            <label for="service">Motivo de contacto *</label>
+            <label for="service">Servicio o Plan Mensual de Interés *</label>
             <select id="service" formControlName="service">
-              <option value="factusol-bridge">Bentian ERP Bridge / Integración Factusol</option>
-              <option value="verifactu-audit">Auditoría Técnica y Adaptación Veri*Factu (RD 1007/2023)</option>
-              <option value="erp-rescue">Rescate Urgente de Integración ERP Caída (&lt;24h)</option>
-              <option value="software-architecture">Desarrollo de Software &amp; Arquitectura Cloud</option>
-              <option value="consulting">Consultoría Técnica &amp; Auditoría ERP</option>
-              <option value="other">Otro asunto o propuesta personalizada</option>
+              <optgroup label="Planes Mensuales de Ingeniería Gestionada (B2B)">
+                <option value="plan-erp-350">Plan 350 €/mes — Operativa Total: Cloud Blindado + E-Commerce + ERP 24/7 (Recomendado)</option>
+                <option value="plan-cloud-200">Plan 200 €/mes — Blindaje Cloud, GitHub CI/CD &amp; Parcheo Seguridad (Node/PHP)</option>
+                <option value="plan-partner-500">Plan 500 €/mes — Partner Tecnológico, Evolución Continua &amp; CTO Externo</option>
+              </optgroup>
+              <optgroup label="Proyectos e Intervenciones Específicas">
+                <option value="factusol-bridge">Bentian ERP Bridge / Integración Factusol con WooCommerce o PrestaShop</option>
+                <option value="verifactu-audit">Auditoría Técnica y Adaptación Veri*Factu (RD 1007/2023)</option>
+                <option value="erp-rescue">Rescate Urgente de Integración ERP o Servidor Caído (&lt;24h)</option>
+                <option value="software-architecture">Desarrollo de Software a Medida &amp; Arquitectura Cloud</option>
+                <option value="other">Otro asunto o propuesta personalizada</option>
+              </optgroup>
             </select>
           </div>
 
           <div class="form-group">
-            <label for="message">Mensaje / Requisitos del Proyecto *</label>
+            <label for="message">Detalles de tu Infraestructura o Proyecto *</label>
             <textarea
               id="message"
               rows="5"
               formControlName="message"
-              placeholder="Describa brevemente qué objetivo persigue su empresa, qué catálogo maneja o qué duda técnica tiene..."
+              placeholder="Indica brevemente el dominio de tu web, qué tecnologías utilizas (Node.js, PHP, WooCommerce, Factusol...) o qué objetivo buscas resolver..."
               [class.error]="contactForm.get('message')?.touched && contactForm.get('message')?.invalid">
             </textarea>
             <span *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.invalid" class="error-msg">
@@ -116,7 +134,7 @@
           </div>
 
           <div *ngIf="submitSuccess()" class="alert alert-success">
-            ¡Mensaje enviado con éxito! Te responderé en menos de 24 horas.
+            ¡Solicitud recibida correctamente! Me pondré en contacto contigo en menos de 24 horas.
           </div>
 
           <div *ngIf="submitError()" class="alert alert-danger">
@@ -124,7 +142,7 @@
           </div>
 
           <button type="submit" class="btn btn-primary btn-submit" [disabled]="isSubmitting()">
-            <span *ngIf="!isSubmitting()">Enviar Mensaje <span class="arrow">&rarr;</span></span>
+            <span *ngIf="!isSubmitting()">Enviar Solicitud Directa <span class="arrow">&rarr;</span></span>
             <span *ngIf="isSubmitting()">Enviando consulta...</span>
           </button>
         </form>
