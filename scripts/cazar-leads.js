@@ -17,6 +17,7 @@
 const https = require('https');
 const http = require('http');
 const tls = require('tls');
+const dns = require('dns').promises;
 const fs = require('fs');
 const path = require('path');
 
@@ -323,27 +324,32 @@ function findInternalLinks(html, baseUrl) {
 function writeIndividualDossier(dossierDir, item) {
   if (!fs.existsSync(dossierDir)) fs.mkdirSync(dossierDir, { recursive: true });
   const filePath = path.join(dossierDir, `dossier-${item.domain}.md`);
-  const md = `# Diagnóstico Técnico de Seguridad, Servidor y Rendimiento Web
+  const md = `# Diagnóstico Técnico de Seguridad, Servidor, Correo y Rendimiento Web
 **Empresa:** ${item.companyDisplayName} (\`${item.domain}\`)
 **Fecha:** ${new Date().toLocaleDateString('es-ES')}
 **Auditor:** Cristian Jiménez Martínez — Arquitecto de Software, Ciberseguridad & ERP ([cristianjm.com](https://cristianjm.com))
 
 ---
 
-## 1. Telemetría y Puntuación de Blindaje Actual
+## 1. Radiografía Real del Servidor, Red y Correo Corporativo
 * **Puntuación de Seguridad Perimetral:** **${item.score} / 100** (Nivel de Exposición: **${item.risk}**)
+* **Servidor Físico / Hosting Detectado:** \`${item.serverHost}\` (IP: \`${item.ip}\`)
 * **Tiempo de Respuesta del Servidor (TTFB):** \`${item.ttfbMs} ms\` ${item.ttfbMs > 600 ? '(Lento — penaliza posicionamiento SEO y experiencia de compra)' : '(Correcto)'}
+* **Pasarela de Correo (\`MX\`):** \`${item.mx}\`
+* **Blindaje Anti-Suplantación de Facturas (\`DMARC\`):** **${item.dmarcStatus}**
 * **Tecnologías Detectadas:** \`${item.stack.join(' · ')}\`
+${item.wpExposedAdmins.length ? `* **⚠️ Fuga de Usuarios Administradores WordPress (\`/wp-json/wp/v2/users\`):** \`${item.wpExposedAdmins.join(', ')}\`` : ''}
 
 ## 2. Puntos Críticos Detectados en \`${item.domain}\`
 ${item.issues.map((iss, idx) => `${idx + 1}. **${iss}**`).join('\n')}
 
-## 3. Solución Propuesta (Llave en Mano · Sin Permanencia)
-Sin necesidad de rehacer ni cambiar vuestra web actual, nos encargamos de blindar toda la infraestructura:
+## 3. Solución Propuesta ( Servidor Dedicado / Cloud Blindado + ERP · Sin Permanencia)
+Sin necesidad de rehacer ni cambiar el diseño de vuestra web actual, nos encargamos de blindar toda la infraestructura:
 * **${item.recommendedPlan}:**
-  - Endurecimiento de servidor (TLS 1.3 + cabeceras OWASP HSTS, CSP, X-Frame-Options al 100/100 + ocultación de huella de servidor frente a escáneres CVE).
-  - Control de versiones en repositorio privado de GitHub y copias de seguridad diarias externas.
-  - ${item.hasEcommerce ? 'Sincronización automática en tiempo real de stock, tarifas y pedidos con vuestro ERP (Factusol / Sage / SimplyGest).' : 'Parcheo continuo de seguridad y soporte técnico directo.'}
+  - **Migración transparente a Servidor Cloud de Alto Rendimiento (o endurecimiento de vuestro servidor actual):** Bajada de tiempos de carga de \`${item.ttfbMs} ms\` a \`< 150 ms\`, TLS 1.3 y cabeceras OWASP (HSTS, CSP, X-Frame-Options) al **100/100**.
+  - **Blindaje de Correo Corporativo (\`SPF + DKIM + DMARC estricto\`):** Impedimos que terceros suplanten vuestro dominio (\`@${item.domain}\`) para enviar facturas falsas con cambios de IBAN a vuestros clientes.
+  - **Control de versiones en repositorio privado de GitHub** y copias de seguridad diarias externas.
+  - ${item.hasEcommerce ? 'Sincronización automática en tiempo real de stock, tarifas y pedidos con vuestro ERP (Factusol / Sage / SimplyGest).' : 'Bloqueo de enumeración de usuarios administradores y soporte técnico directo.'}
 
 ---
 **Contacto Directo:**
@@ -352,6 +358,88 @@ Sin necesidad de rehacer ni cambiar vuestra web actual, nos encargamos de blinda
 `;
   fs.writeFileSync(filePath, md, 'utf8');
   return filePath;
+}
+
+async function deepServerAndMailAudit(domain, finalUrl, isWordPress) {
+  const info = {
+    ip: 'N/D',
+    serverHost: 'N/D',
+    mx: 'N/D',
+    dmarcStatus: 'N/D',
+    dmarcVulnerable: false,
+    wpExposedAdmins: [],
+    xmlRpcOpen: false
+  };
+
+  const cleanDom = domain.replace(/^www\./, '');
+
+  // 1. DNS A + Reverse PTR (Hosting / Máquina real)
+  try {
+    const ips = await dns.resolve4(cleanDom);
+    if (ips && ips[0]) {
+      info.ip = ips[0];
+      try {
+        const ptr = await dns.reverse(info.ip);
+        info.serverHost = ptr[0] || info.ip;
+      } catch {
+        info.serverHost = info.ip;
+      }
+    }
+  } catch {}
+
+  // 2. DNS MX (Servidor de correo)
+  try {
+    const mx = await dns.resolveMx(cleanDom);
+    if (mx && mx.length) {
+      info.mx = mx.sort((a, b) => a.priority - b.priority).map((m) => m.exchange).slice(0, 2).join(', ');
+    }
+  } catch {}
+
+  // 3. DNS DMARC (Protección contra suplantación de facturas por email)
+  try {
+    const dmarcTxt = await dns.resolveTxt(`_dmarc.${cleanDom}`);
+    const flat = dmarcTxt.map((t) => t.join(''));
+    const rec = flat.find((t) => t.toLowerCase().startsWith('v=dmarc1'));
+    if (!rec) {
+      info.dmarcStatus = 'SIN DMARC (Vulnerable a suplantación de email/facturas)';
+      info.dmarcVulnerable = true;
+    } else if (/p\s*=\s*none/i.test(rec)) {
+      info.dmarcStatus = 'DMARC en modo p=none (No bloquea suplantación de identidad/facturas)';
+      info.dmarcVulnerable = true;
+    } else {
+      info.dmarcStatus = `Protegido (${rec.slice(0, 38)})`;
+    }
+  } catch {
+    info.dmarcStatus = 'SIN DMARC (Vulnerable a suplantación de email/facturas)';
+    info.dmarcVulnerable = true;
+  }
+
+  // 4. Sonda pasiva WordPress (/wp-json/wp/v2/users + /xmlrpc.php)
+  if (isWordPress) {
+    try {
+      const origin = new URL(finalUrl).origin;
+      const wpRes = await fetchUrl(`${origin}/wp-json/wp/v2/users`, 4000, 1);
+      if (wpRes.statusCode === 200 && wpRes.body.trim().startsWith('[')) {
+        const parsed = JSON.parse(wpRes.body);
+        if (Array.isArray(parsed)) {
+          info.wpExposedAdmins = parsed
+            .slice(0, 4)
+            .map((u) => `${u.name || u.slug} (login: ${u.slug})`)
+            .filter(Boolean);
+        }
+      }
+    } catch {}
+
+    try {
+      const origin = new URL(finalUrl).origin;
+      const xmlRes = await fetchUrl(`${origin}/xmlrpc.php`, 3500, 1);
+      if (xmlRes.statusCode === 405 || xmlRes.statusCode === 200) {
+        info.xmlRpcOpen = true;
+      }
+    } catch {}
+  }
+
+  return info;
 }
 
 async function auditAndCrawlCompany(domain, modo, dossierDir) {
@@ -427,6 +515,21 @@ async function auditAndCrawlCompany(domain, modo, dossierDir) {
   const contacts = extractContactsAndLegal(combinedHtml);
   const stack = detectTechStack(combinedHtml, h);
   const hasEcommerce = stack.some((s) => /WooCommerce|PrestaShop|Shopify/i.test(s));
+  const isWordPress = stack.some((s) => /WordPress|WooCommerce/i.test(s));
+
+  const serverInfo = await deepServerAndMailAudit(domain, probe.finalUrl, isWordPress);
+
+  if (serverInfo.dmarcVulnerable) {
+    score = Math.max(12, score - 8);
+    issues.push(`Correo corporativo desprotegido (${serverInfo.dmarcStatus})`);
+  }
+  if (serverInfo.wpExposedAdmins.length) {
+    score = Math.max(12, score - 10);
+    issues.push(`Fuga pública de administradores WordPress (/wp-json/wp/v2/users): ${serverInfo.wpExposedAdmins.join(', ')}`);
+  }
+  if (serverInfo.xmlRpcOpen) {
+    issues.push('Pasarela /xmlrpc.php abierta a ataques de fuerza bruta');
+  }
 
   // Detector de Solapamiento / Competencia en modo Partner
   const textBodyLower = combinedHtml
@@ -475,6 +578,11 @@ async function auditAndCrawlCompany(domain, modo, dossierDir) {
     hasEcommerce,
     isCompetitorInPartnerMode,
     partnerFitBadge,
+    ip: serverInfo.ip,
+    serverHost: serverInfo.serverHost,
+    mx: serverInfo.mx,
+    dmarcStatus: serverInfo.dmarcStatus,
+    wpExposedAdmins: serverInfo.wpExposedAdmins,
     score,
     risk,
     ttfbMs: probe.ttfbMs,
@@ -561,7 +669,9 @@ ${results.map((r, i) => `### Lead #${i + 1}: ${r.companyDisplayName} (\`${r.doma
 * **Teléfonos Fijos:** ${r.landlines.length ? r.landlines.map((l) => `\`+34 ${l}\``).join(' · ') : 'No publicado'}
 * **Correos Electrónicos:** ${r.emails.length ? r.emails.map((e) => `\`${e}\``).join(' · ') : 'No publicado'}
 * **Tecnología Detectada:** ${r.stack.join(' · ')}
-* **Estado del Servidor:** **${r.score}/100 (Riesgo ${r.risk})** · Latencia TTFB: \`${r.ttfbMs} ms\`
+* **Servidor Físico / Hosting Real:** \`${r.serverHost}\` (IP: \`${r.ip}\`)
+* **Correo Corporativo y Facturas (\`MX\` / \`DMARC\`):** \`${r.mx}\` → **${r.dmarcStatus}**
+${r.wpExposedAdmins.length ? `* **⚠️ Administradores WordPress Expuestos (\`/wp-json/wp/v2/users\`):** \`${r.wpExposedAdmins.join(', ')}\`\n` : ''}* **Estado del Servidor:** **${r.score}/100 (Riesgo ${r.risk})** · Latencia TTFB: \`${r.ttfbMs} ms\`
 * **Fallos Técnicos Detectados:**
 ${r.issues.map((iss) => `  - ❌ ${iss}`).join('\n')}
 * **Dossier Individual Generado:** \`${r.dossierPath}\`
