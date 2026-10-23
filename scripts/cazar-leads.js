@@ -426,9 +426,30 @@ async function auditAndCrawlCompany(domain, modo, dossierDir) {
   const stack = detectTechStack(combinedHtml, h);
   const hasEcommerce = stack.some((s) => /WooCommerce|PrestaShop|Shopify/i.test(s));
 
+  // Detector de Solapamiento / Competencia en modo Partner
+  const textBodyLower = combinedHtml
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .toLowerCase();
+
+  const overlapKeywords = [];
+  if (/(desarrollo de software a medida|software a medida)/.test(textBodyLower)) overlapKeywords.push('Software a Medida');
+  if (/(desarrollo ia|inteligencia artificial para empresas)/.test(textBodyLower)) overlapKeywords.push('Desarrollo IA');
+  if (/(diseño web|diseñamos.*web|creacion de paginas web|creación de páginas web|agencia de marketing|seo\s*&\s*ads)/.test(textBodyLower)) overlapKeywords.push('Diseño Web / Agencia SEO');
+
+  const isCompetitorInPartnerMode = modo === 'partner' && overlapKeywords.length > 0;
+  const partnerFitBadge = modo === 'partner'
+    ? (isCompetitorInPartnerMode
+        ? `⚠️ SOLAPAMIENTO (${overlapKeywords.join(' + ')}) — NO LLAMAR`
+        : `✅ PARTNER PURO (Solo Hardware / Redes / Soporte IT)`)
+    : '🎯 CLIENTE FINAL B2B';
+
   let recommendedPlan = 'Plan 200 €/mes (Blindaje Cloud, GitHub CI/CD & Ciberseguridad)';
   if (modo === 'partner') {
-    recommendedPlan = 'Alianza Partner B2B (20–25% comisión recurrente)';
+    recommendedPlan = isCompetitorInPartnerMode
+      ? 'DESCARTAR COMO PARTNER (Solapamiento de servicios web/software)'
+      : 'Alianza Partner B2B (20–25% comisión recurrente — Ellos llevan PCs/Redes, tú Web/ERP/IA)';
   } else if (hasEcommerce) {
     recommendedPlan = 'Plan 350 €/mes (Operativa Total: Cloud Blindado + E-Commerce + ERP 24/7)';
   }
@@ -450,6 +471,8 @@ async function auditAndCrawlCompany(domain, modo, dossierDir) {
     emails: contacts.emails,
     stack,
     hasEcommerce,
+    isCompetitorInPartnerMode,
+    partnerFitBadge,
     score,
     risk,
     ttfbMs: probe.ttfbMs,
@@ -502,6 +525,9 @@ async function main() {
   }
 
   results.sort((a, b) => {
+    if (a.isCompetitorInPartnerMode !== b.isCompetitorInPartnerMode) {
+      return a.isCompetitorInPartnerMode ? 1 : -1;
+    }
     const aHasContact = a.mobiles.length || a.landlines.length || a.emails.length ? 0 : 1;
     const bHasContact = b.mobiles.length || b.landlines.length || b.emails.length ? 0 : 1;
     if (aHasContact !== bHasContact) return aHasContact - bHasContact;
@@ -519,15 +545,15 @@ async function main() {
 
 ## 1. Tabla Resumen de Leads Cualificados (Ordenados por Oportunidad)
 
-| # | Empresa / Razón Social | Dominio | Nota Seguridad | Stack Detectado | Móvil / WhatsApp | Teléfono Fijo | Email Directo |
+| # | Empresa / Razón Social | Dominio | Clasificación / Encaje | Nota Seguridad | Móvil / WhatsApp | Teléfono Fijo | Email Directo |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-${results.map((r, i) => `| **${i + 1}** | **${r.companyDisplayName}**<br><small>CIF: ${r.cif}</small> | \`${r.domain}\` | **${r.score}/100** (${r.risk})<br><small>${r.ttfbMs} ms</small> | ${r.stack.join(', ')} | ${r.mobiles.join('<br>') || '—'} | ${r.landlines.join('<br>') || '—'} | ${r.emails.join('<br>') || '—'} |`).join('\n')}
+${results.map((r, i) => `| **${i + 1}** | **${r.companyDisplayName}**<br><small>CIF: ${r.cif}</small> | \`${r.domain}\` | **${r.partnerFitBadge}**<br><small>${r.stack.join(', ')}</small> | **${r.score}/100** (${r.risk})<br><small>${r.ttfbMs} ms</small> | ${r.mobiles.join('<br>') || '—'} | ${r.landlines.join('<br>') || '—'} | ${r.emails.join('<br>') || '—'} |`).join('\n')}
 
 ---
 
 ## 2. Fichas de Ataque Comercial y Guiones Listos para Enviar
 
-${results.map((r, i) => `### Lead #${i + 1}: ${r.companyDisplayName} (\`${r.domain}\`)
+${results.map((r, i) => `### Lead #${i + 1}: ${r.companyDisplayName} (\`${r.domain}\`) — ${r.partnerFitBadge}
 * **Razón Social (Aviso Legal):** ${r.razonSocial} (CIF: \`${r.cif}\`)
 * **Teléfonos Móviles / WhatsApp:** ${r.mobiles.length ? r.mobiles.map((m) => `\`+34 ${m}\``).join(' · ') : 'No publicado'}
 * **Teléfonos Fijos:** ${r.landlines.length ? r.landlines.map((l) => `\`+34 ${l}\``).join(' · ') : 'No publicado'}
