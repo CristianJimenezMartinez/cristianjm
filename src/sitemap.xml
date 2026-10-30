@@ -5,7 +5,7 @@
   <!-- Home Page -->
   <url>
     <loc>https://cristianjm.com/</loc>
-    <lastmod>2026-10-23T11:45:00+02:00</lastmod>
+    <lastmod>2026-10-30T12:00:00+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/" />
@@ -16,7 +16,7 @@
   <!-- Sobre Mí -->
   <url>
     <loc>https://cristianjm.com/sobre-mi/</loc>
-    <lastmod>2026-10-23T11:45:00+02:00</lastmod>
+    <lastmod>2026-10-30T12:00:00+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/sobre-mi/" />
@@ -27,7 +27,7 @@
   <!-- Servicios Especializados (6 Pilares SEO B2B) -->
   <url>
     <loc>https://cristianjm.com/servicios/integracion-erp-factusol/</loc>
-    <lastmod>2026-10-23T11:45:00+02:00</lastmod>
+    <lastmod>2026-10-30T12:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/servicios/integracion-erp-factusol/" />
@@ -36,7 +36,7 @@
   </url>
   <url>
     <loc>https://cristianjm.com/servicios/mantenimiento-web-ciberseguridad-empresas/</loc>
-    <lastmod>2026-10-23T11:45:00+02:00</lastmod>
+    <lastmod>2026-10-30T12:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/servicios/mantenimiento-web-ciberseguridad-empresas/" />
@@ -45,7 +45,7 @@
   </url>
   <url>
     <loc>https://cristianjm.com/servicios/desarrollo-software-medida-ia-automatizacion/</loc>
-    <lastmod>2026-10-23T11:45:00+02:00</lastmod>
+    <lastmod>2026-10-30T12:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/servicios/desarrollo-software-medida-ia-automatizacion/" />
@@ -54,7 +54,7 @@
   </url>
   <url>
     <loc>https://cristianjm.com/servicios/auditoria-verifactu-facturacion/</loc>
-    <lastmod>2026-10-23T11:45:00+02:00</lastmod>
+    <lastmod>2026-10-30T12:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/servicios/auditoria-verifactu-facturacion/" />
@@ -63,7 +63,7 @@
   </url>
   <url>
     <loc>https://cristianjm.com/servicios/rescate-optimizacion-erp/</loc>
-    <lastmod>2026-10-23T11:45:00+02:00</lastmod>
+    <lastmod>2026-10-30T12:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/servicios/rescate-optimizacion-erp/" />
@@ -72,7 +72,7 @@
   </url>
   <url>
     <loc>https://cristianjm.com/servicios/arquitectura-cloud-fullstack/</loc>
-    <lastmod>2026-10-23T11:45:00+02:00</lastmod>
+    <lastmod>2026-10-30T12:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/servicios/arquitectura-cloud-fullstack/" />
@@ -83,7 +83,7 @@
   <!-- Casos de Estudio y Proyectos (11 Sistemas Reales en Producción) -->
   <url>
     <loc>https://cristianjm.com/proyectos/bentian-erp-bridge/</loc>
-    <lastmod>2026-10-23T11:45:00+02:00</lastmod>
+    <lastmod>2026-10-30T12:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/proyectos/bentian-erp-bridge/" />
@@ -92,7 +92,7 @@
   </url>
   <url>
     <loc>https://cristianjm.com/proyectos/suministros-rubio/</loc>
-    <lastmod>2026-10-23T11:45:00+02:00</lastmod>
+    <lastmod>2026-10-30T12:00:00+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/proyectos/suministros-rubio/" />
@@ -101,7 +101,7 @@
   </url>
   <url>
     <loc>https://cristianjm.com/proyectos/praedium-fundus/</loc>
-    <lastmod>2026-10-23T11:45:00+02:00</lastmod>
+    <lastmod>2026-10-30T12:00:00+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/proyectos/praedium-fundus/" />
@@ -110,7 +110,7 @@
   </url>
   <url>
     <loc>https://cristianjm.com/proyectos/organi-soto/</loc>
-    <lastmod>2026-10-23T11:45:00+02:00</lastmod>
+    <lastmod>2026-10-30T12:00:00+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/proyectos/organi-soto/" />
@@ -119,7 +119,7 @@
   </url>
   <url>
     <loc>https://cristianjm.com/proyectos/sototime/</loc>
-    <lastmod>2026-10-23T11:45:00+02:00</lastmod>
+    <lastmod>2026-10-30T12:00:00+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/proyectos/sototime/" />
@@ -128,7 +128,7 @@
   </url>
   <url>
     <loc>https://cristianjm.com/proyectos/grupo-soto-holding/</loc>
-    <lastmod>2026-10-23T11:45:00+02:00</lastmod>
+    <lastmod>2026-10-30T12:00:00+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/proyectos/grupo-soto-holding/" />
@@ -137,7 +137,7 @@
   </url>
   <url>
     <loc>https://cristianjm.com/proyectos/serenity-wellness/</loc>
-    <lastmod>2026-10-23T11:45:00+02:00</lastmod>
+    <lastmod>2026-10-30T12:00:00+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/proyectos/serenity-wellness/" />
@@ -146,7 +146,7 @@
   </url>
   <url>
     <loc>https://cristianjm.com/proyectos/poseidon-flow/</loc>
-    <lastmod>2026-10-23T11:45:00+02:00</lastmod>
+    <lastmod>2026-10-30T12:00:00+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/proyectos/poseidon-flow/" />
@@ -155,7 +155,7 @@
   </url>
   <url>
     <loc>https://cristianjm.com/proyectos/nova-ventanas/</loc>
-    <lastmod>2026-10-23T11:45:00+02:00</lastmod>
+    <lastmod>2026-10-30T12:00:00+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/proyectos/nova-ventanas/" />
@@ -164,7 +164,7 @@
   </url>
   <url>
     <loc>https://cristianjm.com/proyectos/grupo-soto-automovil/</loc>
-    <lastmod>2026-10-23T11:45:00+02:00</lastmod>
+    <lastmod>2026-10-30T12:00:00+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/proyectos/grupo-soto-automovil/" />
@@ -173,7 +173,7 @@
   </url>
   <url>
     <loc>https://cristianjm.com/proyectos/veltiatrust/</loc>
-    <lastmod>2026-10-23T11:45:00+02:00</lastmod>
+    <lastmod>2026-10-30T12:00:00+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://cristianjm.com/proyectos/veltiatrust/" />
